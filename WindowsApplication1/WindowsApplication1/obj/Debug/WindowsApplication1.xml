@@ -38,9 +38,21 @@ WindowsApplication1
   les recherches de ressources à l'aide de cette classe de ressource fortement typée.
 </summary>
 </member>
+<member name="P:WindowsApplication1.My.Resources.Messages.Backup_success">
+<summary>
+  Recherche une chaîne localisée semblable à Le fichier de sauvegarde a été créé avec succès !.
+</summary>
+</member>
+<member name="P:WindowsApplication1.My.Resources.Messages.Excel_BadVersion">
+<summary>
+  Recherche une chaîne localisée semblable à Une version antérieure de Microsoft Excel est installée sur cet ordinateur.
+Veuillez installer la mise à jour vers Microsoft Excel 16.x.
+</summary>
+</member>
 <member name="P:WindowsApplication1.My.Resources.Messages.FirstOpening_Message">
 <summary>
-  Recherche une chaîne localisée semblable à Bienvenue sur ... , veuillez sélectionner l&apos;emplacement de sauvegarde de l&apos;application. Vous pourrez modifier votre choix ultérieurement dans l&apos;onglet Configuration.
+  Recherche une chaîne localisée semblable à Bienvenue sur ... 
+Veuillez sélectionner l&apos;emplacement de sauvegarde de l&apos;application. Vous pourrez modifier votre choix ultérieurement dans l&apos;onglet Configuration.
 </summary>
 </member>
 <member name="P:WindowsApplication1.My.Resources.Messages.FirstOpening_Title">

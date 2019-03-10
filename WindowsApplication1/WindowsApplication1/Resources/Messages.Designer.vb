@@ -65,7 +65,27 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Recherche une chaîne localisée semblable à Bienvenue sur ... , veuillez sélectionner l&apos;emplacement de sauvegarde de l&apos;application. Vous pourrez modifier votre choix ultérieurement dans l&apos;onglet Configuration.
+        '''  Recherche une chaîne localisée semblable à Le fichier de sauvegarde a été créé avec succès !.
+        '''</summary>
+        Friend Shared ReadOnly Property Backup_success() As String
+            Get
+                Return ResourceManager.GetString("Backup_success", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Une version antérieure de Microsoft Excel est installée sur cet ordinateur.
+        '''Veuillez installer la mise à jour vers Microsoft Excel 16.x.
+        '''</summary>
+        Friend Shared ReadOnly Property Excel_BadVersion() As String
+            Get
+                Return ResourceManager.GetString("Excel_BadVersion", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Bienvenue sur ... 
+        '''Veuillez sélectionner l&apos;emplacement de sauvegarde de l&apos;application. Vous pourrez modifier votre choix ultérieurement dans l&apos;onglet Configuration.
         '''</summary>
         Friend Shared ReadOnly Property FirstOpening_Message() As String
             Get

@@ -117,8 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Backup_success" xml:space="preserve">
+    <value>Le fichier de sauvegarde a été créé avec succès !</value>
+  </data>
+  <data name="Excel_BadVersion" xml:space="preserve">
+    <value>Une version antérieure de Microsoft Excel est installée sur cet ordinateur.
+Veuillez installer la mise à jour vers Microsoft Excel 16.x</value>
+  </data>
   <data name="FirstOpening_Message" xml:space="preserve">
-    <value>Bienvenue sur ... , veuillez sélectionner l'emplacement de sauvegarde de l'application. Vous pourrez modifier votre choix ultérieurement dans l'onglet Configuration</value>
+    <value>Bienvenue sur ... 
+Veuillez sélectionner l'emplacement de sauvegarde de l'application. Vous pourrez modifier votre choix ultérieurement dans l'onglet Configuration</value>
   </data>
   <data name="FirstOpening_Title" xml:space="preserve">
     <value>Bienvenue sur ... !</value>

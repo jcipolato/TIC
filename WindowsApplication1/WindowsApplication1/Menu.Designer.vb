@@ -32,9 +32,10 @@ Partial Class Menu
         '
         Me.ButtonInscription.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.ButtonInscription.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonInscription.Location = New System.Drawing.Point(27, 25)
+        Me.ButtonInscription.Location = New System.Drawing.Point(36, 31)
+        Me.ButtonInscription.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ButtonInscription.Name = "ButtonInscription"
-        Me.ButtonInscription.Size = New System.Drawing.Size(225, 135)
+        Me.ButtonInscription.Size = New System.Drawing.Size(300, 166)
         Me.ButtonInscription.TabIndex = 0
         Me.ButtonInscription.Text = "Inscription"
         Me.ButtonInscription.UseVisualStyleBackColor = False
@@ -43,9 +44,10 @@ Partial Class Menu
         '
         Me.ButtonConfiguration.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.ButtonConfiguration.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonConfiguration.Location = New System.Drawing.Point(27, 175)
+        Me.ButtonConfiguration.Location = New System.Drawing.Point(36, 215)
+        Me.ButtonConfiguration.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ButtonConfiguration.Name = "ButtonConfiguration"
-        Me.ButtonConfiguration.Size = New System.Drawing.Size(225, 135)
+        Me.ButtonConfiguration.Size = New System.Drawing.Size(300, 166)
         Me.ButtonConfiguration.TabIndex = 1
         Me.ButtonConfiguration.Text = "Configuration"
         Me.ButtonConfiguration.UseVisualStyleBackColor = False
@@ -54,9 +56,10 @@ Partial Class Menu
         '
         Me.ButtonQuitter.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.ButtonQuitter.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonQuitter.Location = New System.Drawing.Point(272, 175)
+        Me.ButtonQuitter.Location = New System.Drawing.Point(363, 215)
+        Me.ButtonQuitter.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ButtonQuitter.Name = "ButtonQuitter"
-        Me.ButtonQuitter.Size = New System.Drawing.Size(225, 135)
+        Me.ButtonQuitter.Size = New System.Drawing.Size(300, 166)
         Me.ButtonQuitter.TabIndex = 2
         Me.ButtonQuitter.Text = "Quitter"
         Me.ButtonQuitter.UseVisualStyleBackColor = False
@@ -65,22 +68,24 @@ Partial Class Menu
         '
         Me.ButtonConsultaion.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.ButtonConsultaion.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonConsultaion.Location = New System.Drawing.Point(272, 25)
+        Me.ButtonConsultaion.Location = New System.Drawing.Point(363, 31)
+        Me.ButtonConsultaion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ButtonConsultaion.Name = "ButtonConsultaion"
-        Me.ButtonConsultaion.Size = New System.Drawing.Size(225, 135)
+        Me.ButtonConsultaion.Size = New System.Drawing.Size(300, 166)
         Me.ButtonConsultaion.TabIndex = 3
         Me.ButtonConsultaion.Text = "Consultation / Modification"
         Me.ButtonConsultaion.UseVisualStyleBackColor = False
         '
         'Menu
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(520, 332)
+        Me.ClientSize = New System.Drawing.Size(693, 409)
         Me.Controls.Add(Me.ButtonConsultaion)
         Me.Controls.Add(Me.ButtonQuitter)
         Me.Controls.Add(Me.ButtonConfiguration)
         Me.Controls.Add(Me.ButtonInscription)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "Menu"
         Me.Text = "Menu"
         Me.ResumeLayout(False)

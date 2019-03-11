@@ -22,78 +22,90 @@ Partial Class Menu
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ButtonInscription = New System.Windows.Forms.Button()
-        Me.ButtonConfiguration = New System.Windows.Forms.Button()
+        Me.btnInscription = New System.Windows.Forms.Button()
         Me.ButtonQuitter = New System.Windows.Forms.Button()
-        Me.ButtonConsultaion = New System.Windows.Forms.Button()
+        Me.btnConsultation = New System.Windows.Forms.Button()
+        Me.ptUBDX = New System.Windows.Forms.PictureBox()
+        Me.labTitreApplication = New System.Windows.Forms.Label()
+        CType(Me.ptUBDX, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'ButtonInscription
+        'btnInscription
         '
-        Me.ButtonInscription.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.ButtonInscription.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonInscription.Location = New System.Drawing.Point(36, 31)
-        Me.ButtonInscription.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.ButtonInscription.Name = "ButtonInscription"
-        Me.ButtonInscription.Size = New System.Drawing.Size(300, 166)
-        Me.ButtonInscription.TabIndex = 0
-        Me.ButtonInscription.Text = "Inscription"
-        Me.ButtonInscription.UseVisualStyleBackColor = False
-        '
-        'ButtonConfiguration
-        '
-        Me.ButtonConfiguration.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.ButtonConfiguration.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonConfiguration.Location = New System.Drawing.Point(36, 215)
-        Me.ButtonConfiguration.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.ButtonConfiguration.Name = "ButtonConfiguration"
-        Me.ButtonConfiguration.Size = New System.Drawing.Size(300, 166)
-        Me.ButtonConfiguration.TabIndex = 1
-        Me.ButtonConfiguration.Text = "Configuration"
-        Me.ButtonConfiguration.UseVisualStyleBackColor = False
+        Me.btnInscription.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.btnInscription.Font = New System.Drawing.Font("Verdana", 12.0!)
+        Me.btnInscription.Location = New System.Drawing.Point(74, 195)
+        Me.btnInscription.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnInscription.Name = "btnInscription"
+        Me.btnInscription.Size = New System.Drawing.Size(230, 105)
+        Me.btnInscription.TabIndex = 0
+        Me.btnInscription.Text = "Inscription"
+        Me.btnInscription.UseVisualStyleBackColor = False
         '
         'ButtonQuitter
         '
         Me.ButtonQuitter.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.ButtonQuitter.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonQuitter.Location = New System.Drawing.Point(363, 215)
-        Me.ButtonQuitter.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ButtonQuitter.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.ButtonQuitter.Location = New System.Drawing.Point(570, 343)
+        Me.ButtonQuitter.Margin = New System.Windows.Forms.Padding(4)
         Me.ButtonQuitter.Name = "ButtonQuitter"
-        Me.ButtonQuitter.Size = New System.Drawing.Size(300, 166)
+        Me.ButtonQuitter.Size = New System.Drawing.Size(93, 38)
         Me.ButtonQuitter.TabIndex = 2
         Me.ButtonQuitter.Text = "Quitter"
         Me.ButtonQuitter.UseVisualStyleBackColor = False
         '
-        'ButtonConsultaion
+        'btnConsultation
         '
-        Me.ButtonConsultaion.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.ButtonConsultaion.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonConsultaion.Location = New System.Drawing.Point(363, 31)
-        Me.ButtonConsultaion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.ButtonConsultaion.Name = "ButtonConsultaion"
-        Me.ButtonConsultaion.Size = New System.Drawing.Size(300, 166)
-        Me.ButtonConsultaion.TabIndex = 3
-        Me.ButtonConsultaion.Text = "Consultation / Modification"
-        Me.ButtonConsultaion.UseVisualStyleBackColor = False
+        Me.btnConsultation.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.btnConsultation.Font = New System.Drawing.Font("Verdana", 12.0!)
+        Me.btnConsultation.Location = New System.Drawing.Point(385, 195)
+        Me.btnConsultation.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnConsultation.Name = "btnConsultation"
+        Me.btnConsultation.Size = New System.Drawing.Size(230, 105)
+        Me.btnConsultation.TabIndex = 1
+        Me.btnConsultation.Text = "Consultation"
+        Me.btnConsultation.UseVisualStyleBackColor = False
+        '
+        'ptUBDX
+        '
+        Me.ptUBDX.Image = Global.WindowsApplication1.My.Resources.Resources.ubdx_logo
+        Me.ptUBDX.Location = New System.Drawing.Point(12, 12)
+        Me.ptUBDX.Name = "ptUBDX"
+        Me.ptUBDX.Size = New System.Drawing.Size(292, 107)
+        Me.ptUBDX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.ptUBDX.TabIndex = 0
+        Me.ptUBDX.TabStop = False
+        '
+        'labTitreApplication
+        '
+        Me.labTitreApplication.Font = New System.Drawing.Font("Verdana", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labTitreApplication.Location = New System.Drawing.Point(342, 49)
+        Me.labTitreApplication.Name = "labTitreApplication"
+        Me.labTitreApplication.Size = New System.Drawing.Size(321, 70)
+        Me.labTitreApplication.TabIndex = 4
+        Me.labTitreApplication.Text = "UBDXFORM" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Centre de formation"
         '
         'Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(693, 409)
-        Me.Controls.Add(Me.ButtonConsultaion)
+        Me.Controls.Add(Me.labTitreApplication)
+        Me.Controls.Add(Me.ptUBDX)
+        Me.Controls.Add(Me.btnConsultation)
         Me.Controls.Add(Me.ButtonQuitter)
-        Me.Controls.Add(Me.ButtonConfiguration)
-        Me.Controls.Add(Me.ButtonInscription)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Controls.Add(Me.btnInscription)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Menu"
         Me.Text = "Menu"
+        CType(Me.ptUBDX, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents ButtonInscription As Button
-    Friend WithEvents ButtonConfiguration As Button
+    Friend WithEvents btnInscription As Button
     Friend WithEvents ButtonQuitter As Button
-    Friend WithEvents ButtonConsultaion As Button
+    Friend WithEvents btnConsultation As Button
+    Friend WithEvents ptUBDX As PictureBox
+    Friend WithEvents labTitreApplication As Label
 End Class

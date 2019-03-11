@@ -1,21 +1,18 @@
-﻿Imports System.Resources
+﻿Imports System.IO
+Imports System.Resources
+Imports System.Security.AccessControl
 Imports Microsoft.Office.Interop
 Imports Microsoft.Win32
 Imports WindowsApplication1.My.Resources
 
 Public Class Menu
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles ButtonInscription.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnInscription.Click
         Inscription.Show()
 
     End Sub
 
-    Private Sub ButtonConsultaion_Click(sender As Object, e As EventArgs) Handles ButtonConsultaion.Click
+    Private Sub ButtonConsultaion_Click(sender As Object, e As EventArgs) Handles btnConsultation.Click
         Consultation.Show()
-
-    End Sub
-
-    Private Sub ButtonConfiguration_Click(sender As Object, e As EventArgs) Handles ButtonConfiguration.Click
-        Configuration.Show()
 
     End Sub
 
@@ -37,31 +34,45 @@ Public Class Menu
             ElseIf FirstOpeningMessage = DialogResult.OK Then
                 GenerateBackup()
             End If
+        Else
+            Dim foundFile As String = String.Empty
+            For Each currentFile As String In My.Computer.FileSystem.GetFiles("C:\UBDXFORM\", FileIO.SearchOption.SearchAllSubDirectories, "*.xlsx")
+                foundFile = currentFile
+            Next
 
+            If String.IsNullOrEmpty(foundFile) Then
+                Dim BackupNotFound As DialogResult = MessageBox.Show(Messages.Backup_errorMessage, Messages.Backup_errorTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+                If BackupNotFound = DialogResult.OK Then
+                    GenerateBackup()
+                End If
+            End If
         End If
     End Sub
 
     Private Sub GenerateBackup()
-        Dim browse As New FolderBrowserDialog()
+        Dim path As String = "C:\UBDXFORM"
+        Dim xls As Excel.Application = New Excel.Application()
 
-        If (browse.ShowDialog() = DialogResult.OK) Then
-            Dim directory As String = browse.SelectedPath
-            Dim xls As Excel.Application = New Excel.Application()
-            If xls Is Nothing Then
-                MessageBox.Show(Messages.Excel_BadVersion)
-                Return
-            End If
-            Dim workbook As Excel.Workbook = xls.Workbooks.Add(Reflection.Missing.Value)
-            Dim worksheet As Excel.Worksheet = CType(workbook.Sheets(1), Excel.Worksheet)
-            workbook.SaveAs(directory + "\UBDXFORM-backup.xlsx")
-            xls.Quit()
-
-            releaseObject(worksheet)
-            releaseObject(workbook)
-            releaseObject(xls)
-
-            MessageBox.Show(Messages.Backup_success)
+        If xls Is Nothing Then
+            MessageBox.Show(Messages.Excel_BadVersion)
+            Return
         End If
+        Dim workbook As Excel.Workbook = xls.Workbooks.Add(Reflection.Missing.Value)
+        Dim worksheet As Excel.Worksheet = CType(workbook.Sheets(1), Excel.Worksheet)
+
+        If (Not Directory.Exists(path)) Then
+            Directory.CreateDirectory(path)
+        End If
+        workbook.SaveAs(path + "\UBDXFORM-backup.xlsx")
+        xls.Quit()
+
+        releaseObject(worksheet)
+        releaseObject(workbook)
+        releaseObject(xls)
+
+        AddFileSecurity(path + "\UBDXFORM-backup.xlsx", Environment.UserName, FileSystemRights.ReadData, AccessControlType.Allow)
+        MessageBox.Show(Messages.Backup_success)
     End Sub
 
     Private Sub releaseObject(ByVal obj As Object)
@@ -73,5 +84,11 @@ Public Class Menu
         Finally
             GC.Collect()
         End Try
+    End Sub
+
+    Private Sub AddFileSecurity(filePath As String, account As String, rights As FileSystemRights, controlType As AccessControlType)
+        Dim fSecurity As FileSecurity = File.GetAccessControl(filePath)
+        fSecurity.AddAccessRule(New FileSystemAccessRule(account, rights, controlType))
+        File.SetAccessControl(filePath, fSecurity)
     End Sub
 End Class

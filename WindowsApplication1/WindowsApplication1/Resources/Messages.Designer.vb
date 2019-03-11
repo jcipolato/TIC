@@ -65,6 +65,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Recherche une chaîne localisée semblable à Le fichier de sauvegarde est introuvable ! Continuer pour générer un nouveau fichier ?.
+        '''</summary>
+        Friend Shared ReadOnly Property Backup_errorMessage() As String
+            Get
+                Return ResourceManager.GetString("Backup_errorMessage", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Erreur: Fichier de sauvegarde introuvable.
+        '''</summary>
+        Friend Shared ReadOnly Property Backup_errorTitle() As String
+            Get
+                Return ResourceManager.GetString("Backup_errorTitle", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Recherche une chaîne localisée semblable à Le fichier de sauvegarde a été créé avec succès !.
         '''</summary>
         Friend Shared ReadOnly Property Backup_success() As String

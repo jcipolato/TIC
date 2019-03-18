@@ -1,4 +1,23 @@
 ﻿Public Class Inscription
+    Private Sub Inscription_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim textboxes As TextBox() = {txtNom, txtPrenom, txtAdresse, txtDateNaissance, txtCP, txtProfession, txtAutre, txtCheque, txtComplement}
+        Dim comboboxes As ComboBox() = {cbCivilite, cbEmploi, cbEtudes, cbFidelite, cbFinancement, cbPays, cbStatut}
+        For Each tb In textboxes
+            AddHandler tb.TextChanged, Sub(s, ee)
+                                           btnSauvegarder.Enabled = Not textboxes.Any(Function(box) box.Text = String.Empty)
+                                       End Sub
+        Next
+        For Each cb In comboboxes
+            AddHandler cb.SelectedIndexChanged, Sub(s, ee)
+                                                    btnSauvegarder.Enabled = Not comboboxes.Any(Function(box) box.SelectedIndex > -1)
+                                                End Sub
+        Next
+    End Sub
+
+    Private Sub btnRetour_Click(sender As Object, e As EventArgs) Handles btnRetour.Click
+        Me.Hide()
+    End Sub
+
     Private Sub txtCP_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtCP.KeyPress
         If Not Char.IsDigit(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
             e.Handled = True
@@ -33,19 +52,4 @@
             Return False
         End Try
     End Function
-
-    Private Sub Inscription_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim textboxes As TextBox() = {txtNom, txtPrenom, txtAdresse, txtDateNaissance, txtCP, txtProfession, txtAutre, txtCheque, txtComplement}
-        Dim comboboxes As ComboBox() = {cbCivilite, cbEmploi, cbEtudes, cbFidelite, cbFinancement, cbPays, cbStatut}
-        For Each tb In textboxes
-            AddHandler tb.TextChanged, Sub(s, ee)
-                                           btnSauvegarder.Enabled = Not textboxes.Any(Function(box) box.Text = String.Empty)
-                                       End Sub
-        Next
-        For Each cb In comboboxes
-            AddHandler cb.SelectedIndexChanged, Sub(s, ee)
-                                                    btnSauvegarder.Enabled = Not comboboxes.Any(Function(box) box.SelectedIndex > -1)
-                                                End Sub
-        Next
-    End Sub
 End Class

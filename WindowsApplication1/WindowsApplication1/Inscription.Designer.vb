@@ -524,7 +524,7 @@ Partial Class Inscription
         'txtTelPerso
         '
         Me.txtTelPerso.Font = New System.Drawing.Font("Verdana", 9.0!)
-        Me.txtTelPerso.Location = New System.Drawing.Point(81, 139)
+        Me.txtTelPerso.Location = New System.Drawing.Point(86, 139)
         Me.txtTelPerso.Margin = New System.Windows.Forms.Padding(4)
         Me.txtTelPerso.MaxLength = 10
         Me.txtTelPerso.Name = "txtTelPerso"
@@ -881,7 +881,7 @@ Partial Class Inscription
         '
         Me.btnSauvegarder.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.btnSauvegarder.Enabled = False
-        Me.btnSauvegarder.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSauvegarder.Font = New System.Drawing.Font("Verdana", 12.0!)
         Me.btnSauvegarder.Location = New System.Drawing.Point(83, 586)
         Me.btnSauvegarder.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSauvegarder.Name = "btnSauvegarder"
@@ -893,13 +893,13 @@ Partial Class Inscription
         'btnRetour
         '
         Me.btnRetour.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.btnRetour.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRetour.Font = New System.Drawing.Font("Verdana", 12.0!)
         Me.btnRetour.Location = New System.Drawing.Point(312, 586)
         Me.btnRetour.Margin = New System.Windows.Forms.Padding(4)
         Me.btnRetour.Name = "btnRetour"
         Me.btnRetour.Size = New System.Drawing.Size(173, 48)
         Me.btnRetour.TabIndex = 3
-        Me.btnRetour.Text = "Retour Menu"
+        Me.btnRetour.Text = "Retour"
         Me.btnRetour.UseVisualStyleBackColor = False
         '
         'Inscription

@@ -1,9 +1,9 @@
-<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Inscription
     Inherits System.Windows.Forms.Form
 
     'Form remplace la méthode Dispose pour nettoyer la liste des composants.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,864 +20,887 @@ Partial Class Inscription
     'REMARQUE : la procédure suivante est requise par le Concepteur Windows Form
     'Elle peut être modifiée à l'aide du Concepteur Windows Form.  
     'Ne la modifiez pas à l'aide de l'éditeur de code.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PanelProfession = New System.Windows.Forms.Panel()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.LabelAutre = New System.Windows.Forms.Label()
-        Me.TextBoxProfession = New System.Windows.Forms.TextBox()
-        Me.LabelProfession = New System.Windows.Forms.Label()
-        Me.ComboBoxDE = New System.Windows.Forms.ComboBox()
-        Me.LabelDE = New System.Windows.Forms.Label()
-        Me.ComboBoxNE = New System.Windows.Forms.ComboBox()
-        Me.LabelDiplome = New System.Windows.Forms.Label()
-        Me.LabelStatus = New System.Windows.Forms.Label()
-        Me.ComboBoxSatus = New System.Windows.Forms.ComboBox()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.LabelVille = New System.Windows.Forms.Label()
-        Me.TextBoxVille = New System.Windows.Forms.TextBox()
-        Me.TextBoxCP = New System.Windows.Forms.TextBox()
-        Me.ComboBoxPays = New System.Windows.Forms.ComboBox()
-        Me.TextBoxAdresse = New System.Windows.Forms.TextBox()
-        Me.LabelCP = New System.Windows.Forms.Label()
-        Me.LabelPays = New System.Windows.Forms.Label()
-        Me.LabelAdresse = New System.Windows.Forms.Label()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.TextBoxDate = New System.Windows.Forms.TextBox()
-        Me.ComboBoxCivilite = New System.Windows.Forms.ComboBox()
-        Me.TextBoxNom = New System.Windows.Forms.TextBox()
-        Me.TextBoxPrenom = New System.Windows.Forms.TextBox()
-        Me.LabelPrenom = New System.Windows.Forms.Label()
-        Me.LabelDateNaissance = New System.Windows.Forms.Label()
-        Me.LabelNom = New System.Windows.Forms.Label()
-        Me.LabelCivilite = New System.Windows.Forms.Label()
-        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.panParcours = New System.Windows.Forms.Panel()
+        Me.txtAutre = New System.Windows.Forms.TextBox()
+        Me.labAutre = New System.Windows.Forms.Label()
+        Me.txtProfession = New System.Windows.Forms.TextBox()
+        Me.labProfession = New System.Windows.Forms.Label()
+        Me.cbEmploi = New System.Windows.Forms.ComboBox()
+        Me.labEmploi = New System.Windows.Forms.Label()
+        Me.cbEtudes = New System.Windows.Forms.ComboBox()
+        Me.labDiplome = New System.Windows.Forms.Label()
+        Me.labStatut = New System.Windows.Forms.Label()
+        Me.cbStatut = New System.Windows.Forms.ComboBox()
+        Me.panCoordonnees = New System.Windows.Forms.Panel()
+        Me.txtComplement = New System.Windows.Forms.TextBox()
+        Me.labComplement = New System.Windows.Forms.Label()
+        Me.labVille = New System.Windows.Forms.Label()
+        Me.txtVille = New System.Windows.Forms.TextBox()
+        Me.txtCP = New System.Windows.Forms.TextBox()
+        Me.cbPays = New System.Windows.Forms.ComboBox()
+        Me.txtAdresse = New System.Windows.Forms.TextBox()
+        Me.labCP = New System.Windows.Forms.Label()
+        Me.labPays = New System.Windows.Forms.Label()
+        Me.labAdresse = New System.Windows.Forms.Label()
+        Me.panIdentite = New System.Windows.Forms.Panel()
+        Me.txtDateNaissance = New System.Windows.Forms.TextBox()
+        Me.cbCivilite = New System.Windows.Forms.ComboBox()
+        Me.txtNom = New System.Windows.Forms.TextBox()
+        Me.txtPrenom = New System.Windows.Forms.TextBox()
+        Me.labPrenom = New System.Windows.Forms.Label()
+        Me.labDateNaissance = New System.Windows.Forms.Label()
+        Me.labNom = New System.Windows.Forms.Label()
+        Me.labCivilite = New System.Windows.Forms.Label()
+        Me.panContact = New System.Windows.Forms.Panel()
         Me.LabelTel = New System.Windows.Forms.Label()
         Me.LabelMail = New System.Windows.Forms.Label()
-        Me.TextBoxTelPro = New System.Windows.Forms.TextBox()
-        Me.TextBoxTelPerso = New System.Windows.Forms.TextBox()
-        Me.TextBoxMailPro = New System.Windows.Forms.TextBox()
-        Me.TextBoxMailPerso = New System.Windows.Forms.TextBox()
-        Me.LabelProtel = New System.Windows.Forms.Label()
-        Me.LabelPersoTel = New System.Windows.Forms.Label()
-        Me.LabelProMail = New System.Windows.Forms.Label()
-        Me.LabelPerso = New System.Windows.Forms.Label()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.RadioButton5 = New System.Windows.Forms.RadioButton()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.RadioButtonNonMotiv = New System.Windows.Forms.RadioButton()
-        Me.RadioButtonOuiMotiv = New System.Windows.Forms.RadioButton()
-        Me.RadioButtonNonCurry = New System.Windows.Forms.RadioButton()
-        Me.RadioButtonOuiCurry = New System.Windows.Forms.RadioButton()
-        Me.RadioButtonOuiCurri = New System.Windows.Forms.RadioButton()
-        Me.LabelLettreMotiv = New System.Windows.Forms.Label()
-        Me.LabelCurri = New System.Windows.Forms.Label()
-        Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.TextBoxNumeroCheque = New System.Windows.Forms.TextBox()
-        Me.DateTimePickerDateFin = New System.Windows.Forms.DateTimePicker()
-        Me.LabelDateFinDeContrat = New System.Windows.Forms.Label()
-        Me.LabelDateDebutContrat = New System.Windows.Forms.Label()
-        Me.DateTimePickerDateDebut = New System.Windows.Forms.DateTimePicker()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.LabelAccompte = New System.Windows.Forms.Label()
-        Me.Sauvegarder = New System.Windows.Forms.Button()
-        Me.ButtonRetour = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.txtTelPro = New System.Windows.Forms.TextBox()
+        Me.txtTelPerso = New System.Windows.Forms.TextBox()
+        Me.txtMailPro = New System.Windows.Forms.TextBox()
+        Me.txtMailPerso = New System.Windows.Forms.TextBox()
+        Me.labProTel = New System.Windows.Forms.Label()
+        Me.labPersoTel = New System.Windows.Forms.Label()
+        Me.labProMail = New System.Windows.Forms.Label()
+        Me.labPerso = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.panRenseign = New System.Windows.Forms.Panel()
+        Me.cbFidelite = New System.Windows.Forms.ComboBox()
+        Me.cbFinancement = New System.Windows.Forms.ComboBox()
+        Me.labFidelite = New System.Windows.Forms.Label()
+        Me.labFinancement = New System.Windows.Forms.Label()
+        Me.panPieces = New System.Windows.Forms.Panel()
+        Me.rbNonMotiv = New System.Windows.Forms.RadioButton()
+        Me.rbOuiMotiv = New System.Windows.Forms.RadioButton()
+        Me.rbNonCV = New System.Windows.Forms.RadioButton()
+        Me.rbOuiCV = New System.Windows.Forms.RadioButton()
+        Me.labMotiv = New System.Windows.Forms.Label()
+        Me.labCV = New System.Windows.Forms.Label()
+        Me.panReglement = New System.Windows.Forms.Panel()
+        Me.rbAcompteOui = New System.Windows.Forms.RadioButton()
+        Me.rbOuiAcompte = New System.Windows.Forms.RadioButton()
+        Me.txtCheque = New System.Windows.Forms.TextBox()
+        Me.dtFinContrat = New System.Windows.Forms.DateTimePicker()
+        Me.labFinContrat = New System.Windows.Forms.Label()
+        Me.labDebutContrat = New System.Windows.Forms.Label()
+        Me.dtDebutContrat = New System.Windows.Forms.DateTimePicker()
+        Me.labCheque = New System.Windows.Forms.Label()
+        Me.labAcompte = New System.Windows.Forms.Label()
+        Me.btnSauvegarder = New System.Windows.Forms.Button()
+        Me.btnRetour = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
-        Me.PanelProfession.SuspendLayout()
+        Me.panParcours.SuspendLayout()
+        Me.panCoordonnees.SuspendLayout()
+        Me.panIdentite.SuspendLayout()
+        Me.panContact.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        Me.Panel3.SuspendLayout()
-        Me.Panel5.SuspendLayout()
-        Me.Panel4.SuspendLayout()
-        Me.Panel8.SuspendLayout()
-        Me.Panel7.SuspendLayout()
-        Me.Panel6.SuspendLayout()
+        Me.panRenseign.SuspendLayout()
+        Me.panPieces.SuspendLayout()
+        Me.panReglement.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.PanelProfession)
-        Me.Panel1.Controls.Add(Me.Panel2)
-        Me.Panel1.Controls.Add(Me.Panel3)
+        Me.Panel1.Controls.Add(Me.panParcours)
+        Me.Panel1.Controls.Add(Me.panCoordonnees)
+        Me.Panel1.Controls.Add(Me.panIdentite)
         Me.Panel1.Location = New System.Drawing.Point(16, 15)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(519, 563)
         Me.Panel1.TabIndex = 0
         '
-        'PanelProfession
+        'panParcours
         '
-        Me.PanelProfession.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PanelProfession.Controls.Add(Me.TextBox2)
-        Me.PanelProfession.Controls.Add(Me.LabelAutre)
-        Me.PanelProfession.Controls.Add(Me.TextBoxProfession)
-        Me.PanelProfession.Controls.Add(Me.LabelProfession)
-        Me.PanelProfession.Controls.Add(Me.ComboBoxDE)
-        Me.PanelProfession.Controls.Add(Me.LabelDE)
-        Me.PanelProfession.Controls.Add(Me.ComboBoxNE)
-        Me.PanelProfession.Controls.Add(Me.LabelDiplome)
-        Me.PanelProfession.Controls.Add(Me.LabelStatus)
-        Me.PanelProfession.Controls.Add(Me.ComboBoxSatus)
-        Me.PanelProfession.Location = New System.Drawing.Point(17, 353)
-        Me.PanelProfession.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.PanelProfession.Name = "PanelProfession"
-        Me.PanelProfession.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.PanelProfession.Size = New System.Drawing.Size(483, 161)
-        Me.PanelProfession.TabIndex = 3
+        Me.panParcours.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.panParcours.Controls.Add(Me.txtAutre)
+        Me.panParcours.Controls.Add(Me.labAutre)
+        Me.panParcours.Controls.Add(Me.txtProfession)
+        Me.panParcours.Controls.Add(Me.labProfession)
+        Me.panParcours.Controls.Add(Me.cbEmploi)
+        Me.panParcours.Controls.Add(Me.labEmploi)
+        Me.panParcours.Controls.Add(Me.cbEtudes)
+        Me.panParcours.Controls.Add(Me.labDiplome)
+        Me.panParcours.Controls.Add(Me.labStatut)
+        Me.panParcours.Controls.Add(Me.cbStatut)
+        Me.panParcours.Location = New System.Drawing.Point(17, 353)
+        Me.panParcours.Margin = New System.Windows.Forms.Padding(4)
+        Me.panParcours.Name = "panParcours"
+        Me.panParcours.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.panParcours.Size = New System.Drawing.Size(483, 161)
+        Me.panParcours.TabIndex = 3
         '
-        'TextBox2
+        'txtAutre
         '
-        Me.TextBox2.Location = New System.Drawing.Point(309, 37)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(163, 22)
-        Me.TextBox2.TabIndex = 20
+        Me.txtAutre.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.txtAutre.Location = New System.Drawing.Point(327, 54)
+        Me.txtAutre.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtAutre.Name = "txtAutre"
+        Me.txtAutre.Size = New System.Drawing.Size(145, 26)
+        Me.txtAutre.TabIndex = 11
         '
-        'LabelAutre
+        'labAutre
         '
-        Me.LabelAutre.AutoSize = True
-        Me.LabelAutre.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.LabelAutre.Location = New System.Drawing.Point(259, 41)
-        Me.LabelAutre.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LabelAutre.Name = "LabelAutre"
-        Me.LabelAutre.Size = New System.Drawing.Size(42, 17)
-        Me.LabelAutre.TabIndex = 19
-        Me.LabelAutre.Text = "Autre"
+        Me.labAutre.AutoSize = True
+        Me.labAutre.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.labAutre.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.labAutre.Location = New System.Drawing.Point(262, 57)
+        Me.labAutre.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.labAutre.Name = "labAutre"
+        Me.labAutre.Size = New System.Drawing.Size(60, 18)
+        Me.labAutre.TabIndex = 19
+        Me.labAutre.Text = "Autre :"
         '
-        'TextBoxProfession
+        'txtProfession
         '
-        Me.TextBoxProfession.Location = New System.Drawing.Point(89, 92)
-        Me.TextBoxProfession.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBoxProfession.Name = "TextBoxProfession"
-        Me.TextBoxProfession.Size = New System.Drawing.Size(383, 22)
-        Me.TextBoxProfession.TabIndex = 13
+        Me.txtProfession.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.txtProfession.Location = New System.Drawing.Point(126, 92)
+        Me.txtProfession.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtProfession.Name = "txtProfession"
+        Me.txtProfession.Size = New System.Drawing.Size(346, 26)
+        Me.txtProfession.TabIndex = 12
         '
-        'LabelProfession
+        'labProfession
         '
-        Me.LabelProfession.AutoSize = True
-        Me.LabelProfession.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.LabelProfession.Location = New System.Drawing.Point(4, 96)
-        Me.LabelProfession.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LabelProfession.Name = "LabelProfession"
-        Me.LabelProfession.Size = New System.Drawing.Size(75, 17)
-        Me.LabelProfession.TabIndex = 18
-        Me.LabelProfession.Text = "Profession"
+        Me.labProfession.AutoSize = True
+        Me.labProfession.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.labProfession.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.labProfession.Location = New System.Drawing.Point(18, 95)
+        Me.labProfession.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.labProfession.Name = "labProfession"
+        Me.labProfession.Size = New System.Drawing.Size(97, 18)
+        Me.labProfession.TabIndex = 18
+        Me.labProfession.Text = "Profession :"
         '
-        'ComboBoxDE
+        'cbEmploi
         '
-        Me.ComboBoxDE.FormattingEnabled = True
-        Me.ComboBoxDE.Items.AddRange(New Object() {"Art", "Autre", "Administration", "Biologie-Chimiste-Physique", "Commerce", "Droit", "Enseignement", "Environnement", "Hôtellerie-Restauration-Tourisme", "Informatique-Multimédia", "Médecine-Santé", "Social", "Sport", "Technique", "Transports"})
-        Me.ComboBoxDE.Location = New System.Drawing.Point(91, 124)
-        Me.ComboBoxDE.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.ComboBoxDE.Name = "ComboBoxDE"
-        Me.ComboBoxDE.Size = New System.Drawing.Size(381, 24)
-        Me.ComboBoxDE.TabIndex = 17
+        Me.cbEmploi.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.cbEmploi.FormattingEnabled = True
+        Me.cbEmploi.Items.AddRange(New Object() {"Art", "Autre", "Administration", "Biologie-Chimiste-Physique", "Commerce", "Droit", "Enseignement", "Environnement", "Hôtellerie-Restauration-Tourisme", "Informatique-Multimédia", "Médecine-Santé", "Social", "Sport", "Technique", "Transports"})
+        Me.cbEmploi.Location = New System.Drawing.Point(109, 129)
+        Me.cbEmploi.Margin = New System.Windows.Forms.Padding(4)
+        Me.cbEmploi.Name = "cbEmploi"
+        Me.cbEmploi.Size = New System.Drawing.Size(363, 26)
+        Me.cbEmploi.TabIndex = 13
         '
-        'LabelDE
+        'labEmploi
         '
-        Me.LabelDE.AutoSize = True
-        Me.LabelDE.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.LabelDE.Location = New System.Drawing.Point(8, 118)
-        Me.LabelDE.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LabelDE.Name = "LabelDE"
-        Me.LabelDE.Size = New System.Drawing.Size(68, 34)
-        Me.LabelDE.TabIndex = 16
-        Me.LabelDE.Text = "Domaine " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "d'emplois"
+        Me.labEmploi.AutoSize = True
+        Me.labEmploi.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.labEmploi.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.labEmploi.Location = New System.Drawing.Point(18, 119)
+        Me.labEmploi.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.labEmploi.Name = "labEmploi"
+        Me.labEmploi.Size = New System.Drawing.Size(82, 36)
+        Me.labEmploi.TabIndex = 16
+        Me.labEmploi.Text = "Domaine " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "d'emploi :"
         '
-        'ComboBoxNE
+        'cbEtudes
         '
-        Me.ComboBoxNE.FormattingEnabled = True
-        Me.ComboBoxNE.Items.AddRange(New Object() {"Baccalauréat", "BTS", "DUT", "Licence", "Master", "Autre"})
-        Me.ComboBoxNE.Location = New System.Drawing.Point(89, 38)
-        Me.ComboBoxNE.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.ComboBoxNE.Name = "ComboBoxNE"
-        Me.ComboBoxNE.Size = New System.Drawing.Size(160, 24)
-        Me.ComboBoxNE.TabIndex = 13
+        Me.cbEtudes.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.cbEtudes.FormattingEnabled = True
+        Me.cbEtudes.Items.AddRange(New Object() {"Baccalauréat", "BTS", "DUT", "Licence", "Master", "Autre"})
+        Me.cbEtudes.Location = New System.Drawing.Point(125, 50)
+        Me.cbEtudes.Margin = New System.Windows.Forms.Padding(4)
+        Me.cbEtudes.Name = "cbEtudes"
+        Me.cbEtudes.Size = New System.Drawing.Size(128, 26)
+        Me.cbEtudes.TabIndex = 10
         '
-        'LabelDiplome
+        'labDiplome
         '
-        Me.LabelDiplome.AutoSize = True
-        Me.LabelDiplome.Location = New System.Drawing.Point(8, 30)
-        Me.LabelDiplome.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LabelDiplome.Name = "LabelDiplome"
-        Me.LabelDiplome.Size = New System.Drawing.Size(62, 34)
-        Me.LabelDiplome.TabIndex = 4
-        Me.LabelDiplome.Text = "Niveau " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "d'études"
+        Me.labDiplome.AutoSize = True
+        Me.labDiplome.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.labDiplome.Location = New System.Drawing.Point(18, 39)
+        Me.labDiplome.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.labDiplome.Name = "labDiplome"
+        Me.labDiplome.Size = New System.Drawing.Size(83, 36)
+        Me.labDiplome.TabIndex = 4
+        Me.labDiplome.Text = "Niveau " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "d'études :"
         '
-        'LabelStatus
+        'labStatut
         '
-        Me.LabelStatus.AutoSize = True
-        Me.LabelStatus.Location = New System.Drawing.Point(13, 7)
-        Me.LabelStatus.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LabelStatus.Name = "LabelStatus"
-        Me.LabelStatus.Size = New System.Drawing.Size(45, 17)
-        Me.LabelStatus.TabIndex = 6
-        Me.LabelStatus.Text = "Statut"
+        Me.labStatut.AutoSize = True
+        Me.labStatut.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.labStatut.Location = New System.Drawing.Point(18, 9)
+        Me.labStatut.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.labStatut.Name = "labStatut"
+        Me.labStatut.Size = New System.Drawing.Size(66, 18)
+        Me.labStatut.TabIndex = 6
+        Me.labStatut.Text = "Statut :"
         '
-        'ComboBoxSatus
+        'cbStatut
         '
-        Me.ComboBoxSatus.FormattingEnabled = True
-        Me.ComboBoxSatus.Items.AddRange(New Object() {"Salarié", "Fonctionnaire", "Auto-entrepreneur", "Sans emploi", "Etudiant(e)"})
-        Me.ComboBoxSatus.Location = New System.Drawing.Point(91, 5)
-        Me.ComboBoxSatus.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.ComboBoxSatus.Name = "ComboBoxSatus"
-        Me.ComboBoxSatus.Size = New System.Drawing.Size(160, 24)
-        Me.ComboBoxSatus.TabIndex = 15
+        Me.cbStatut.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.cbStatut.FormattingEnabled = True
+        Me.cbStatut.Items.AddRange(New Object() {"Salarié", "Fonctionnaire", "Auto-entrepreneur", "Sans emploi", "Etudiant(e)"})
+        Me.cbStatut.Location = New System.Drawing.Point(125, 6)
+        Me.cbStatut.Margin = New System.Windows.Forms.Padding(4)
+        Me.cbStatut.Name = "cbStatut"
+        Me.cbStatut.Size = New System.Drawing.Size(143, 26)
+        Me.cbStatut.TabIndex = 9
         '
-        'Panel2
+        'panCoordonnees
         '
-        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Controls.Add(Me.TextBox1)
-        Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Controls.Add(Me.LabelVille)
-        Me.Panel2.Controls.Add(Me.TextBoxVille)
-        Me.Panel2.Controls.Add(Me.TextBoxCP)
-        Me.Panel2.Controls.Add(Me.ComboBoxPays)
-        Me.Panel2.Controls.Add(Me.TextBoxAdresse)
-        Me.Panel2.Controls.Add(Me.LabelCP)
-        Me.Panel2.Controls.Add(Me.LabelPays)
-        Me.Panel2.Controls.Add(Me.LabelAdresse)
-        Me.Panel2.Location = New System.Drawing.Point(17, 193)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(483, 141)
-        Me.Panel2.TabIndex = 2
+        Me.panCoordonnees.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.panCoordonnees.Controls.Add(Me.txtComplement)
+        Me.panCoordonnees.Controls.Add(Me.labComplement)
+        Me.panCoordonnees.Controls.Add(Me.labVille)
+        Me.panCoordonnees.Controls.Add(Me.txtVille)
+        Me.panCoordonnees.Controls.Add(Me.txtCP)
+        Me.panCoordonnees.Controls.Add(Me.cbPays)
+        Me.panCoordonnees.Controls.Add(Me.txtAdresse)
+        Me.panCoordonnees.Controls.Add(Me.labCP)
+        Me.panCoordonnees.Controls.Add(Me.labPays)
+        Me.panCoordonnees.Controls.Add(Me.labAdresse)
+        Me.panCoordonnees.Location = New System.Drawing.Point(17, 193)
+        Me.panCoordonnees.Margin = New System.Windows.Forms.Padding(4)
+        Me.panCoordonnees.Name = "panCoordonnees"
+        Me.panCoordonnees.Size = New System.Drawing.Size(483, 141)
+        Me.panCoordonnees.TabIndex = 2
         '
-        'TextBox1
+        'txtComplement
         '
-        Me.TextBox1.Location = New System.Drawing.Point(89, 41)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(383, 22)
-        Me.TextBox1.TabIndex = 12
+        Me.txtComplement.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.txtComplement.Location = New System.Drawing.Point(128, 42)
+        Me.txtComplement.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtComplement.Name = "txtComplement"
+        Me.txtComplement.Size = New System.Drawing.Size(349, 26)
+        Me.txtComplement.TabIndex = 5
         '
-        'Label2
+        'labComplement
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(1, 44)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(86, 17)
-        Me.Label2.TabIndex = 11
-        Me.Label2.Text = "Complément"
+        Me.labComplement.AutoSize = True
+        Me.labComplement.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.labComplement.Location = New System.Drawing.Point(4, 45)
+        Me.labComplement.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.labComplement.Name = "labComplement"
+        Me.labComplement.Size = New System.Drawing.Size(116, 18)
+        Me.labComplement.TabIndex = 11
+        Me.labComplement.Text = "Complément :"
         '
-        'LabelVille
+        'labVille
         '
-        Me.LabelVille.AutoSize = True
-        Me.LabelVille.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.LabelVille.Location = New System.Drawing.Point(244, 80)
-        Me.LabelVille.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LabelVille.Name = "LabelVille"
-        Me.LabelVille.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.LabelVille.Size = New System.Drawing.Size(34, 17)
-        Me.LabelVille.TabIndex = 10
-        Me.LabelVille.Text = "Ville"
-        Me.LabelVille.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.labVille.AutoSize = True
+        Me.labVille.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.labVille.Location = New System.Drawing.Point(31, 113)
+        Me.labVille.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.labVille.Name = "labVille"
+        Me.labVille.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.labVille.Size = New System.Drawing.Size(48, 18)
+        Me.labVille.TabIndex = 10
+        Me.labVille.Text = "Ville :"
+        Me.labVille.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'TextBoxVille
+        'txtVille
         '
-        Me.TextBoxVille.Location = New System.Drawing.Point(287, 76)
-        Me.TextBoxVille.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBoxVille.Name = "TextBoxVille"
-        Me.TextBoxVille.Size = New System.Drawing.Size(185, 22)
-        Me.TextBoxVille.TabIndex = 9
+        Me.txtVille.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.txtVille.Location = New System.Drawing.Point(98, 109)
+        Me.txtVille.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtVille.MaxLength = 50
+        Me.txtVille.Name = "txtVille"
+        Me.txtVille.Size = New System.Drawing.Size(174, 26)
+        Me.txtVille.TabIndex = 7
         '
-        'TextBoxCP
+        'txtCP
         '
-        Me.TextBoxCP.Location = New System.Drawing.Point(89, 76)
-        Me.TextBoxCP.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBoxCP.Name = "TextBoxCP"
-        Me.TextBoxCP.Size = New System.Drawing.Size(145, 22)
-        Me.TextBoxCP.TabIndex = 8
+        Me.txtCP.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.txtCP.Location = New System.Drawing.Point(128, 76)
+        Me.txtCP.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtCP.MaxLength = 5
+        Me.txtCP.Name = "txtCP"
+        Me.txtCP.Size = New System.Drawing.Size(143, 26)
+        Me.txtCP.TabIndex = 6
         '
-        'ComboBoxPays
+        'cbPays
         '
-        Me.ComboBoxPays.FormattingEnabled = True
-        Me.ComboBoxPays.Items.AddRange(New Object() {"FRANCE"})
-        Me.ComboBoxPays.Location = New System.Drawing.Point(89, 110)
-        Me.ComboBoxPays.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.ComboBoxPays.Name = "ComboBoxPays"
-        Me.ComboBoxPays.Size = New System.Drawing.Size(145, 24)
-        Me.ComboBoxPays.TabIndex = 7
+        Me.cbPays.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbPays.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.cbPays.FormattingEnabled = True
+        Me.cbPays.Items.AddRange(New Object() {"FRANCE"})
+        Me.cbPays.Location = New System.Drawing.Point(337, 109)
+        Me.cbPays.Margin = New System.Windows.Forms.Padding(4)
+        Me.cbPays.Name = "cbPays"
+        Me.cbPays.Size = New System.Drawing.Size(135, 26)
+        Me.cbPays.TabIndex = 8
         '
-        'TextBoxAdresse
+        'txtAdresse
         '
-        Me.TextBoxAdresse.Location = New System.Drawing.Point(91, 11)
-        Me.TextBoxAdresse.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBoxAdresse.Name = "TextBoxAdresse"
-        Me.TextBoxAdresse.Size = New System.Drawing.Size(381, 22)
-        Me.TextBoxAdresse.TabIndex = 6
+        Me.txtAdresse.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.txtAdresse.Location = New System.Drawing.Point(128, 11)
+        Me.txtAdresse.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtAdresse.Name = "txtAdresse"
+        Me.txtAdresse.Size = New System.Drawing.Size(350, 26)
+        Me.txtAdresse.TabIndex = 4
         '
-        'LabelCP
+        'labCP
         '
-        Me.LabelCP.AutoSize = True
-        Me.LabelCP.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.LabelCP.Location = New System.Drawing.Point(13, 71)
-        Me.LabelCP.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LabelCP.Name = "LabelCP"
-        Me.LabelCP.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.LabelCP.Size = New System.Drawing.Size(47, 34)
-        Me.LabelCP.TabIndex = 3
-        Me.LabelCP.Text = "Code" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Postal"
-        Me.LabelCP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.labCP.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.labCP.Location = New System.Drawing.Point(-4, 75)
+        Me.labCP.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.labCP.Name = "labCP"
+        Me.labCP.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.labCP.Size = New System.Drawing.Size(141, 27)
+        Me.labCP.TabIndex = 3
+        Me.labCP.Text = "Code postal :"
+        Me.labCP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'LabelPays
+        'labPays
         '
-        Me.LabelPays.AutoSize = True
-        Me.LabelPays.Location = New System.Drawing.Point(15, 112)
-        Me.LabelPays.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LabelPays.Name = "LabelPays"
-        Me.LabelPays.Size = New System.Drawing.Size(39, 17)
-        Me.LabelPays.TabIndex = 2
-        Me.LabelPays.Text = "Pays"
+        Me.labPays.AutoSize = True
+        Me.labPays.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.labPays.Location = New System.Drawing.Point(280, 113)
+        Me.labPays.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.labPays.Name = "labPays"
+        Me.labPays.Size = New System.Drawing.Size(55, 18)
+        Me.labPays.TabIndex = 2
+        Me.labPays.Text = "Pays :"
         '
-        'LabelAdresse
+        'labAdresse
         '
-        Me.LabelAdresse.AutoSize = True
-        Me.LabelAdresse.Location = New System.Drawing.Point(8, 15)
-        Me.LabelAdresse.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LabelAdresse.Name = "LabelAdresse"
-        Me.LabelAdresse.Size = New System.Drawing.Size(60, 17)
-        Me.LabelAdresse.TabIndex = 1
-        Me.LabelAdresse.Text = "Adresse"
+        Me.labAdresse.AutoSize = True
+        Me.labAdresse.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.labAdresse.Location = New System.Drawing.Point(41, 14)
+        Me.labAdresse.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.labAdresse.Name = "labAdresse"
+        Me.labAdresse.Size = New System.Drawing.Size(79, 18)
+        Me.labAdresse.TabIndex = 1
+        Me.labAdresse.Text = "Adresse :"
         '
-        'Panel3
+        'panIdentite
         '
-        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel3.Controls.Add(Me.TextBoxDate)
-        Me.Panel3.Controls.Add(Me.ComboBoxCivilite)
-        Me.Panel3.Controls.Add(Me.TextBoxNom)
-        Me.Panel3.Controls.Add(Me.TextBoxPrenom)
-        Me.Panel3.Controls.Add(Me.LabelPrenom)
-        Me.Panel3.Controls.Add(Me.LabelDateNaissance)
-        Me.Panel3.Controls.Add(Me.LabelNom)
-        Me.Panel3.Controls.Add(Me.LabelCivilite)
-        Me.Panel3.Location = New System.Drawing.Point(17, 20)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(483, 150)
-        Me.Panel3.TabIndex = 1
+        Me.panIdentite.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.panIdentite.Controls.Add(Me.txtDateNaissance)
+        Me.panIdentite.Controls.Add(Me.cbCivilite)
+        Me.panIdentite.Controls.Add(Me.txtNom)
+        Me.panIdentite.Controls.Add(Me.txtPrenom)
+        Me.panIdentite.Controls.Add(Me.labPrenom)
+        Me.panIdentite.Controls.Add(Me.labDateNaissance)
+        Me.panIdentite.Controls.Add(Me.labNom)
+        Me.panIdentite.Controls.Add(Me.labCivilite)
+        Me.panIdentite.Location = New System.Drawing.Point(17, 20)
+        Me.panIdentite.Margin = New System.Windows.Forms.Padding(4)
+        Me.panIdentite.Name = "panIdentite"
+        Me.panIdentite.Size = New System.Drawing.Size(483, 150)
+        Me.panIdentite.TabIndex = 0
         '
-        'TextBoxDate
+        'txtDateNaissance
         '
-        Me.TextBoxDate.Location = New System.Drawing.Point(91, 119)
-        Me.TextBoxDate.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBoxDate.Name = "TextBoxDate"
-        Me.TextBoxDate.Size = New System.Drawing.Size(163, 22)
-        Me.TextBoxDate.TabIndex = 13
+        Me.txtDateNaissance.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.txtDateNaissance.Location = New System.Drawing.Point(125, 118)
+        Me.txtDateNaissance.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtDateNaissance.Name = "txtDateNaissance"
+        Me.txtDateNaissance.Size = New System.Drawing.Size(163, 26)
+        Me.txtDateNaissance.TabIndex = 3
         '
-        'ComboBoxCivilite
+        'cbCivilite
         '
-        Me.ComboBoxCivilite.FormattingEnabled = True
-        Me.ComboBoxCivilite.Items.AddRange(New Object() {"Madame", "Monsieur"})
-        Me.ComboBoxCivilite.Location = New System.Drawing.Point(91, 9)
-        Me.ComboBoxCivilite.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.ComboBoxCivilite.Name = "ComboBoxCivilite"
-        Me.ComboBoxCivilite.Size = New System.Drawing.Size(112, 24)
-        Me.ComboBoxCivilite.TabIndex = 12
+        Me.cbCivilite.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbCivilite.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.cbCivilite.FormattingEnabled = True
+        Me.cbCivilite.Items.AddRange(New Object() {"Madame", "Monsieur"})
+        Me.cbCivilite.Location = New System.Drawing.Point(126, 9)
+        Me.cbCivilite.Margin = New System.Windows.Forms.Padding(4)
+        Me.cbCivilite.Name = "cbCivilite"
+        Me.cbCivilite.Size = New System.Drawing.Size(112, 26)
+        Me.cbCivilite.TabIndex = 0
         '
-        'TextBoxNom
+        'txtNom
         '
-        Me.TextBoxNom.Location = New System.Drawing.Point(91, 42)
-        Me.TextBoxNom.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBoxNom.Name = "TextBoxNom"
-        Me.TextBoxNom.Size = New System.Drawing.Size(163, 22)
-        Me.TextBoxNom.TabIndex = 5
+        Me.txtNom.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.txtNom.Location = New System.Drawing.Point(125, 43)
+        Me.txtNom.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtNom.Name = "txtNom"
+        Me.txtNom.Size = New System.Drawing.Size(163, 26)
+        Me.txtNom.TabIndex = 1
         '
-        'TextBoxPrenom
+        'txtPrenom
         '
-        Me.TextBoxPrenom.Location = New System.Drawing.Point(91, 81)
-        Me.TextBoxPrenom.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBoxPrenom.Name = "TextBoxPrenom"
-        Me.TextBoxPrenom.Size = New System.Drawing.Size(163, 22)
-        Me.TextBoxPrenom.TabIndex = 4
+        Me.txtPrenom.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.txtPrenom.Location = New System.Drawing.Point(125, 78)
+        Me.txtPrenom.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtPrenom.Name = "txtPrenom"
+        Me.txtPrenom.Size = New System.Drawing.Size(163, 26)
+        Me.txtPrenom.TabIndex = 2
         '
-        'LabelPrenom
+        'labPrenom
         '
-        Me.LabelPrenom.AutoSize = True
-        Me.LabelPrenom.Location = New System.Drawing.Point(8, 81)
-        Me.LabelPrenom.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LabelPrenom.Name = "LabelPrenom"
-        Me.LabelPrenom.Size = New System.Drawing.Size(57, 17)
-        Me.LabelPrenom.TabIndex = 3
-        Me.LabelPrenom.Text = "Prenom"
+        Me.labPrenom.AutoSize = True
+        Me.labPrenom.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.labPrenom.Location = New System.Drawing.Point(18, 81)
+        Me.labPrenom.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.labPrenom.Name = "labPrenom"
+        Me.labPrenom.Size = New System.Drawing.Size(78, 18)
+        Me.labPrenom.TabIndex = 3
+        Me.labPrenom.Text = "Prénom :"
         '
-        'LabelDateNaissance
+        'labDateNaissance
         '
-        Me.LabelDateNaissance.AutoSize = True
-        Me.LabelDateNaissance.Location = New System.Drawing.Point(1, 113)
-        Me.LabelDateNaissance.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LabelDateNaissance.Name = "LabelDateNaissance"
-        Me.LabelDateNaissance.Size = New System.Drawing.Size(80, 34)
-        Me.LabelDateNaissance.TabIndex = 2
-        Me.LabelDateNaissance.Text = "Date de " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "naissance :"
+        Me.labDateNaissance.AutoSize = True
+        Me.labDateNaissance.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.labDateNaissance.Location = New System.Drawing.Point(18, 103)
+        Me.labDateNaissance.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.labDateNaissance.Name = "labDateNaissance"
+        Me.labDateNaissance.Size = New System.Drawing.Size(92, 36)
+        Me.labDateNaissance.TabIndex = 2
+        Me.labDateNaissance.Text = "Date de " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "naissance :"
         '
-        'LabelNom
+        'labNom
         '
-        Me.LabelNom.AutoSize = True
-        Me.LabelNom.Location = New System.Drawing.Point(16, 46)
-        Me.LabelNom.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LabelNom.Name = "LabelNom"
-        Me.LabelNom.Size = New System.Drawing.Size(37, 17)
-        Me.LabelNom.TabIndex = 1
-        Me.LabelNom.Text = "Nom"
+        Me.labNom.AutoSize = True
+        Me.labNom.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.labNom.Location = New System.Drawing.Point(18, 46)
+        Me.labNom.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.labNom.Name = "labNom"
+        Me.labNom.Size = New System.Drawing.Size(56, 18)
+        Me.labNom.TabIndex = 1
+        Me.labNom.Text = "Nom :"
         '
-        'LabelCivilite
+        'labCivilite
         '
-        Me.LabelCivilite.AutoSize = True
-        Me.LabelCivilite.Location = New System.Drawing.Point(16, 12)
-        Me.LabelCivilite.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LabelCivilite.Name = "LabelCivilite"
-        Me.LabelCivilite.Size = New System.Drawing.Size(48, 17)
-        Me.LabelCivilite.TabIndex = 0
-        Me.LabelCivilite.Text = "Civilité"
+        Me.labCivilite.AutoSize = True
+        Me.labCivilite.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.labCivilite.Location = New System.Drawing.Point(18, 12)
+        Me.labCivilite.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.labCivilite.Name = "labCivilite"
+        Me.labCivilite.Size = New System.Drawing.Size(67, 18)
+        Me.labCivilite.TabIndex = 0
+        Me.labCivilite.Text = "Civilité :"
         '
-        'Panel5
+        'panContact
         '
-        Me.Panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel5.Controls.Add(Me.LabelTel)
-        Me.Panel5.Controls.Add(Me.LabelMail)
-        Me.Panel5.Controls.Add(Me.TextBoxTelPro)
-        Me.Panel5.Controls.Add(Me.TextBoxTelPerso)
-        Me.Panel5.Controls.Add(Me.TextBoxMailPro)
-        Me.Panel5.Controls.Add(Me.TextBoxMailPerso)
-        Me.Panel5.Controls.Add(Me.LabelProtel)
-        Me.Panel5.Controls.Add(Me.LabelPersoTel)
-        Me.Panel5.Controls.Add(Me.LabelProMail)
-        Me.Panel5.Controls.Add(Me.LabelPerso)
-        Me.Panel5.Location = New System.Drawing.Point(19, 5)
-        Me.Panel5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(483, 169)
-        Me.Panel5.TabIndex = 4
+        Me.panContact.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.panContact.Controls.Add(Me.LabelTel)
+        Me.panContact.Controls.Add(Me.LabelMail)
+        Me.panContact.Controls.Add(Me.txtTelPro)
+        Me.panContact.Controls.Add(Me.txtTelPerso)
+        Me.panContact.Controls.Add(Me.txtMailPro)
+        Me.panContact.Controls.Add(Me.txtMailPerso)
+        Me.panContact.Controls.Add(Me.labProTel)
+        Me.panContact.Controls.Add(Me.labPersoTel)
+        Me.panContact.Controls.Add(Me.labProMail)
+        Me.panContact.Controls.Add(Me.labPerso)
+        Me.panContact.Location = New System.Drawing.Point(19, 5)
+        Me.panContact.Margin = New System.Windows.Forms.Padding(4)
+        Me.panContact.Name = "panContact"
+        Me.panContact.Size = New System.Drawing.Size(483, 169)
+        Me.panContact.TabIndex = 4
         '
         'LabelTel
         '
         Me.LabelTel.AutoSize = True
-        Me.LabelTel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelTel.Font = New System.Drawing.Font("Verdana", 9.0!)
         Me.LabelTel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.LabelTel.Location = New System.Drawing.Point(4, 114)
         Me.LabelTel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelTel.Name = "LabelTel"
-        Me.LabelTel.Size = New System.Drawing.Size(76, 17)
+        Me.LabelTel.Size = New System.Drawing.Size(84, 18)
         Me.LabelTel.TabIndex = 10
         Me.LabelTel.Text = "Téléphone"
         '
         'LabelMail
         '
         Me.LabelMail.AutoSize = True
-        Me.LabelMail.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelMail.Font = New System.Drawing.Font("Verdana", 9.0!)
         Me.LabelMail.Location = New System.Drawing.Point(4, 7)
         Me.LabelMail.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelMail.Name = "LabelMail"
-        Me.LabelMail.Size = New System.Drawing.Size(33, 17)
+        Me.LabelMail.Size = New System.Drawing.Size(36, 18)
         Me.LabelMail.TabIndex = 9
         Me.LabelMail.Text = "Mail"
         '
-        'TextBoxTelPro
-        '
-        Me.TextBoxTelPro.Location = New System.Drawing.Point(289, 139)
-        Me.TextBoxTelPro.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBoxTelPro.Name = "TextBoxTelPro"
-        Me.TextBoxTelPro.Size = New System.Drawing.Size(164, 22)
-        Me.TextBoxTelPro.TabIndex = 8
-        '
-        'TextBoxTelPerso
-        '
-        Me.TextBoxTelPerso.Location = New System.Drawing.Point(69, 139)
-        Me.TextBoxTelPerso.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBoxTelPerso.Name = "TextBoxTelPerso"
-        Me.TextBoxTelPerso.Size = New System.Drawing.Size(157, 22)
-        Me.TextBoxTelPerso.TabIndex = 7
-        '
-        'TextBoxMailPro
-        '
-        Me.TextBoxMailPro.Location = New System.Drawing.Point(69, 75)
-        Me.TextBoxMailPro.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBoxMailPro.Name = "TextBoxMailPro"
-        Me.TextBoxMailPro.Size = New System.Drawing.Size(384, 22)
-        Me.TextBoxMailPro.TabIndex = 6
-        '
-        'TextBoxMailPerso
-        '
-        Me.TextBoxMailPerso.Location = New System.Drawing.Point(69, 37)
-        Me.TextBoxMailPerso.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBoxMailPerso.Name = "TextBoxMailPerso"
-        Me.TextBoxMailPerso.Size = New System.Drawing.Size(384, 22)
-        Me.TextBoxMailPerso.TabIndex = 5
-        '
-        'LabelProtel
-        '
-        Me.LabelProtel.AutoSize = True
-        Me.LabelProtel.Location = New System.Drawing.Point(248, 143)
-        Me.LabelProtel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LabelProtel.Name = "LabelProtel"
-        Me.LabelProtel.Size = New System.Drawing.Size(30, 17)
-        Me.LabelProtel.TabIndex = 4
-        Me.LabelProtel.Text = "Pro"
-        '
-        'LabelPersoTel
-        '
-        Me.LabelPersoTel.AutoSize = True
-        Me.LabelPersoTel.Location = New System.Drawing.Point(16, 143)
-        Me.LabelPersoTel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LabelPersoTel.Name = "LabelPersoTel"
-        Me.LabelPersoTel.Size = New System.Drawing.Size(45, 17)
-        Me.LabelPersoTel.TabIndex = 3
-        Me.LabelPersoTel.Text = "Perso"
-        '
-        'LabelProMail
-        '
-        Me.LabelProMail.AutoSize = True
-        Me.LabelProMail.Location = New System.Drawing.Point(24, 75)
-        Me.LabelProMail.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LabelProMail.Name = "LabelProMail"
-        Me.LabelProMail.Size = New System.Drawing.Size(30, 17)
-        Me.LabelProMail.TabIndex = 2
-        Me.LabelProMail.Text = "Pro"
-        '
-        'LabelPerso
-        '
-        Me.LabelPerso.AutoSize = True
-        Me.LabelPerso.Location = New System.Drawing.Point(16, 37)
-        Me.LabelPerso.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LabelPerso.Name = "LabelPerso"
-        Me.LabelPerso.Size = New System.Drawing.Size(45, 17)
-        Me.LabelPerso.TabIndex = 1
-        Me.LabelPerso.Text = "Perso"
-        '
-        'Panel4
-        '
-        Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel4.Controls.Add(Me.Panel8)
-        Me.Panel4.Controls.Add(Me.Panel5)
-        Me.Panel4.Controls.Add(Me.Panel7)
-        Me.Panel4.Controls.Add(Me.Panel6)
-        Me.Panel4.Location = New System.Drawing.Point(568, 15)
-        Me.Panel4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(527, 619)
-        Me.Panel4.TabIndex = 1
-        '
-        'Panel8
-        '
-        Me.Panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel8.Controls.Add(Me.ComboBox2)
-        Me.Panel8.Controls.Add(Me.ComboBox1)
-        Me.Panel8.Controls.Add(Me.RadioButton5)
-        Me.Panel8.Controls.Add(Me.Label3)
-        Me.Panel8.Controls.Add(Me.Label4)
-        Me.Panel8.Location = New System.Drawing.Point(19, 460)
-        Me.Panel8.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Panel8.Name = "Panel8"
-        Me.Panel8.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Panel8.Size = New System.Drawing.Size(483, 115)
-        Me.Panel8.TabIndex = 12
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"Relation professionnelle", "Presse audovisuelle", "Site école", "Réseaux sociaux", "Presse écrite", "Site institutionnel", "Réseaux sociaux institutionnel", "Autre"})
-        Me.ComboBox2.Location = New System.Drawing.Point(51, 79)
-        Me.ComboBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(403, 24)
-        Me.ComboBox2.TabIndex = 14
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Financement propre ", "Entreprise", "OPCA"})
-        Me.ComboBox1.Location = New System.Drawing.Point(156, 17)
-        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(297, 24)
-        Me.ComboBox1.TabIndex = 13
-        '
-        'RadioButton5
-        '
-        Me.RadioButton5.AutoSize = True
-        Me.RadioButton5.Location = New System.Drawing.Point(-45, 54)
-        Me.RadioButton5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.RadioButton5.Name = "RadioButton5"
-        Me.RadioButton5.Size = New System.Drawing.Size(51, 21)
-        Me.RadioButton5.TabIndex = 6
-        Me.RadioButton5.TabStop = True
-        Me.RadioButton5.Text = "Oui"
-        Me.RadioButton5.UseVisualStyleBackColor = True
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(5, 59)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(226, 17)
-        Me.Label3.TabIndex = 5
-        Me.Label3.Text = "Comment nous avez-vous connu ?"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(5, 21)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(149, 17)
-        Me.Label4.TabIndex = 4
-        Me.Label4.Text = "Type de financement :"
-        '
-        'Panel7
-        '
-        Me.Panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel7.Controls.Add(Me.RadioButtonNonMotiv)
-        Me.Panel7.Controls.Add(Me.RadioButtonOuiMotiv)
-        Me.Panel7.Controls.Add(Me.RadioButtonNonCurry)
-        Me.Panel7.Controls.Add(Me.RadioButtonOuiCurry)
-        Me.Panel7.Controls.Add(Me.RadioButtonOuiCurri)
-        Me.Panel7.Controls.Add(Me.LabelLettreMotiv)
-        Me.Panel7.Controls.Add(Me.LabelCurri)
-        Me.Panel7.Location = New System.Drawing.Point(19, 182)
-        Me.Panel7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Panel7.Name = "Panel7"
-        Me.Panel7.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Panel7.Size = New System.Drawing.Size(483, 102)
-        Me.Panel7.TabIndex = 5
-        '
-        'RadioButtonNonMotiv
-        '
-        Me.RadioButtonNonMotiv.AutoSize = True
-        Me.RadioButtonNonMotiv.Location = New System.Drawing.Point(381, 54)
-        Me.RadioButtonNonMotiv.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.RadioButtonNonMotiv.Name = "RadioButtonNonMotiv"
-        Me.RadioButtonNonMotiv.Size = New System.Drawing.Size(55, 21)
-        Me.RadioButtonNonMotiv.TabIndex = 11
-        Me.RadioButtonNonMotiv.TabStop = True
-        Me.RadioButtonNonMotiv.Text = "Non"
-        Me.RadioButtonNonMotiv.UseVisualStyleBackColor = True
-        '
-        'RadioButtonOuiMotiv
-        '
-        Me.RadioButtonOuiMotiv.AutoSize = True
-        Me.RadioButtonOuiMotiv.Location = New System.Drawing.Point(312, 55)
-        Me.RadioButtonOuiMotiv.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.RadioButtonOuiMotiv.Name = "RadioButtonOuiMotiv"
-        Me.RadioButtonOuiMotiv.Size = New System.Drawing.Size(51, 21)
-        Me.RadioButtonOuiMotiv.TabIndex = 10
-        Me.RadioButtonOuiMotiv.TabStop = True
-        Me.RadioButtonOuiMotiv.Text = "Oui"
-        Me.RadioButtonOuiMotiv.UseVisualStyleBackColor = True
-        '
-        'RadioButtonNonCurry
-        '
-        Me.RadioButtonNonCurry.AutoSize = True
-        Me.RadioButtonNonCurry.Location = New System.Drawing.Point(113, 55)
-        Me.RadioButtonNonCurry.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.RadioButtonNonCurry.Name = "RadioButtonNonCurry"
-        Me.RadioButtonNonCurry.Size = New System.Drawing.Size(55, 21)
-        Me.RadioButtonNonCurry.TabIndex = 8
-        Me.RadioButtonNonCurry.TabStop = True
-        Me.RadioButtonNonCurry.Text = "Non"
-        Me.RadioButtonNonCurry.UseVisualStyleBackColor = True
-        '
-        'RadioButtonOuiCurry
-        '
-        Me.RadioButtonOuiCurry.AutoSize = True
-        Me.RadioButtonOuiCurry.Location = New System.Drawing.Point(51, 55)
-        Me.RadioButtonOuiCurry.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.RadioButtonOuiCurry.Name = "RadioButtonOuiCurry"
-        Me.RadioButtonOuiCurry.Size = New System.Drawing.Size(51, 21)
-        Me.RadioButtonOuiCurry.TabIndex = 7
-        Me.RadioButtonOuiCurry.TabStop = True
-        Me.RadioButtonOuiCurry.Text = "Oui"
-        Me.RadioButtonOuiCurry.UseVisualStyleBackColor = True
-        '
-        'RadioButtonOuiCurri
-        '
-        Me.RadioButtonOuiCurri.AutoSize = True
-        Me.RadioButtonOuiCurri.Location = New System.Drawing.Point(-45, 54)
-        Me.RadioButtonOuiCurri.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.RadioButtonOuiCurri.Name = "RadioButtonOuiCurri"
-        Me.RadioButtonOuiCurri.Size = New System.Drawing.Size(51, 21)
-        Me.RadioButtonOuiCurri.TabIndex = 6
-        Me.RadioButtonOuiCurri.TabStop = True
-        Me.RadioButtonOuiCurri.Text = "Oui"
-        Me.RadioButtonOuiCurri.UseVisualStyleBackColor = True
-        '
-        'LabelLettreMotiv
-        '
-        Me.LabelLettreMotiv.AutoSize = True
-        Me.LabelLettreMotiv.Location = New System.Drawing.Point(308, 22)
-        Me.LabelLettreMotiv.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LabelLettreMotiv.Name = "LabelLettreMotiv"
-        Me.LabelLettreMotiv.Size = New System.Drawing.Size(133, 17)
-        Me.LabelLettreMotiv.TabIndex = 5
-        Me.LabelLettreMotiv.Text = "Lettre de motivation"
-        '
-        'LabelCurri
-        '
-        Me.LabelCurri.AutoSize = True
-        Me.LabelCurri.Location = New System.Drawing.Point(47, 22)
-        Me.LabelCurri.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LabelCurri.Name = "LabelCurri"
-        Me.LabelCurri.Size = New System.Drawing.Size(109, 17)
-        Me.LabelCurri.TabIndex = 4
-        Me.LabelCurri.Text = "Curriculum vitae"
-        '
-        'Panel6
-        '
-        Me.Panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel6.Controls.Add(Me.RadioButton2)
-        Me.Panel6.Controls.Add(Me.RadioButton1)
-        Me.Panel6.Controls.Add(Me.TextBoxNumeroCheque)
-        Me.Panel6.Controls.Add(Me.DateTimePickerDateFin)
-        Me.Panel6.Controls.Add(Me.LabelDateFinDeContrat)
-        Me.Panel6.Controls.Add(Me.LabelDateDebutContrat)
-        Me.Panel6.Controls.Add(Me.DateTimePickerDateDebut)
-        Me.Panel6.Controls.Add(Me.Label1)
-        Me.Panel6.Controls.Add(Me.LabelAccompte)
-        Me.Panel6.Location = New System.Drawing.Point(19, 304)
-        Me.Panel6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Panel6.Size = New System.Drawing.Size(483, 130)
-        Me.Panel6.TabIndex = 4
-        '
-        'RadioButton2
-        '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(219, 59)
-        Me.RadioButton2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(55, 21)
-        Me.RadioButton2.TabIndex = 12
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "Non"
-        Me.RadioButton2.UseVisualStyleBackColor = True
-        '
-        'RadioButton1
-        '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(156, 59)
-        Me.RadioButton1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(51, 21)
-        Me.RadioButton1.TabIndex = 12
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Oui"
-        Me.RadioButton1.UseVisualStyleBackColor = True
-        '
-        'TextBoxNumeroCheque
-        '
-        Me.TextBoxNumeroCheque.Location = New System.Drawing.Point(143, 96)
-        Me.TextBoxNumeroCheque.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBoxNumeroCheque.Name = "TextBoxNumeroCheque"
-        Me.TextBoxNumeroCheque.Size = New System.Drawing.Size(311, 22)
-        Me.TextBoxNumeroCheque.TabIndex = 7
-        '
-        'DateTimePickerDateFin
-        '
-        Me.DateTimePickerDateFin.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePickerDateFin.Location = New System.Drawing.Point(275, 22)
-        Me.DateTimePickerDateFin.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.DateTimePickerDateFin.Name = "DateTimePickerDateFin"
-        Me.DateTimePickerDateFin.Size = New System.Drawing.Size(179, 22)
-        Me.DateTimePickerDateFin.TabIndex = 14
-        '
-        'LabelDateFinDeContrat
-        '
-        Me.LabelDateFinDeContrat.AutoSize = True
-        Me.LabelDateFinDeContrat.Location = New System.Drawing.Point(295, 2)
-        Me.LabelDateFinDeContrat.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LabelDateFinDeContrat.Name = "LabelDateFinDeContrat"
-        Me.LabelDateFinDeContrat.Size = New System.Drawing.Size(145, 17)
-        Me.LabelDateFinDeContrat.TabIndex = 5
-        Me.LabelDateFinDeContrat.Text = "Date de fin de contrat"
-        '
-        'LabelDateDebutContrat
-        '
-        Me.LabelDateDebutContrat.AutoSize = True
-        Me.LabelDateDebutContrat.Location = New System.Drawing.Point(60, 2)
-        Me.LabelDateDebutContrat.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LabelDateDebutContrat.Name = "LabelDateDebutContrat"
-        Me.LabelDateDebutContrat.Size = New System.Drawing.Size(166, 17)
-        Me.LabelDateDebutContrat.TabIndex = 4
-        Me.LabelDateDebutContrat.Text = "Date de début de contrat"
-        '
-        'DateTimePickerDateDebut
-        '
-        Me.DateTimePickerDateDebut.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePickerDateDebut.Location = New System.Drawing.Point(51, 22)
-        Me.DateTimePickerDateDebut.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.DateTimePickerDateDebut.Name = "DateTimePickerDateDebut"
-        Me.DateTimePickerDateDebut.Size = New System.Drawing.Size(189, 22)
-        Me.DateTimePickerDateDebut.TabIndex = 13
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(4, 100)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(129, 17)
-        Me.Label1.TabIndex = 5
-        Me.Label1.Text = "Numéro de chèque"
-        '
-        'LabelAccompte
-        '
-        Me.LabelAccompte.AutoSize = True
-        Me.LabelAccompte.Location = New System.Drawing.Point(4, 62)
-        Me.LabelAccompte.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LabelAccompte.Name = "LabelAccompte"
-        Me.LabelAccompte.Size = New System.Drawing.Size(109, 17)
-        Me.LabelAccompte.TabIndex = 4
-        Me.LabelAccompte.Text = "Accompte versé"
-        '
-        'Sauvegarder
-        '
-        Me.Sauvegarder.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.Sauvegarder.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Sauvegarder.Location = New System.Drawing.Point(16, 586)
-        Me.Sauvegarder.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Sauvegarder.Name = "Sauvegarder"
-        Me.Sauvegarder.Size = New System.Drawing.Size(173, 48)
-        Me.Sauvegarder.TabIndex = 2
-        Me.Sauvegarder.Text = "Sauvegarder"
-        Me.Sauvegarder.UseVisualStyleBackColor = False
-        '
-        'ButtonRetour
-        '
-        Me.ButtonRetour.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.ButtonRetour.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonRetour.Location = New System.Drawing.Point(363, 586)
-        Me.ButtonRetour.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.ButtonRetour.Name = "ButtonRetour"
-        Me.ButtonRetour.Size = New System.Drawing.Size(173, 48)
-        Me.ButtonRetour.TabIndex = 3
-        Me.ButtonRetour.Text = "Retour Menu"
-        Me.ButtonRetour.UseVisualStyleBackColor = False
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(197, 586)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(157, 48)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Export word"
-        Me.Button1.UseVisualStyleBackColor = False
+        'txtTelPro
+        '
+        Me.txtTelPro.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.txtTelPro.Location = New System.Drawing.Point(298, 139)
+        Me.txtTelPro.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtTelPro.MaxLength = 10
+        Me.txtTelPro.Name = "txtTelPro"
+        Me.txtTelPro.Size = New System.Drawing.Size(164, 26)
+        Me.txtTelPro.TabIndex = 17
+        '
+        'txtTelPerso
+        '
+        Me.txtTelPerso.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.txtTelPerso.Location = New System.Drawing.Point(81, 139)
+        Me.txtTelPerso.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtTelPerso.MaxLength = 10
+        Me.txtTelPerso.Name = "txtTelPerso"
+        Me.txtTelPerso.Size = New System.Drawing.Size(157, 26)
+        Me.txtTelPerso.TabIndex = 16
+        '
+        'txtMailPro
+        '
+        Me.txtMailPro.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.txtMailPro.Location = New System.Drawing.Point(81, 75)
+        Me.txtMailPro.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtMailPro.Name = "txtMailPro"
+        Me.txtMailPro.Size = New System.Drawing.Size(384, 26)
+        Me.txtMailPro.TabIndex = 15
+        '
+        'txtMailPerso
+        '
+        Me.txtMailPerso.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.txtMailPerso.Location = New System.Drawing.Point(81, 34)
+        Me.txtMailPerso.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtMailPerso.Name = "txtMailPerso"
+        Me.txtMailPerso.Size = New System.Drawing.Size(384, 26)
+        Me.txtMailPerso.TabIndex = 14
+        '
+        'labProTel
+        '
+        Me.labProTel.AutoSize = True
+        Me.labProTel.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.labProTel.Location = New System.Drawing.Point(248, 143)
+        Me.labProTel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.labProTel.Name = "labProTel"
+        Me.labProTel.Size = New System.Drawing.Size(45, 18)
+        Me.labProTel.TabIndex = 4
+        Me.labProTel.Text = "Pro :"
+        '
+        'labPersoTel
+        '
+        Me.labPersoTel.AutoSize = True
+        Me.labPersoTel.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.labPersoTel.Location = New System.Drawing.Point(16, 143)
+        Me.labPersoTel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.labPersoTel.Name = "labPersoTel"
+        Me.labPersoTel.Size = New System.Drawing.Size(62, 18)
+        Me.labPersoTel.TabIndex = 3
+        Me.labPersoTel.Text = "Perso :"
+        '
+        'labProMail
+        '
+        Me.labProMail.AutoSize = True
+        Me.labProMail.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.labProMail.Location = New System.Drawing.Point(33, 78)
+        Me.labProMail.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.labProMail.Name = "labProMail"
+        Me.labProMail.Size = New System.Drawing.Size(45, 18)
+        Me.labProMail.TabIndex = 2
+        Me.labProMail.Text = "Pro :"
+        '
+        'labPerso
+        '
+        Me.labPerso.AutoSize = True
+        Me.labPerso.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.labPerso.Location = New System.Drawing.Point(16, 37)
+        Me.labPerso.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.labPerso.Name = "labPerso"
+        Me.labPerso.Size = New System.Drawing.Size(62, 18)
+        Me.labPerso.TabIndex = 1
+        Me.labPerso.Text = "Perso :"
+        '
+        'Panel2
+        '
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.panRenseign)
+        Me.Panel2.Controls.Add(Me.panContact)
+        Me.Panel2.Controls.Add(Me.panPieces)
+        Me.Panel2.Controls.Add(Me.panReglement)
+        Me.Panel2.Location = New System.Drawing.Point(568, 15)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(527, 619)
+        Me.Panel2.TabIndex = 1
+        '
+        'panRenseign
+        '
+        Me.panRenseign.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.panRenseign.Controls.Add(Me.cbFidelite)
+        Me.panRenseign.Controls.Add(Me.cbFinancement)
+        Me.panRenseign.Controls.Add(Me.labFidelite)
+        Me.panRenseign.Controls.Add(Me.labFinancement)
+        Me.panRenseign.Location = New System.Drawing.Point(19, 460)
+        Me.panRenseign.Margin = New System.Windows.Forms.Padding(4)
+        Me.panRenseign.Name = "panRenseign"
+        Me.panRenseign.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.panRenseign.Size = New System.Drawing.Size(483, 115)
+        Me.panRenseign.TabIndex = 12
+        '
+        'cbFidelite
+        '
+        Me.cbFidelite.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.cbFidelite.FormattingEnabled = True
+        Me.cbFidelite.Items.AddRange(New Object() {"Relation professionnelle", "Presse audovisuelle", "Site école", "Réseaux sociaux", "Presse écrite", "Site institutionnel", "Réseaux sociaux institutionnel", "Autre"})
+        Me.cbFidelite.Location = New System.Drawing.Point(8, 81)
+        Me.cbFidelite.Margin = New System.Windows.Forms.Padding(4)
+        Me.cbFidelite.Name = "cbFidelite"
+        Me.cbFidelite.Size = New System.Drawing.Size(403, 26)
+        Me.cbFidelite.TabIndex = 27
+        '
+        'cbFinancement
+        '
+        Me.cbFinancement.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbFinancement.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.cbFinancement.FormattingEnabled = True
+        Me.cbFinancement.Items.AddRange(New Object() {"Financement propre ", "Entreprise", "OPCA"})
+        Me.cbFinancement.Location = New System.Drawing.Point(187, 18)
+        Me.cbFinancement.Margin = New System.Windows.Forms.Padding(4)
+        Me.cbFinancement.Name = "cbFinancement"
+        Me.cbFinancement.Size = New System.Drawing.Size(290, 26)
+        Me.cbFinancement.TabIndex = 26
+        '
+        'labFidelite
+        '
+        Me.labFidelite.AutoSize = True
+        Me.labFidelite.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.labFidelite.Location = New System.Drawing.Point(5, 59)
+        Me.labFidelite.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.labFidelite.Name = "labFidelite"
+        Me.labFidelite.Size = New System.Drawing.Size(283, 18)
+        Me.labFidelite.TabIndex = 5
+        Me.labFidelite.Text = "Comment nous avez-vous connu ? :"
+        '
+        'labFinancement
+        '
+        Me.labFinancement.AutoSize = True
+        Me.labFinancement.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.labFinancement.Location = New System.Drawing.Point(4, 21)
+        Me.labFinancement.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.labFinancement.Name = "labFinancement"
+        Me.labFinancement.Size = New System.Drawing.Size(174, 18)
+        Me.labFinancement.TabIndex = 4
+        Me.labFinancement.Text = "Type de financement :"
+        '
+        'panPieces
+        '
+        Me.panPieces.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.panPieces.Controls.Add(Me.rbNonMotiv)
+        Me.panPieces.Controls.Add(Me.rbOuiMotiv)
+        Me.panPieces.Controls.Add(Me.rbNonCV)
+        Me.panPieces.Controls.Add(Me.rbOuiCV)
+        Me.panPieces.Controls.Add(Me.labMotiv)
+        Me.panPieces.Controls.Add(Me.labCV)
+        Me.panPieces.Location = New System.Drawing.Point(19, 182)
+        Me.panPieces.Margin = New System.Windows.Forms.Padding(4)
+        Me.panPieces.Name = "panPieces"
+        Me.panPieces.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.panPieces.Size = New System.Drawing.Size(483, 102)
+        Me.panPieces.TabIndex = 5
+        '
+        'rbNonMotiv
+        '
+        Me.rbNonMotiv.AutoSize = True
+        Me.rbNonMotiv.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.rbNonMotiv.Location = New System.Drawing.Point(381, 54)
+        Me.rbNonMotiv.Margin = New System.Windows.Forms.Padding(4)
+        Me.rbNonMotiv.Name = "rbNonMotiv"
+        Me.rbNonMotiv.Size = New System.Drawing.Size(59, 22)
+        Me.rbNonMotiv.TabIndex = 20
+        Me.rbNonMotiv.TabStop = True
+        Me.rbNonMotiv.Text = "Non"
+        Me.rbNonMotiv.UseVisualStyleBackColor = True
+        '
+        'rbOuiMotiv
+        '
+        Me.rbOuiMotiv.AutoSize = True
+        Me.rbOuiMotiv.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.rbOuiMotiv.Location = New System.Drawing.Point(312, 55)
+        Me.rbOuiMotiv.Margin = New System.Windows.Forms.Padding(4)
+        Me.rbOuiMotiv.Name = "rbOuiMotiv"
+        Me.rbOuiMotiv.Size = New System.Drawing.Size(53, 22)
+        Me.rbOuiMotiv.TabIndex = 19
+        Me.rbOuiMotiv.TabStop = True
+        Me.rbOuiMotiv.Text = "Oui"
+        Me.rbOuiMotiv.UseVisualStyleBackColor = True
+        '
+        'rbNonCV
+        '
+        Me.rbNonCV.AutoSize = True
+        Me.rbNonCV.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.rbNonCV.Location = New System.Drawing.Point(113, 55)
+        Me.rbNonCV.Margin = New System.Windows.Forms.Padding(4)
+        Me.rbNonCV.Name = "rbNonCV"
+        Me.rbNonCV.Size = New System.Drawing.Size(59, 22)
+        Me.rbNonCV.TabIndex = 18
+        Me.rbNonCV.TabStop = True
+        Me.rbNonCV.Text = "Non"
+        Me.rbNonCV.UseVisualStyleBackColor = True
+        '
+        'rbOuiCV
+        '
+        Me.rbOuiCV.AutoSize = True
+        Me.rbOuiCV.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.rbOuiCV.Location = New System.Drawing.Point(51, 55)
+        Me.rbOuiCV.Margin = New System.Windows.Forms.Padding(4)
+        Me.rbOuiCV.Name = "rbOuiCV"
+        Me.rbOuiCV.Size = New System.Drawing.Size(53, 22)
+        Me.rbOuiCV.TabIndex = 17
+        Me.rbOuiCV.TabStop = True
+        Me.rbOuiCV.Text = "Oui"
+        Me.rbOuiCV.UseVisualStyleBackColor = True
+        '
+        'labMotiv
+        '
+        Me.labMotiv.AutoSize = True
+        Me.labMotiv.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.labMotiv.Location = New System.Drawing.Point(294, 22)
+        Me.labMotiv.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.labMotiv.Name = "labMotiv"
+        Me.labMotiv.Size = New System.Drawing.Size(160, 18)
+        Me.labMotiv.TabIndex = 5
+        Me.labMotiv.Text = "Lettre de motivation"
+        '
+        'labCV
+        '
+        Me.labCV.AutoSize = True
+        Me.labCV.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.labCV.Location = New System.Drawing.Point(44, 22)
+        Me.labCV.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.labCV.Name = "labCV"
+        Me.labCV.Size = New System.Drawing.Size(128, 18)
+        Me.labCV.TabIndex = 4
+        Me.labCV.Text = "Curriculum vitae"
+        '
+        'panReglement
+        '
+        Me.panReglement.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.panReglement.Controls.Add(Me.rbAcompteOui)
+        Me.panReglement.Controls.Add(Me.rbOuiAcompte)
+        Me.panReglement.Controls.Add(Me.txtCheque)
+        Me.panReglement.Controls.Add(Me.dtFinContrat)
+        Me.panReglement.Controls.Add(Me.labFinContrat)
+        Me.panReglement.Controls.Add(Me.labDebutContrat)
+        Me.panReglement.Controls.Add(Me.dtDebutContrat)
+        Me.panReglement.Controls.Add(Me.labCheque)
+        Me.panReglement.Controls.Add(Me.labAcompte)
+        Me.panReglement.Location = New System.Drawing.Point(19, 304)
+        Me.panReglement.Margin = New System.Windows.Forms.Padding(4)
+        Me.panReglement.Name = "panReglement"
+        Me.panReglement.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.panReglement.Size = New System.Drawing.Size(483, 130)
+        Me.panReglement.TabIndex = 4
+        '
+        'rbAcompteOui
+        '
+        Me.rbAcompteOui.AutoSize = True
+        Me.rbAcompteOui.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.rbAcompteOui.Location = New System.Drawing.Point(217, 62)
+        Me.rbAcompteOui.Margin = New System.Windows.Forms.Padding(4)
+        Me.rbAcompteOui.Name = "rbAcompteOui"
+        Me.rbAcompteOui.Size = New System.Drawing.Size(59, 22)
+        Me.rbAcompteOui.TabIndex = 24
+        Me.rbAcompteOui.TabStop = True
+        Me.rbAcompteOui.Text = "Non"
+        Me.rbAcompteOui.UseVisualStyleBackColor = True
+        '
+        'rbOuiAcompte
+        '
+        Me.rbOuiAcompte.AutoSize = True
+        Me.rbOuiAcompte.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.rbOuiAcompte.Location = New System.Drawing.Point(149, 62)
+        Me.rbOuiAcompte.Margin = New System.Windows.Forms.Padding(4)
+        Me.rbOuiAcompte.Name = "rbOuiAcompte"
+        Me.rbOuiAcompte.Size = New System.Drawing.Size(53, 22)
+        Me.rbOuiAcompte.TabIndex = 23
+        Me.rbOuiAcompte.TabStop = True
+        Me.rbOuiAcompte.Text = "Oui"
+        Me.rbOuiAcompte.UseVisualStyleBackColor = True
+        '
+        'txtCheque
+        '
+        Me.txtCheque.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.txtCheque.Location = New System.Drawing.Point(180, 96)
+        Me.txtCheque.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtCheque.Name = "txtCheque"
+        Me.txtCheque.Size = New System.Drawing.Size(152, 26)
+        Me.txtCheque.TabIndex = 25
+        '
+        'dtFinContrat
+        '
+        Me.dtFinContrat.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.dtFinContrat.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtFinContrat.Location = New System.Drawing.Point(275, 22)
+        Me.dtFinContrat.Margin = New System.Windows.Forms.Padding(4)
+        Me.dtFinContrat.MaxDate = New Date(2050, 12, 31, 0, 0, 0, 0)
+        Me.dtFinContrat.MinDate = New Date(2019, 3, 13, 0, 0, 0, 0)
+        Me.dtFinContrat.Name = "dtFinContrat"
+        Me.dtFinContrat.Size = New System.Drawing.Size(179, 26)
+        Me.dtFinContrat.TabIndex = 22
+        '
+        'labFinContrat
+        '
+        Me.labFinContrat.AutoSize = True
+        Me.labFinContrat.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.labFinContrat.Location = New System.Drawing.Point(272, 2)
+        Me.labFinContrat.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.labFinContrat.Name = "labFinContrat"
+        Me.labFinContrat.Size = New System.Drawing.Size(182, 18)
+        Me.labFinContrat.TabIndex = 5
+        Me.labFinContrat.Text = "Date de fin de contrat :"
+        '
+        'labDebutContrat
+        '
+        Me.labDebutContrat.AutoSize = True
+        Me.labDebutContrat.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.labDebutContrat.Location = New System.Drawing.Point(31, 2)
+        Me.labDebutContrat.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.labDebutContrat.Name = "labDebutContrat"
+        Me.labDebutContrat.Size = New System.Drawing.Size(207, 18)
+        Me.labDebutContrat.TabIndex = 4
+        Me.labDebutContrat.Text = "Date de début de contrat :"
+        '
+        'dtDebutContrat
+        '
+        Me.dtDebutContrat.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.dtDebutContrat.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtDebutContrat.Location = New System.Drawing.Point(51, 22)
+        Me.dtDebutContrat.Margin = New System.Windows.Forms.Padding(4)
+        Me.dtDebutContrat.MaxDate = New Date(2050, 12, 31, 0, 0, 0, 0)
+        Me.dtDebutContrat.MinDate = New Date(1990, 1, 1, 0, 0, 0, 0)
+        Me.dtDebutContrat.Name = "dtDebutContrat"
+        Me.dtDebutContrat.Size = New System.Drawing.Size(187, 26)
+        Me.dtDebutContrat.TabIndex = 21
+        '
+        'labCheque
+        '
+        Me.labCheque.AutoSize = True
+        Me.labCheque.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.labCheque.Location = New System.Drawing.Point(4, 99)
+        Me.labCheque.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.labCheque.Name = "labCheque"
+        Me.labCheque.Size = New System.Drawing.Size(161, 18)
+        Me.labCheque.TabIndex = 5
+        Me.labCheque.Text = "Numéro de chèque :"
+        '
+        'labAcompte
+        '
+        Me.labAcompte.AutoSize = True
+        Me.labAcompte.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.labAcompte.Location = New System.Drawing.Point(4, 62)
+        Me.labAcompte.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.labAcompte.Name = "labAcompte"
+        Me.labAcompte.Size = New System.Drawing.Size(133, 18)
+        Me.labAcompte.TabIndex = 4
+        Me.labAcompte.Text = "Acompte versé :"
+        '
+        'btnSauvegarder
+        '
+        Me.btnSauvegarder.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.btnSauvegarder.Enabled = False
+        Me.btnSauvegarder.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSauvegarder.Location = New System.Drawing.Point(83, 586)
+        Me.btnSauvegarder.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnSauvegarder.Name = "btnSauvegarder"
+        Me.btnSauvegarder.Size = New System.Drawing.Size(173, 48)
+        Me.btnSauvegarder.TabIndex = 2
+        Me.btnSauvegarder.Text = "Sauvegarder"
+        Me.btnSauvegarder.UseVisualStyleBackColor = False
+        '
+        'btnRetour
+        '
+        Me.btnRetour.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.btnRetour.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRetour.Location = New System.Drawing.Point(312, 586)
+        Me.btnRetour.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnRetour.Name = "btnRetour"
+        Me.btnRetour.Size = New System.Drawing.Size(173, 48)
+        Me.btnRetour.TabIndex = 3
+        Me.btnRetour.Text = "Retour Menu"
+        Me.btnRetour.UseVisualStyleBackColor = False
         '
         'Inscription
         '
@@ -885,103 +908,99 @@ Partial Class Inscription
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Menu
         Me.ClientSize = New System.Drawing.Size(1111, 649)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.ButtonRetour)
-        Me.Controls.Add(Me.Sauvegarder)
-        Me.Controls.Add(Me.Panel4)
+        Me.Controls.Add(Me.btnRetour)
+        Me.Controls.Add(Me.btnSauvegarder)
+        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Inscription"
         Me.Text = "Inscription"
         Me.Panel1.ResumeLayout(False)
-        Me.PanelProfession.ResumeLayout(False)
-        Me.PanelProfession.PerformLayout()
+        Me.panParcours.ResumeLayout(False)
+        Me.panParcours.PerformLayout()
+        Me.panCoordonnees.ResumeLayout(False)
+        Me.panCoordonnees.PerformLayout()
+        Me.panIdentite.ResumeLayout(False)
+        Me.panIdentite.PerformLayout()
+        Me.panContact.ResumeLayout(False)
+        Me.panContact.PerformLayout()
         Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
-        Me.Panel5.ResumeLayout(False)
-        Me.Panel5.PerformLayout()
-        Me.Panel4.ResumeLayout(False)
-        Me.Panel8.ResumeLayout(False)
-        Me.Panel8.PerformLayout()
-        Me.Panel7.ResumeLayout(False)
-        Me.Panel7.PerformLayout()
-        Me.Panel6.ResumeLayout(False)
-        Me.Panel6.PerformLayout()
+        Me.panRenseign.ResumeLayout(False)
+        Me.panRenseign.PerformLayout()
+        Me.panPieces.ResumeLayout(False)
+        Me.panPieces.PerformLayout()
+        Me.panReglement.ResumeLayout(False)
+        Me.panReglement.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents Panel5 As Panel
-    Friend WithEvents TextBoxTelPro As TextBox
-    Friend WithEvents TextBoxTelPerso As TextBox
-    Friend WithEvents TextBoxMailPro As TextBox
-    Friend WithEvents TextBoxMailPerso As TextBox
-    Friend WithEvents LabelProtel As Label
-    Friend WithEvents LabelPersoTel As Label
-    Friend WithEvents LabelProMail As Label
-    Friend WithEvents LabelPerso As Label
-    Friend WithEvents PanelProfession As Panel
-    Friend WithEvents LabelDiplome As Label
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents LabelCP As Label
-    Friend WithEvents LabelPays As Label
-    Friend WithEvents LabelAdresse As Label
-    Friend WithEvents TextBoxNom As TextBox
-    Friend WithEvents TextBoxPrenom As TextBox
-    Friend WithEvents LabelPrenom As Label
-    Friend WithEvents LabelDateNaissance As Label
-    Friend WithEvents LabelNom As Label
-    Friend WithEvents LabelCivilite As Label
-    Friend WithEvents TextBoxAdresse As TextBox
+    Friend WithEvents panIdentite As Panel
+    Friend WithEvents panContact As Panel
+    Friend WithEvents txtTelPro As TextBox
+    Friend WithEvents txtTelPerso As TextBox
+    Friend WithEvents txtMailPro As TextBox
+    Friend WithEvents txtMailPerso As TextBox
+    Friend WithEvents labProTel As Label
+    Friend WithEvents labPersoTel As Label
+    Friend WithEvents labProMail As Label
+    Friend WithEvents labPerso As Label
+    Friend WithEvents panParcours As Panel
+    Friend WithEvents labDiplome As Label
+    Friend WithEvents panCoordonnees As Panel
+    Friend WithEvents labCP As Label
+    Friend WithEvents labPays As Label
+    Friend WithEvents labAdresse As Label
+    Friend WithEvents txtNom As TextBox
+    Friend WithEvents txtPrenom As TextBox
+    Friend WithEvents labPrenom As Label
+    Friend WithEvents labDateNaissance As Label
+    Friend WithEvents labNom As Label
+    Friend WithEvents labCivilite As Label
+    Friend WithEvents txtAdresse As TextBox
     Friend WithEvents LabelTel As Label
     Friend WithEvents LabelMail As Label
-    Friend WithEvents ComboBoxPays As ComboBox
-    Friend WithEvents ComboBoxCivilite As ComboBox
-    Friend WithEvents Panel4 As Panel
-    Friend WithEvents DateTimePickerDateDebut As DateTimePicker
-    Friend WithEvents LabelStatus As Label
-    Friend WithEvents LabelDateFinDeContrat As Label
-    Friend WithEvents LabelDateDebutContrat As Label
-    Friend WithEvents Panel7 As Panel
-    Friend WithEvents LabelLettreMotiv As Label
-    Friend WithEvents LabelCurri As Label
-    Friend WithEvents Panel6 As Panel
-    Friend WithEvents TextBoxNumeroCheque As TextBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents LabelAccompte As Label
-    Friend WithEvents ComboBoxSatus As ComboBox
-    Friend WithEvents DateTimePickerDateFin As DateTimePicker
-    Friend WithEvents RadioButtonOuiCurry As RadioButton
-    Friend WithEvents RadioButtonOuiCurri As RadioButton
-    Friend WithEvents RadioButtonOuiMotiv As RadioButton
-    Friend WithEvents RadioButtonNonCurry As RadioButton
-    Friend WithEvents RadioButtonNonMotiv As RadioButton
-    Friend WithEvents Sauvegarder As Button
-    Friend WithEvents ButtonRetour As Button
-    Friend WithEvents LabelVille As Label
-    Friend WithEvents TextBoxVille As TextBox
-    Friend WithEvents TextBoxCP As TextBox
-    Friend WithEvents TextBoxDate As TextBox
-    Friend WithEvents LabelDE As Label
-    Friend WithEvents ComboBoxNE As ComboBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents ComboBoxDE As ComboBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents LabelAutre As Label
-    Friend WithEvents TextBoxProfession As TextBox
-    Friend WithEvents LabelProfession As Label
-    Friend WithEvents Panel8 As Panel
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents RadioButton5 As RadioButton
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents RadioButton2 As RadioButton
-    Friend WithEvents RadioButton1 As RadioButton
-    Friend WithEvents Button1 As Button
+    Friend WithEvents cbPays As ComboBox
+    Friend WithEvents cbCivilite As ComboBox
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents dtDebutContrat As DateTimePicker
+    Friend WithEvents labStatut As Label
+    Friend WithEvents labFinContrat As Label
+    Friend WithEvents labDebutContrat As Label
+    Friend WithEvents panPieces As Panel
+    Friend WithEvents labMotiv As Label
+    Friend WithEvents labCV As Label
+    Friend WithEvents panReglement As Panel
+    Friend WithEvents txtCheque As TextBox
+    Friend WithEvents labCheque As Label
+    Friend WithEvents labAcompte As Label
+    Friend WithEvents cbStatut As ComboBox
+    Friend WithEvents dtFinContrat As DateTimePicker
+    Friend WithEvents rbOuiCV As RadioButton
+    Friend WithEvents rbOuiMotiv As RadioButton
+    Friend WithEvents rbNonCV As RadioButton
+    Friend WithEvents rbNonMotiv As RadioButton
+    Friend WithEvents btnSauvegarder As Button
+    Friend WithEvents btnRetour As Button
+    Friend WithEvents labVille As Label
+    Friend WithEvents txtVille As TextBox
+    Friend WithEvents txtCP As TextBox
+    Friend WithEvents txtDateNaissance As TextBox
+    Friend WithEvents labEmploi As Label
+    Friend WithEvents cbEtudes As ComboBox
+    Friend WithEvents txtComplement As TextBox
+    Friend WithEvents labComplement As Label
+    Friend WithEvents cbEmploi As ComboBox
+    Friend WithEvents txtAutre As TextBox
+    Friend WithEvents labAutre As Label
+    Friend WithEvents txtProfession As TextBox
+    Friend WithEvents labProfession As Label
+    Friend WithEvents panRenseign As Panel
+    Friend WithEvents cbFidelite As ComboBox
+    Friend WithEvents cbFinancement As ComboBox
+    Friend WithEvents labFidelite As Label
+    Friend WithEvents labFinancement As Label
+    Friend WithEvents rbAcompteOui As RadioButton
+    Friend WithEvents rbOuiAcompte As RadioButton
 End Class

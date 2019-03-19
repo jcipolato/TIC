@@ -1,4 +1,5 @@
 ﻿Imports System.Globalization
+Imports Microsoft.Office.Interop
 Imports Microsoft.Win32
 
 Public Class Inscription
@@ -62,14 +63,6 @@ Public Class Inscription
         Next
     End Sub
 
-    Private Sub btnSauvegarder_Click(sender As Object, e As EventArgs) Handles btnSauvegarder.Click
-        If Not IsValidEmail(txtMailPerso.Text) And Not IsValidEmail(txtMailPro.Text) Then
-            labErreurMail.Visible = True
-        ElseIf txtTelPerso.Text.Length < 10 And txtTelPro.Text.Length < 10 Then
-            labErreurTel.Visible = True
-        End If
-    End Sub
-
     Private Sub cbEtudes_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbEtudes.SelectedIndexChanged
         If cbEtudes.SelectedItem.ToString = "Autre" Then
             labAutre.Visible = True
@@ -81,6 +74,13 @@ Public Class Inscription
     End Sub
 
     Private Sub btnSauvegarder_Click(sender As Object, e As EventArgs) Handles btnSauvegarder.Click
+
+        If Not IsValidEmail(txtMailPerso.Text) And Not IsValidEmail(txtMailPro.Text) Then
+            labErreurMail.Visible = True
+        ElseIf txtTelPerso.Text.Length < 10 And txtTelPro.Text.Length < 10 Then
+            labErreurTel.Visible = True
+        End If
+
         Dim dossier As New Dossier()
         dossier.p_civilite = cbCivilite.SelectedValue
         dossier.p_nom = txtNom.Text
@@ -125,21 +125,33 @@ Public Class Inscription
         dossier.p_financement = cbFinancement.SelectedValue
         dossier.p_fidelite = cbFidelite.SelectedValue
 
+        'Appeler fonction Private qui exporte dans fichier Excel
+
+    End Sub
+
+    Private Sub addExcel()
+
+        'OUVERTURE EXCEL
+        ' Dim path As String = "C:\UBDXFORM"
+        ' Dim xls As Excel.Application = New Excel.Application()
+        ' xls.Workbooks.Open(path)
+
+        ' Dim workbook As Excel.Workbook
+        ' workbook = xls.Workbooks(1)
+
+        '  Dim worksheet As Excel.Worksheet = CType(workbook.Sheets(1), Excel.Worksheet)
+
+        'Brouillon :
+        'Inscription i : worksheet.Cells(i, 0).Value =civiliité
+        '                               ...     
 
 
-
-
-
-
+        'FERMETURE EXCEL
 
 
 
 
     End Sub
 
-    Private Sub rbOuiCV_CheckedChanged(sender As Object, e As EventArgs) Handles rbOuiCV.CheckedChanged
-        ' MessageBox pour afficher p_CVOuiNon
 
-
-    End Sub
 End Class

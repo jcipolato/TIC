@@ -54,6 +54,8 @@ Public Class Inscription
             labErreurMail.Visible = True
         ElseIf txtTelPerso.Text.Length < 10 And txtTelPro.Text.Length < 10 Then
             labErreurTel.Visible = True
+        Else
+            FillDossier()
         End If
     End Sub
 
@@ -67,7 +69,7 @@ Public Class Inscription
         End If
     End Sub
 
-    Private Sub btnSauvegarder_Click(sender As Object, e As EventArgs) Handles btnSauvegarder.Click
+    Private Sub FillDossier()
         Dim dossier As New Dossier()
         dossier.p_civilite = cbCivilite.SelectedValue
         dossier.p_nom = txtNom.Text
@@ -85,15 +87,13 @@ Public Class Inscription
         dossier.p_domaineEmploi = cbEmploi.SelectedValue
         dossier.p_mailPerso = txtMailPerso.Text
         dossier.p_mailPro = txtMailPro.Text
-        dossier.p_telPerso = txtTelPerso.Text 'pas de conversion à faire ?
+        dossier.p_telPerso = txtTelPerso.Text
         dossier.p_telPro = txtTelPro.Text
 
         If rbOuiCV.Checked Then
             dossier.p_cvOuiNon = True
         Else dossier.p_cvOuiNon = False
         End If
-
-        'dossier.p_cvOuiNon = rbOuiCV.Checked Or rbNonCV.Checked à tester
 
         If rbOuiMotiv.Checked Then
             dossier.p_lettreMotivationOuiNon = True
@@ -111,22 +111,5 @@ Public Class Inscription
         dossier.p_numeroCheque = txtCheque.Text
         dossier.p_financement = cbFinancement.SelectedValue
         dossier.p_fidelite = cbFidelite.SelectedValue
-
-
-
-
-
-
-
-
-
-
-
-    End Sub
-
-    Private Sub rbOuiCV_CheckedChanged(sender As Object, e As EventArgs) Handles rbOuiCV.CheckedChanged
-        ' MessageBox pour afficher p_CVOuiNon
-
-
     End Sub
 End Class

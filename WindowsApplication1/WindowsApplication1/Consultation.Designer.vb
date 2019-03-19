@@ -313,7 +313,7 @@ Partial Class Consultation
         '
         'txtRechercher
         '
-        Me.txtRechercher.Location = New System.Drawing.Point(136, 82)
+        Me.txtRechercher.Location = New System.Drawing.Point(135, 83)
         Me.txtRechercher.Name = "txtRechercher"
         Me.txtRechercher.Size = New System.Drawing.Size(319, 22)
         Me.txtRechercher.TabIndex = 10

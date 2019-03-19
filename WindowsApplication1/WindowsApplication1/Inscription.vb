@@ -4,7 +4,7 @@ Imports Microsoft.Win32
 
 Public Class Inscription
     Private Sub Inscription_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        SetCountriesList()
+        CountryList()
         SwitchButtonState()
     End Sub
 
@@ -27,29 +27,16 @@ Public Class Inscription
         End Try
     End Function
 
-    Private Sub SetCountriesList()
-        Dim list = CountryList().Values
-        For Each country In list
-            cbPays.Items.Add(country)
-        Next
-    End Sub
-
-    Public Function CountryList() As SortedList
-        Dim slCountry As SortedList = New SortedList()
-        Dim Key As String
-        Dim Value As String
-
+    Public Sub CountryList()
         For Each info In CultureInfo.GetCultures(CultureTypes.SpecificCultures)
             Dim ri As RegionInfo = New RegionInfo(info.LCID)
-            If Not (slCountry.Contains(ri.TwoLetterISORegionName)) Then
-                Value = ri.DisplayName
-                Key = ri.TwoLetterISORegionName
-                slCountry.Add(Key, Value)
+            If Not (cbPays.Items.Contains(ri.DisplayName)) Then
+                cbPays.Items.Add(ri.DisplayName)
             End If
         Next
-        slCountry.RemoveAt(0)
-        Return slCountry
-    End Function
+
+        cbPays.Items.RemoveAt(0)
+    End Sub
 
     Private Sub SwitchButtonState()
         Dim controls As Control() = {txtNom, txtPrenom, txtAdresse, txtCP, txtProfession,

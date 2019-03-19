@@ -85,7 +85,7 @@ Public Class Inscription
         dossier.p_civilite = cbCivilite.SelectedValue
         dossier.p_nom = txtNom.Text
         dossier.p_prenom = txtPrenom.Text
-        dossier.p_dateNaissance = txtDateNaissance.Text
+        dossier.p_dateNaissance = dtNaissance.Text
         dossier.p_adresse = txtAdresse.Text
         dossier.p_complementAdresse = txtComplement.Text
         dossier.p_codePostal = txtCP.Text
@@ -116,7 +116,7 @@ Public Class Inscription
         dossier.p_dateDebutContrat = dtDebutContrat.Value
         dossier.p_dateFinContrat = dtFinContrat.Value
 
-        If rbAcompteOui.Checked Then
+        If rbOuiAcompte.Checked Then
             dossier.p_accompteOuiNon = True
         Else dossier.p_accompteOuiNon = False
         End If

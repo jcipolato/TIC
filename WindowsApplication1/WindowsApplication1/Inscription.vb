@@ -113,8 +113,8 @@ Public Class Inscription
         dossier.p_financement = cbFinancement.SelectedValue
         dossier.p_fidelite = cbFidelite.SelectedValue
 
-        'Appeler fonction Private qui exporte dans fichier Excel
 
+        'Appeler fonction Private qui exporte dans fichier Excel
     End Sub
 
     Private Sub addExcel()

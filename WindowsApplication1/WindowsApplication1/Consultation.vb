@@ -23,12 +23,4 @@
             btnGenerer.Enabled = False
         End If
     End Sub
-
-    Private Sub txtRechercher_TextChanged(sender As Object, e As EventArgs) Handles txtRechercher.TextChanged
-        MessageBox.Show(dtgDossiers.SelectedRows.Count)
-    End Sub
-
-    Private Sub Consultation_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class

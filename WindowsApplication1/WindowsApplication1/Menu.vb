@@ -11,7 +11,7 @@ Public Class Menu
 
     End Sub
 
-    Private Sub ButtonConsultaion_Click(sender As Object, e As EventArgs) Handles btnConsultation.Click
+    Private Sub ButtonConsultation_Click(sender As Object, e As EventArgs) Handles btnConsultation.Click
         Consultation.Show()
 
     End Sub

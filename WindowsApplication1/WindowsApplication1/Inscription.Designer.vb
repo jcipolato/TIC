@@ -334,6 +334,7 @@ Partial Class Inscription
         Me.cbPays.Margin = New System.Windows.Forms.Padding(4)
         Me.cbPays.Name = "cbPays"
         Me.cbPays.Size = New System.Drawing.Size(200, 26)
+        Me.cbPays.Sorted = True
         Me.cbPays.TabIndex = 8
         '
         'txtAdresse
@@ -754,6 +755,7 @@ Partial Class Inscription
         'rbNonMotiv
         '
         Me.rbNonMotiv.AutoSize = True
+        Me.rbNonMotiv.Checked = True
         Me.rbNonMotiv.Font = New System.Drawing.Font("Verdana", 9.0!)
         Me.rbNonMotiv.Location = New System.Drawing.Point(111, 51)
         Me.rbNonMotiv.Margin = New System.Windows.Forms.Padding(4)
@@ -795,13 +797,13 @@ Partial Class Inscription
         Me.rbOuiCV.Name = "rbOuiCV"
         Me.rbOuiCV.Size = New System.Drawing.Size(53, 22)
         Me.rbOuiCV.TabIndex = 17
-        Me.rbOuiCV.TabStop = True
         Me.rbOuiCV.Text = "Oui"
         Me.rbOuiCV.UseVisualStyleBackColor = True
         '
         'rbNonCV
         '
         Me.rbNonCV.AutoSize = True
+        Me.rbNonCV.Checked = True
         Me.rbNonCV.Font = New System.Drawing.Font("Verdana", 9.0!)
         Me.rbNonCV.Location = New System.Drawing.Point(111, 50)
         Me.rbNonCV.Margin = New System.Windows.Forms.Padding(4)
@@ -834,6 +836,7 @@ Partial Class Inscription
         'rbNonAcompte
         '
         Me.rbNonAcompte.AutoSize = True
+        Me.rbNonAcompte.Checked = True
         Me.rbNonAcompte.Font = New System.Drawing.Font("Verdana", 9.0!)
         Me.rbNonAcompte.Location = New System.Drawing.Point(265, 64)
         Me.rbNonAcompte.Margin = New System.Windows.Forms.Padding(4)

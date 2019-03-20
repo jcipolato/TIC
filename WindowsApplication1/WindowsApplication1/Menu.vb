@@ -71,7 +71,6 @@ Public Class Menu
         releaseObject(workbook)
         releaseObject(xls)
 
-        AddFileSecurity(path + "\UBDXFORM-backup.xlsx", Environment.UserName, FileSystemRights.ReadData, AccessControlType.Allow)
         MessageBox.Show(Messages.Backup_success)
     End Sub
 
@@ -84,11 +83,5 @@ Public Class Menu
         Finally
             GC.Collect()
         End Try
-    End Sub
-
-    Private Sub AddFileSecurity(filePath As String, account As String, rights As FileSystemRights, controlType As AccessControlType)
-        Dim fSecurity As FileSecurity = File.GetAccessControl(filePath)
-        fSecurity.AddAccessRule(New FileSystemAccessRule(account, rights, controlType))
-        File.SetAccessControl(filePath, fSecurity)
     End Sub
 End Class

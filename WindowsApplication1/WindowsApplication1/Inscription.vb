@@ -115,23 +115,64 @@ Public Class Inscription
 
 
         'Appeler fonction Private qui exporte dans fichier Excel
+        addExcel()
+
     End Sub
 
     Private Sub addExcel()
 
         'OUVERTURE EXCEL
-        ' Dim path As String = "C:\UBDXFORM"
-        ' Dim xls As Excel.Application = New Excel.Application()
-        ' xls.Workbooks.Open(path)
+        Dim xls As Excel.Application = New Excel.Application()
 
-        ' Dim workbook As Excel.Workbook
-        ' workbook = xls.Workbooks(1)
+        If xls Is Nothing Then
+            MessageBox.Show(My.Resources.Messages.Excel_BadVersion)
+            Return
+        End If
+        Dim workbook As Excel.Workbook = xls.Workbooks.Open("C:\UBDXFORM\UBDXFORM-backup.xlsx")
+        Dim worksheet As Excel.Worksheet = CType(workbook.Sheets(1), Excel.Worksheet)
 
-        '  Dim worksheet As Excel.Worksheet = CType(workbook.Sheets(1), Excel.Worksheet)
+        For i = 1 To worksheet.UsedRange.Rows.Count
+            worksheet.Cells(i, 1) = cbCivilite.SelectedValue
+            worksheet.Cells(i, 2) = txtNom.Text
+            worksheet.Cells(i, 3) = txtPrenom.Text
+            worksheet.Cells(i, 4) = dtNaissance.Text
+            worksheet.Cells(i, 5) = txtAdresse.Text
+            worksheet.Cells(i, 6) = txtComplement.Text
+            worksheet.Cells(i, 7) = txtCP.Text
+            worksheet.Cells(i, 8) = txtVille.Text
+            worksheet.Cells(i, 9) = cbPays.SelectedValue
+            worksheet.Cells(i, 10) = cbStatut.SelectedValue
+            worksheet.Cells(i, 11) = cbEtudes.SelectedValue
+            worksheet.Cells(i, 12) = txtAutre.Text
+            worksheet.Cells(i, 13) = txtProfession.Text
+            worksheet.Cells(i, 14) = cbEmploi.SelectedValue
+            worksheet.Cells(i, 15) = txtMailPerso.Text
+            worksheet.Cells(i, 16) = txtMailPro.Text
+            worksheet.Cells(i, 17) = txtTelPerso.Text
+            worksheet.Cells(i, 18) = txtTelPro.Text
 
-        'Brouillon :
-        'Inscription i : worksheet.Cells(i, 0).Value =civiliité
-        '                               ...     
+            If rbOuiCV.Checked Then
+                worksheet.Cells(i, 19) = True
+            Else worksheet.Cells(i, 19) = False
+            End If
+
+            If rbOuiMotiv.Checked Then
+                worksheet.Cells(i, 20) = True
+            Else worksheet.Cells(i, 20) = False
+            End If
+
+            worksheet.Cells(i, 21) = dtDebutContrat.Value
+            worksheet.Cells(i, 22) = dtFinContrat.Value
+
+            If rbOuiAcompte.Checked Then
+                worksheet.Cells(i, 23) = True
+            Else worksheet.Cells(i, 23) = False
+            End If
+
+            worksheet.Cells(i, 24) = txtCheque.Text
+            worksheet.Cells(i, 25) = cbFinancement.SelectedValue
+            worksheet.Cells(i, 26) = cbFidelite.SelectedValue
+        Next
 
 
         'FERMETURE EXCEL

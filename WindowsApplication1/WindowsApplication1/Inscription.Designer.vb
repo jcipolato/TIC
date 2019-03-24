@@ -23,6 +23,8 @@ Partial Class Inscription
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.labErreurDateNaissance = New System.Windows.Forms.Label()
+        Me.labErreurCP = New System.Windows.Forms.Label()
         Me.panParcours = New System.Windows.Forms.Panel()
         Me.txtAutre = New System.Windows.Forms.TextBox()
         Me.labAutre = New System.Windows.Forms.Label()
@@ -94,6 +96,7 @@ Partial Class Inscription
         Me.labAcompte = New System.Windows.Forms.Label()
         Me.btnSauvegarder = New System.Windows.Forms.Button()
         Me.btnRetour = New System.Windows.Forms.Button()
+        Me.labErreurDatesContrat = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.panParcours.SuspendLayout()
         Me.panCoordonnees.SuspendLayout()
@@ -110,6 +113,8 @@ Partial Class Inscription
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.labErreurDateNaissance)
+        Me.Panel1.Controls.Add(Me.labErreurCP)
         Me.Panel1.Controls.Add(Me.panParcours)
         Me.Panel1.Controls.Add(Me.panCoordonnees)
         Me.Panel1.Controls.Add(Me.panIdentite)
@@ -118,6 +123,30 @@ Partial Class Inscription
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(519, 563)
         Me.Panel1.TabIndex = 0
+        '
+        'labErreurDateNaissance
+        '
+        Me.labErreurDateNaissance.AutoSize = True
+        Me.labErreurDateNaissance.Font = New System.Drawing.Font("Verdana", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labErreurDateNaissance.ForeColor = System.Drawing.Color.Red
+        Me.labErreurDateNaissance.Location = New System.Drawing.Point(98, 0)
+        Me.labErreurDateNaissance.Name = "labErreurDateNaissance"
+        Me.labErreurDateNaissance.Size = New System.Drawing.Size(323, 18)
+        Me.labErreurDateNaissance.TabIndex = 20
+        Me.labErreurDateNaissance.Text = "La personne inscrite doit être majeure"
+        Me.labErreurDateNaissance.Visible = False
+        '
+        'labErreurCP
+        '
+        Me.labErreurCP.AutoSize = True
+        Me.labErreurCP.Font = New System.Drawing.Font("Verdana", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labErreurCP.ForeColor = System.Drawing.Color.Red
+        Me.labErreurCP.Location = New System.Drawing.Point(98, 174)
+        Me.labErreurCP.Name = "labErreurCP"
+        Me.labErreurCP.Size = New System.Drawing.Size(336, 18)
+        Me.labErreurCP.TabIndex = 19
+        Me.labErreurCP.Text = "Le code postal doit comporter 5 chiffres"
+        Me.labErreurCP.Visible = False
         '
         'panParcours
         '
@@ -403,11 +432,12 @@ Partial Class Inscription
         Me.dtNaissance.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtNaissance.Location = New System.Drawing.Point(182, 112)
         Me.dtNaissance.Margin = New System.Windows.Forms.Padding(4)
-        Me.dtNaissance.MaxDate = New Date(2050, 12, 31, 0, 0, 0, 0)
+        Me.dtNaissance.MaxDate = New Date(2019, 3, 24, 0, 0, 0, 0)
         Me.dtNaissance.MinDate = New Date(1990, 1, 1, 0, 0, 0, 0)
         Me.dtNaissance.Name = "dtNaissance"
         Me.dtNaissance.Size = New System.Drawing.Size(163, 26)
         Me.dtNaissance.TabIndex = 22
+        Me.dtNaissance.Value = New Date(1990, 1, 1, 0, 0, 0, 0)
         '
         'cbCivilite
         '
@@ -510,9 +540,9 @@ Partial Class Inscription
         Me.labErreurTel.ForeColor = System.Drawing.Color.Red
         Me.labErreurTel.Location = New System.Drawing.Point(135, 114)
         Me.labErreurTel.Name = "labErreurTel"
-        Me.labErreurTel.Size = New System.Drawing.Size(305, 18)
+        Me.labErreurTel.Size = New System.Drawing.Size(316, 18)
         Me.labErreurTel.TabIndex = 19
-        Me.labErreurTel.Text = "Le numéro de téléphone est invalide"
+        Me.labErreurTel.Text = "Le numéro de téléphone est incorrect"
         Me.labErreurTel.Visible = False
         '
         'labErreurMail
@@ -522,9 +552,9 @@ Partial Class Inscription
         Me.labErreurMail.ForeColor = System.Drawing.Color.Red
         Me.labErreurMail.Location = New System.Drawing.Point(100, 7)
         Me.labErreurMail.Name = "labErreurMail"
-        Me.labErreurMail.Size = New System.Drawing.Size(311, 18)
+        Me.labErreurMail.Size = New System.Drawing.Size(322, 18)
         Me.labErreurMail.TabIndex = 18
-        Me.labErreurMail.Text = "Le format d'adresse mail est invalide"
+        Me.labErreurMail.Text = "Le format d'adresse mail est incorrect"
         Me.labErreurMail.Visible = False
         '
         'LabelTel
@@ -635,6 +665,7 @@ Partial Class Inscription
         'Panel2
         '
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.labErreurDatesContrat)
         Me.Panel2.Controls.Add(Me.panRenseign)
         Me.Panel2.Controls.Add(Me.panContact)
         Me.Panel2.Controls.Add(Me.panPieces)
@@ -962,6 +993,18 @@ Partial Class Inscription
         Me.btnRetour.Text = "Retour"
         Me.btnRetour.UseVisualStyleBackColor = False
         '
+        'labErreurDatesContrat
+        '
+        Me.labErreurDatesContrat.AutoSize = True
+        Me.labErreurDatesContrat.Font = New System.Drawing.Font("Verdana", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labErreurDatesContrat.ForeColor = System.Drawing.Color.Red
+        Me.labErreurDatesContrat.Location = New System.Drawing.Point(0, 438)
+        Me.labErreurDatesContrat.Name = "labErreurDatesContrat"
+        Me.labErreurDatesContrat.Size = New System.Drawing.Size(530, 18)
+        Me.labErreurDatesContrat.TabIndex = 21
+        Me.labErreurDatesContrat.Text = "La date de fin de contrat doit être supérieure à la date de début"
+        Me.labErreurDatesContrat.Visible = False
+        '
         'Inscription
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -976,6 +1019,7 @@ Partial Class Inscription
         Me.Name = "Inscription"
         Me.Text = "Inscription"
         Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.panParcours.ResumeLayout(False)
         Me.panParcours.PerformLayout()
         Me.panCoordonnees.ResumeLayout(False)
@@ -985,6 +1029,7 @@ Partial Class Inscription
         Me.panContact.ResumeLayout(False)
         Me.panContact.PerformLayout()
         Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.panRenseign.ResumeLayout(False)
         Me.panRenseign.PerformLayout()
         Me.panPieces.ResumeLayout(False)
@@ -1070,4 +1115,7 @@ Partial Class Inscription
     Friend WithEvents grpMotiv As GroupBox
     Friend WithEvents grpCV As GroupBox
     Friend WithEvents dtNaissance As DateTimePicker
+    Friend WithEvents labErreurCP As Label
+    Friend WithEvents labErreurDateNaissance As Label
+    Friend WithEvents labErreurDatesContrat As Label
 End Class

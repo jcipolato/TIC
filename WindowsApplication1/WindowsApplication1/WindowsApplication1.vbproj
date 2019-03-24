@@ -72,6 +72,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Common.vb" />
     <Compile Include="Classes\Dossier.vb" />
     <Compile Include="Consultation.Designer.vb">
       <DependentUpon>Consultation.vb</DependentUpon>
@@ -83,12 +84,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Rechercher.Designer.vb">
-      <DependentUpon>Rechercher.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Rechercher.vb">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Inscription.Designer.vb">
       <DependentUpon>Inscription.vb</DependentUpon>
@@ -134,9 +129,6 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Rechercher.resx">
-      <DependentUpon>Rechercher.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Messages.resx">
       <CustomToolNamespace>My.Resources</CustomToolNamespace>

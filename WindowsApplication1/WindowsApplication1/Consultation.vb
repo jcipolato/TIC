@@ -1,5 +1,6 @@
 ﻿Imports System.IO
 Imports Microsoft.Office.Interop
+Imports WindowsApplication1.Common
 Imports WindowsApplication1.My.Resources
 
 Public Class Consultation
@@ -16,10 +17,19 @@ Public Class Consultation
         Me.Hide()
     End Sub
 
+    Private Sub btnSupprimer_Click(sender As Object, e As EventArgs) Handles btnSupprimer.Click
+        If dtgDossiers.SelectedRows.Count > 0 Then
+            MessageBox.Show(Messages.DeleteDossier_Message, Messages.DeleteDossier_Title, MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            If DialogResult.Yes Then
+                DeleteDossier(dtgDossiers.SelectedRows)
+            End If
+        End If
+    End Sub
+
     Private Sub dtgDossiers_SelectionChanged(sender As Object, e As EventArgs) Handles dtgDossiers.SelectionChanged
         If dtgDossiers.SelectedRows.Count > 1 Then
             btnModifier.Enabled = False
-            btnSupprimer.Enabled = True
+            btnSupprimer.Enabled = False
             btnGenerer.Enabled = True
         ElseIf dtgDossiers.SelectedRows.Count > 0 Then
             btnGenerer.Enabled = True
@@ -34,12 +44,8 @@ Public Class Consultation
 
     Private Sub ReadBackup()
         Dim data As List(Of Dossier) = New List(Of Dossier)()
-        Dim foundFile As String = String.Empty
-        For Each currentFile As String In My.Computer.FileSystem.GetFiles("C:\UBDXFORM\", FileIO.SearchOption.SearchAllSubDirectories, "*.xlsx")
-            foundFile = currentFile
-        Next
 
-        If String.IsNullOrEmpty(foundFile) Then
+        If FileNotFound("C:\UBDXFORM\") = True Then
             MessageBox.Show(Messages.Backup_errorMessage, Messages.Backup_errorTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
             Dim xls As Excel.Application = New Excel.Application()
@@ -53,6 +59,7 @@ Public Class Consultation
 
             For i = 1 To worksheet.UsedRange.Rows.Count
                 Dim dossier As Dossier = New Dossier()
+
                 dossier.p_civilite = DirectCast(worksheet.Cells(i, 1), Excel.Range).Value
                 dossier.p_nom = DirectCast(worksheet.Cells(i, 2), Excel.Range).Value
                 dossier.p_prenom = DirectCast(worksheet.Cells(i, 3), Excel.Range).Value
@@ -74,7 +81,7 @@ Public Class Consultation
                 dossier.p_lettreMotivationOuiNon = DirectCast(worksheet.Cells(i, 19), Excel.Range).Value
                 dossier.p_dateDebutContrat = DirectCast(worksheet.Cells(i, 20), Excel.Range).Value
                 dossier.p_dateFinContrat = DirectCast(worksheet.Cells(i, 21), Excel.Range).Value
-                dossier.p_accompteOuiNon = DirectCast(worksheet.Cells(i, 22), Excel.Range).Value
+                dossier.p_acompteOuiNon = DirectCast(worksheet.Cells(i, 22), Excel.Range).Value
                 dossier.p_financement = DirectCast(worksheet.Cells(i, 23), Excel.Range).Value
                 dossier.p_numeroCheque = DirectCast(worksheet.Cells(i, 24), Excel.Range).Value
                 dossier.p_fidelite = DirectCast(worksheet.Cells(i, 25), Excel.Range).Value
@@ -85,21 +92,38 @@ Public Class Consultation
             xls.Quit()
 
             DossierBindingSource.DataSource = data
-
             releaseObject(worksheet)
             releaseObject(workbook)
             releaseObject(xls)
         End If
     End Sub
 
-    Private Sub releaseObject(ByVal obj As Object)
-        Try
-            Runtime.InteropServices.Marshal.ReleaseComObject(obj)
-            obj = Nothing
-        Catch ex As Exception
-            obj = Nothing
-        Finally
-            GC.Collect()
-        End Try
+    Private Sub DeleteDossier(row As DataGridViewSelectedRowCollection)
+        If FileNotFound("C:\UBDXFORM\") = True Then
+            MessageBox.Show(Messages.Backup_errorMessage, Messages.Backup_errorTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Else
+            Dim xls As Excel.Application = New Excel.Application()
+
+            If xls Is Nothing Then
+                MessageBox.Show(Messages.Excel_BadVersion)
+                Return
+            End If
+            Dim workbook As Excel.Workbook = xls.Workbooks.Open("C:\UBDXFORM\UBDXFORM-backup.xlsx")
+            Dim worksheet As Excel.Worksheet = CType(workbook.Sheets(1), Excel.Worksheet)
+
+            worksheet.UsedRange.Rows(dtgDossiers.CurrentCell.RowIndex + 1).Delete()
+
+            workbook.Save()
+            workbook.Close()
+            xls.Quit()
+
+            releaseObject(worksheet)
+            releaseObject(workbook)
+            releaseObject(xls)
+
+            For Each item In dtgDossiers.SelectedRows
+                dtgDossiers.Rows.RemoveAt(item.Index)
+            Next
+        End If
     End Sub
 End Class

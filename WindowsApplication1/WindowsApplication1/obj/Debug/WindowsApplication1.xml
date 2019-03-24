@@ -8,18 +8,23 @@ WindowsApplication1
 <members>
 <member name="T:WindowsApplication1.My.Resources.Resources">
 <summary>
-  A strongly-typed resource class, for looking up localized strings, etc.
+  Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées.
 </summary>
 </member>
 <member name="P:WindowsApplication1.My.Resources.Resources.ResourceManager">
 <summary>
-  Returns the cached ResourceManager instance used by this class.
+  Retourne l'instance ResourceManager mise en cache utilisée par cette classe.
 </summary>
 </member>
 <member name="P:WindowsApplication1.My.Resources.Resources.Culture">
 <summary>
-  Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
+  Remplace la propriété CurrentUICulture du thread actuel pour toutes
+  les recherches de ressources à l'aide de cette classe de ressource fortement typée.
+</summary>
+</member>
+<member name="P:WindowsApplication1.My.Resources.Resources.ubdx_logo">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="T:WindowsApplication1.My.Resources.Messages">
@@ -38,9 +43,29 @@ WindowsApplication1
   les recherches de ressources à l'aide de cette classe de ressource fortement typée.
 </summary>
 </member>
+<member name="P:WindowsApplication1.My.Resources.Messages.Backup_errorMessage">
+<summary>
+  Recherche une chaîne localisée semblable à Le fichier de sauvegarde est introuvable ! Continuer pour générer un nouveau fichier ?.
+</summary>
+</member>
+<member name="P:WindowsApplication1.My.Resources.Messages.Backup_errorTitle">
+<summary>
+  Recherche une chaîne localisée semblable à Erreur: Fichier de sauvegarde introuvable.
+</summary>
+</member>
 <member name="P:WindowsApplication1.My.Resources.Messages.Backup_success">
 <summary>
   Recherche une chaîne localisée semblable à Le fichier de sauvegarde a été créé avec succès !.
+</summary>
+</member>
+<member name="P:WindowsApplication1.My.Resources.Messages.DeleteDossier_Message">
+<summary>
+  Recherche une chaîne localisée semblable à Voulez-vous vraiment supprimer ce dossier ?.
+</summary>
+</member>
+<member name="P:WindowsApplication1.My.Resources.Messages.DeleteDossier_Title">
+<summary>
+  Recherche une chaîne localisée semblable à Supprimer un dossier.
 </summary>
 </member>
 <member name="P:WindowsApplication1.My.Resources.Messages.Excel_BadVersion">
@@ -51,13 +76,18 @@ Veuillez installer la mise à jour vers Microsoft Excel 16.x.
 </member>
 <member name="P:WindowsApplication1.My.Resources.Messages.FirstOpening_Message">
 <summary>
-  Recherche une chaîne localisée semblable à Bienvenue sur ... 
+  Recherche une chaîne localisée semblable à Bienvenue sur UBDXFORM
 Veuillez sélectionner l&apos;emplacement de sauvegarde de l&apos;application. Vous pourrez modifier votre choix ultérieurement dans l&apos;onglet Configuration.
 </summary>
 </member>
 <member name="P:WindowsApplication1.My.Resources.Messages.FirstOpening_Title">
 <summary>
-  Recherche une chaîne localisée semblable à Bienvenue sur ... !.
+  Recherche une chaîne localisée semblable à Bienvenue sur UBDXFORM.
+</summary>
+</member>
+<member name="P:WindowsApplication1.My.Resources.Messages.Inscription_Success">
+<summary>
+  Recherche une chaîne localisée semblable à L&apos;inscription a été ajoutée avec succès !.
 </summary>
 </member>
 </members>

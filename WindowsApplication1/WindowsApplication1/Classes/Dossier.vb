@@ -35,7 +35,7 @@
         End Set
     End Property
 
-    Private dateNaissance As DateTime
+    Private dateNaissance As Date
     Public Property p_dateNaissance() As String
         Get
             Return dateNaissance
@@ -95,13 +95,13 @@
         End Set
     End Property
 
-    Private Statut As String
-    Public Property p_Statut() As String
+    Private statut As String
+    Public Property p_statut() As String
         Get
-            Return Statut
+            Return statut
         End Get
         Set(ByVal value As String)
-            Statut = value
+            statut = value
         End Set
     End Property
 
@@ -205,42 +205,42 @@
         End Set
     End Property
 
-    Private dateDebutContrat As DateTime
-    Public Property p_dateDebutContrat() As DateTime
+    Private dateDebutContrat As Date
+    Public Property p_dateDebutContrat() As Date
         Get
             Return dateDebutContrat
         End Get
-        Set(ByVal value As DateTime)
+        Set(ByVal value As Date)
             dateDebutContrat = value
         End Set
     End Property
 
-    Private dateFinContrat As DateTime
-    Public Property p_dateFinContrat() As DateTime
+    Private dateFinContrat As Date
+    Public Property p_dateFinContrat() As Date
         Get
             Return dateFinContrat
         End Get
-        Set(ByVal value As DateTime)
+        Set(ByVal value As Date)
             dateFinContrat = value
         End Set
     End Property
 
-    Private accompteOuiNon As Boolean
-    Public Property p_accompteOuiNon() As Boolean
+    Private acompteOuiNon As Boolean
+    Public Property p_acompteOuiNon() As Boolean
         Get
-            Return accompteOuiNon
+            Return acompteOuiNon
         End Get
         Set(ByVal value As Boolean)
-            accompteOuiNon = value
+            acompteOuiNon = value
         End Set
     End Property
 
-    Private numeroCheque As Integer
-    Public Property p_numeroCheque() As Integer
+    Private numeroCheque As String
+    Public Property p_numeroCheque() As String
         Get
             Return numeroCheque
         End Get
-        Set(ByVal value As Integer)
+        Set(ByVal value As String)
             numeroCheque = value
         End Set
     End Property

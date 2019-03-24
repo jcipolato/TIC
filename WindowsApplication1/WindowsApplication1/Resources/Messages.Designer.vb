@@ -92,6 +92,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Recherche une chaîne localisée semblable à Voulez-vous vraiment supprimer ce dossier ?.
+        '''</summary>
+        Friend Shared ReadOnly Property DeleteDossier_Message() As String
+            Get
+                Return ResourceManager.GetString("DeleteDossier_Message", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Supprimer un dossier.
+        '''</summary>
+        Friend Shared ReadOnly Property DeleteDossier_Title() As String
+            Get
+                Return ResourceManager.GetString("DeleteDossier_Title", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Recherche une chaîne localisée semblable à Une version antérieure de Microsoft Excel est installée sur cet ordinateur.
         '''Veuillez installer la mise à jour vers Microsoft Excel 16.x.
         '''</summary>
@@ -102,7 +120,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Recherche une chaîne localisée semblable à Bienvenue sur ... 
+        '''  Recherche une chaîne localisée semblable à Bienvenue sur UBDXFORM
         '''Veuillez sélectionner l&apos;emplacement de sauvegarde de l&apos;application. Vous pourrez modifier votre choix ultérieurement dans l&apos;onglet Configuration.
         '''</summary>
         Friend Shared ReadOnly Property FirstOpening_Message() As String
@@ -112,11 +130,20 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Recherche une chaîne localisée semblable à Bienvenue sur ... !.
+        '''  Recherche une chaîne localisée semblable à Bienvenue sur UBDXFORM.
         '''</summary>
         Friend Shared ReadOnly Property FirstOpening_Title() As String
             Get
                 Return ResourceManager.GetString("FirstOpening_Title", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à L&apos;inscription a été ajoutée avec succès !.
+        '''</summary>
+        Friend Shared ReadOnly Property Inscription_Success() As String
+            Get
+                Return ResourceManager.GetString("Inscription_Success", resourceCulture)
             End Get
         End Property
     End Class

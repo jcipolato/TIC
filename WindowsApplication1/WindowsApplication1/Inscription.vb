@@ -1,6 +1,8 @@
 ﻿Imports System.Globalization
 Imports Microsoft.Office.Interop
 Imports Microsoft.Win32
+Imports WindowsApplication1.Common
+Imports WindowsApplication1.My.Resources
 
 Public Class Inscription
     Private Sub Inscription_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -40,22 +42,24 @@ Public Class Inscription
 
     Private Sub SwitchButtonState()
         Dim controls As Control() = {txtNom, txtPrenom, txtAdresse, txtCP, txtProfession,
-            txtAutre, txtCheque, txtComplement, cbCivilite, cbEmploi, cbEtudes, cbFidelite,
-            cbFinancement, cbPays, cbStatut, rbOuiCV, rbNonCV, rbOuiMotiv, rbNonMotiv, rbNonAcompte, rbOuiAcompte}
+            txtCheque, cbCivilite, cbEmploi, cbEtudes, cbFidelite, cbFinancement, cbPays,
+            cbStatut, rbOuiCV, rbNonCV, rbOuiMotiv, rbNonMotiv, rbNonAcompte, rbOuiAcompte}
         For Each item In controls
             AddHandler item.TextChanged, Sub(s, ee)
                                              btnSauvegarder.Enabled = Not controls.Any(Function(box) box.Text = String.Empty)
                                          End Sub
-
         Next
     End Sub
 
     Private Sub btnSauvegarder_Click(sender As Object, e As EventArgs) Handles btnSauvegarder.Click
-        If Not IsValidEmail(txtMailPerso.Text) And Not IsValidEmail(txtMailPro.Text) Then
-            labErreurMail.Visible = True
-        ElseIf txtTelPerso.Text.Length < 10 And txtTelPro.Text.Length < 10 Then
-            labErreurTel.Visible = True
-        Else
+        labErreurMail.Visible = Not IsValidEmail(txtMailPerso.Text) And Not IsValidEmail(txtMailPro.Text)
+        labErreurTel.Visible = txtTelPerso.Text.Length <> 10 And txtTelPro.Text.Length <> 10
+        labErreurCP.Visible = txtCP.Text.Length <> 5
+        labErreurDateNaissance.Visible = dtNaissance.Value.Year >= Date.Now.Year - 18
+        labErreurDatesContrat.Visible = dtDebutContrat.Value.Date >= dtFinContrat.Value.Date
+
+        If IsValidEmail(txtMailPerso.Text) And IsValidEmail(txtMailPro.Text) And txtTelPerso.Text.Length = 10 And txtTelPro.Text.Length = 10 And
+            txtCP.Text.Length = 5 And dtNaissance.Value.Year < Date.Now.Year - 18 And dtDebutContrat.Value.Date < dtFinContrat.Value.Date Then
             FillDossier()
         End If
     End Sub
@@ -72,7 +76,7 @@ Public Class Inscription
 
     Private Sub FillDossier()
         Dim dossier As New Dossier()
-        dossier.p_civilite = cbCivilite.SelectedValue
+        dossier.p_civilite = cbCivilite.Text
         dossier.p_nom = txtNom.Text
         dossier.p_prenom = txtPrenom.Text
         dossier.p_dateNaissance = dtNaissance.Text
@@ -80,12 +84,12 @@ Public Class Inscription
         dossier.p_complementAdresse = txtComplement.Text
         dossier.p_codePostal = txtCP.Text
         dossier.p_ville = txtVille.Text
-        dossier.p_pays = cbPays.SelectedValue
-        dossier.p_Statut = cbStatut.SelectedValue
-        dossier.p_niveauEtudes = cbEtudes.SelectedValue
+        dossier.p_pays = cbPays.Text
+        dossier.p_statut = cbStatut.Text
+        dossier.p_niveauEtudes = cbEtudes.Text
         dossier.p_autre = txtAutre.Text
         dossier.p_profession = txtProfession.Text
-        dossier.p_domaineEmploi = cbEmploi.SelectedValue
+        dossier.p_domaineEmploi = cbEmploi.Text
         dossier.p_mailPerso = txtMailPerso.Text
         dossier.p_mailPro = txtMailPro.Text
         dossier.p_telPerso = txtTelPerso.Text
@@ -105,41 +109,45 @@ Public Class Inscription
         dossier.p_dateFinContrat = dtFinContrat.Value
 
         If rbOuiAcompte.Checked Then
-            dossier.p_accompteOuiNon = True
-        Else dossier.p_accompteOuiNon = False
+            dossier.p_acompteOuiNon = True
+        Else dossier.p_acompteOuiNon = False
         End If
 
         dossier.p_numeroCheque = txtCheque.Text
-        dossier.p_financement = cbFinancement.SelectedValue
-        dossier.p_fidelite = cbFidelite.SelectedValue
+        dossier.p_financement = cbFinancement.Text
+        dossier.p_fidelite = cbFidelite.Text
 
-
-        'Appeler fonction Private qui exporte dans fichier Excel
+        addDossier(dossier)
     End Sub
 
-    Private Sub addExcel()
+    Private Sub addDossier(dossier As Dossier)
+        If FileNotFound("C:\UBDXFORM\") = True Then
+            MessageBox.Show(Messages.Backup_errorMessage, Messages.Backup_errorTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Else
+            Dim xls As Excel.Application = New Excel.Application()
 
-        'OUVERTURE EXCEL
-        ' Dim path As String = "C:\UBDXFORM"
-        ' Dim xls As Excel.Application = New Excel.Application()
-        ' xls.Workbooks.Open(path)
+            If xls Is Nothing Then
+                MessageBox.Show(Messages.Excel_BadVersion)
+                Return
+            End If
+            Dim workbook As Excel.Workbook = xls.Workbooks.Open("C:\UBDXFORM\UBDXFORM-backup.xlsx")
+            Dim worksheet As Excel.Worksheet = CType(workbook.Sheets(1), Excel.Worksheet)
 
-        ' Dim workbook As Excel.Workbook
-        ' workbook = xls.Workbooks(1)
+            If worksheet.Rows(1).Insert() Then
+                For Each prop In dossier.GetType().GetProperties()
+                    DirectCast(worksheet.Cells(1, Array.IndexOf(dossier.GetType().GetProperties(), prop) + 1), Excel.Range).Value = prop.GetValue(dossier)
+                Next
+                MessageBox.Show(Messages.Inscription_Success)
+            End If
 
-        '  Dim worksheet As Excel.Worksheet = CType(workbook.Sheets(1), Excel.Worksheet)
+            workbook.Save()
+            workbook.Close()
+            xls.Quit()
 
-        'Brouillon :
-        'Inscription i : worksheet.Cells(i, 0).Value =civiliité
-        '                               ...     
-
-
-        'FERMETURE EXCEL
-
-
-
-
+            releaseObject(worksheet)
+            releaseObject(workbook)
+            releaseObject(xls)
+            Me.Close()
+        End If
     End Sub
-
-
 End Class

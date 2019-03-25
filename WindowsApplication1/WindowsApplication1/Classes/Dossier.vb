@@ -115,16 +115,6 @@
         End Set
     End Property
 
-    Private autre As String
-    Public Property p_autre() As String
-        Get
-            Return autre
-        End Get
-        Set(ByVal value As String)
-            autre = value
-        End Set
-    End Property
-
     Private profession As String
     Public Property p_profession() As String
         Get

@@ -9,7 +9,7 @@ Public Class Consultation
     End Sub
 
     Private Sub ButtonRetour_Click(sender As Object, e As EventArgs) Handles btnRetour.Click
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub ButtonModifier_Click(sender As Object, e As EventArgs) Handles btnModifier.Click
@@ -126,4 +126,20 @@ Public Class Consultation
             Next
         End If
     End Sub
+
+    Private Sub txtRechercher_TextChanged(sender As Object, e As EventArgs) Handles txtRechercher.TextChanged
+        dtgDossiers.Rows(findIndex()).Selected = True
+    End Sub
+
+    Private Function findIndex() As Integer
+        For Each dossier In DossierBindingSource.DataSource
+            For Each prop In dossier.GetType.GetProperties
+                Dim search As String = prop.GetValue(dossier)
+                If search.Contains(txtRechercher.Text) Then
+                    Return DossierBindingSource.IndexOf(dossier)
+                End If
+            Next
+        Next
+        Return 0
+    End Function
 End Class

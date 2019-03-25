@@ -32,31 +32,6 @@ Partial Class Consultation
         Me.labRechercher = New System.Windows.Forms.Label()
         Me.txtRechercher = New System.Windows.Forms.TextBox()
         Me.labTrier = New System.Windows.Forms.Label()
-        Me.colCivilite = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colNom = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colPrenom = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colNaissance = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colAdresse = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colComplement = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colCP = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colVille = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colPays = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colStatut = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colDiplome = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colProfession = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colDomaine = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colMailPerso = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colMailPro = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colTelPro = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colTelPerso = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colCV = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.colMotiv = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.colDebutContrat = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colFinContrat = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colAcompte = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.colCheque = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colFinancement = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colCommentaire = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PciviliteDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PnomDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PprenomDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -66,9 +41,7 @@ Partial Class Consultation
         Me.PcodePostalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PvilleDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PpaysDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PStatutDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PniveauEtudesDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PautreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PprofessionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PdomaineEmploiDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PmailPersoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -79,7 +52,7 @@ Partial Class Consultation
         Me.PlettreMotivationOuiNonDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.PdateDebutContratDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PdateFinContratDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PaccompteOuiNonDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.PacompteOuiNonDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.PnumeroChequeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PfinancementDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PfideliteDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -94,10 +67,11 @@ Partial Class Consultation
         Me.dtgDossiers.AllowUserToDeleteRows = False
         Me.dtgDossiers.AutoGenerateColumns = False
         Me.dtgDossiers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dtgDossiers.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colCivilite, Me.colNom, Me.colPrenom, Me.colNaissance, Me.colAdresse, Me.colComplement, Me.colCP, Me.colVille, Me.colPays, Me.colStatut, Me.colDiplome, Me.colProfession, Me.colDomaine, Me.colMailPerso, Me.colMailPro, Me.colTelPro, Me.colTelPerso, Me.colCV, Me.colMotiv, Me.colDebutContrat, Me.colFinContrat, Me.colAcompte, Me.colCheque, Me.colFinancement, Me.colCommentaire, Me.PciviliteDataGridViewTextBoxColumn, Me.PnomDataGridViewTextBoxColumn, Me.PprenomDataGridViewTextBoxColumn, Me.PdateNaissanceDataGridViewTextBoxColumn, Me.PadresseDataGridViewTextBoxColumn, Me.PcomplementAdresseDataGridViewTextBoxColumn, Me.PcodePostalDataGridViewTextBoxColumn, Me.PvilleDataGridViewTextBoxColumn, Me.PpaysDataGridViewTextBoxColumn, Me.PStatutDataGridViewTextBoxColumn, Me.PniveauEtudesDataGridViewTextBoxColumn, Me.PautreDataGridViewTextBoxColumn, Me.PprofessionDataGridViewTextBoxColumn, Me.PdomaineEmploiDataGridViewTextBoxColumn, Me.PmailPersoDataGridViewTextBoxColumn, Me.PmailProDataGridViewTextBoxColumn, Me.PtelProDataGridViewTextBoxColumn, Me.PtelPersoDataGridViewTextBoxColumn, Me.PcvOuiNonDataGridViewCheckBoxColumn, Me.PlettreMotivationOuiNonDataGridViewCheckBoxColumn, Me.PdateDebutContratDataGridViewTextBoxColumn, Me.PdateFinContratDataGridViewTextBoxColumn, Me.PaccompteOuiNonDataGridViewCheckBoxColumn, Me.PnumeroChequeDataGridViewTextBoxColumn, Me.PfinancementDataGridViewTextBoxColumn, Me.PfideliteDataGridViewTextBoxColumn})
+        Me.dtgDossiers.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PciviliteDataGridViewTextBoxColumn, Me.PnomDataGridViewTextBoxColumn, Me.PprenomDataGridViewTextBoxColumn, Me.PdateNaissanceDataGridViewTextBoxColumn, Me.PadresseDataGridViewTextBoxColumn, Me.PcomplementAdresseDataGridViewTextBoxColumn, Me.PcodePostalDataGridViewTextBoxColumn, Me.PvilleDataGridViewTextBoxColumn, Me.PpaysDataGridViewTextBoxColumn, Me.PniveauEtudesDataGridViewTextBoxColumn, Me.PprofessionDataGridViewTextBoxColumn, Me.PdomaineEmploiDataGridViewTextBoxColumn, Me.PmailPersoDataGridViewTextBoxColumn, Me.PmailProDataGridViewTextBoxColumn, Me.PtelProDataGridViewTextBoxColumn, Me.PtelPersoDataGridViewTextBoxColumn, Me.PcvOuiNonDataGridViewCheckBoxColumn, Me.PlettreMotivationOuiNonDataGridViewCheckBoxColumn, Me.PdateDebutContratDataGridViewTextBoxColumn, Me.PdateFinContratDataGridViewTextBoxColumn, Me.PacompteOuiNonDataGridViewCheckBoxColumn, Me.PnumeroChequeDataGridViewTextBoxColumn, Me.PfinancementDataGridViewTextBoxColumn, Me.PfideliteDataGridViewTextBoxColumn})
         Me.dtgDossiers.DataSource = Me.DossierBindingSource
         Me.dtgDossiers.Location = New System.Drawing.Point(16, 124)
         Me.dtgDossiers.Margin = New System.Windows.Forms.Padding(4)
+        Me.dtgDossiers.MultiSelect = False
         Me.dtgDossiers.Name = "dtgDossiers"
         Me.dtgDossiers.ReadOnly = True
         Me.dtgDossiers.Size = New System.Drawing.Size(1080, 458)
@@ -192,360 +166,171 @@ Partial Class Consultation
         Me.labTrier.TabIndex = 11
         Me.labTrier.Text = "Trier par :"
         '
-        'colCivilite
-        '
-        Me.colCivilite.DataPropertyName = "p_civilite"
-        Me.colCivilite.HeaderText = "Civilité"
-        Me.colCivilite.Name = "colCivilite"
-        Me.colCivilite.ReadOnly = True
-        '
-        'colNom
-        '
-        Me.colNom.DataPropertyName = "p_nom"
-        Me.colNom.HeaderText = "Nom"
-        Me.colNom.Name = "colNom"
-        Me.colNom.ReadOnly = True
-        '
-        'colPrenom
-        '
-        Me.colPrenom.DataPropertyName = "p_prenom"
-        Me.colPrenom.HeaderText = "Prénom"
-        Me.colPrenom.Name = "colPrenom"
-        Me.colPrenom.ReadOnly = True
-        '
-        'colNaissance
-        '
-        Me.colNaissance.DataPropertyName = "p_dateNaissance"
-        Me.colNaissance.HeaderText = "Date de naissance"
-        Me.colNaissance.Name = "colNaissance"
-        Me.colNaissance.ReadOnly = True
-        '
-        'colAdresse
-        '
-        Me.colAdresse.DataPropertyName = "p_adresse"
-        Me.colAdresse.HeaderText = "Adresse"
-        Me.colAdresse.Name = "colAdresse"
-        Me.colAdresse.ReadOnly = True
-        '
-        'colComplement
-        '
-        Me.colComplement.DataPropertyName = "p_complementAdresse"
-        Me.colComplement.HeaderText = "Complément adresse"
-        Me.colComplement.Name = "colComplement"
-        Me.colComplement.ReadOnly = True
-        '
-        'colCP
-        '
-        Me.colCP.DataPropertyName = "p_codePostal"
-        Me.colCP.HeaderText = "Code postal"
-        Me.colCP.Name = "colCP"
-        Me.colCP.ReadOnly = True
-        '
-        'colVille
-        '
-        Me.colVille.DataPropertyName = "p_ville"
-        Me.colVille.HeaderText = "Ville"
-        Me.colVille.Name = "colVille"
-        Me.colVille.ReadOnly = True
-        '
-        'colPays
-        '
-        Me.colPays.DataPropertyName = "p_pays"
-        Me.colPays.HeaderText = "Pays"
-        Me.colPays.Name = "colPays"
-        Me.colPays.ReadOnly = True
-        '
-        'colStatut
-        '
-        Me.colStatut.DataPropertyName = "p_Statut"
-        Me.colStatut.HeaderText = "Statut"
-        Me.colStatut.Name = "colStatut"
-        Me.colStatut.ReadOnly = True
-        '
-        'colDiplome
-        '
-        Me.colDiplome.DataPropertyName = "p_niveauEtudes"
-        Me.colDiplome.HeaderText = "Diplome"
-        Me.colDiplome.Name = "colDiplome"
-        Me.colDiplome.ReadOnly = True
-        '
-        'colProfession
-        '
-        Me.colProfession.DataPropertyName = "p_profession"
-        Me.colProfession.HeaderText = "Profession"
-        Me.colProfession.Name = "colProfession"
-        Me.colProfession.ReadOnly = True
-        '
-        'colDomaine
-        '
-        Me.colDomaine.DataPropertyName = "p_domaineEmploi"
-        Me.colDomaine.HeaderText = "Domaine d'emploi"
-        Me.colDomaine.Name = "colDomaine"
-        Me.colDomaine.ReadOnly = True
-        '
-        'colMailPerso
-        '
-        Me.colMailPerso.DataPropertyName = "p_mailPerso"
-        Me.colMailPerso.HeaderText = "Mail Perso"
-        Me.colMailPerso.Name = "colMailPerso"
-        Me.colMailPerso.ReadOnly = True
-        '
-        'colMailPro
-        '
-        Me.colMailPro.DataPropertyName = "p_mailPro"
-        Me.colMailPro.HeaderText = "Mail Pro"
-        Me.colMailPro.Name = "colMailPro"
-        Me.colMailPro.ReadOnly = True
-        '
-        'colTelPro
-        '
-        Me.colTelPro.DataPropertyName = "p_telPro"
-        Me.colTelPro.HeaderText = "Tel Pro"
-        Me.colTelPro.Name = "colTelPro"
-        Me.colTelPro.ReadOnly = True
-        '
-        'colTelPerso
-        '
-        Me.colTelPerso.DataPropertyName = "p_telPerso"
-        Me.colTelPerso.HeaderText = "Tel Perso"
-        Me.colTelPerso.Name = "colTelPerso"
-        Me.colTelPerso.ReadOnly = True
-        '
-        'colCV
-        '
-        Me.colCV.DataPropertyName = "p_cvOuiNon"
-        Me.colCV.HeaderText = "Curriculum Vitae"
-        Me.colCV.Name = "colCV"
-        Me.colCV.ReadOnly = True
-        '
-        'colMotiv
-        '
-        Me.colMotiv.DataPropertyName = "p_lettreMotivationOuiNon"
-        Me.colMotiv.HeaderText = "Lettre de motivation"
-        Me.colMotiv.Name = "colMotiv"
-        Me.colMotiv.ReadOnly = True
-        '
-        'colDebutContrat
-        '
-        Me.colDebutContrat.DataPropertyName = "p_dateDebutContrat"
-        Me.colDebutContrat.HeaderText = "Début du contrat"
-        Me.colDebutContrat.Name = "colDebutContrat"
-        Me.colDebutContrat.ReadOnly = True
-        '
-        'colFinContrat
-        '
-        Me.colFinContrat.DataPropertyName = "p_dateFinContrat"
-        Me.colFinContrat.HeaderText = "Fin du contrat"
-        Me.colFinContrat.Name = "colFinContrat"
-        Me.colFinContrat.ReadOnly = True
-        '
-        'colAcompte
-        '
-        Me.colAcompte.DataPropertyName = "p_accompteOuiNon"
-        Me.colAcompte.HeaderText = "Acompte"
-        Me.colAcompte.Name = "colAcompte"
-        Me.colAcompte.ReadOnly = True
-        '
-        'colCheque
-        '
-        Me.colCheque.DataPropertyName = "p_numeroCheque"
-        Me.colCheque.HeaderText = "Chèque"
-        Me.colCheque.Name = "colCheque"
-        Me.colCheque.ReadOnly = True
-        '
-        'colFinancement
-        '
-        Me.colFinancement.DataPropertyName = "p_financement"
-        Me.colFinancement.HeaderText = "Financement"
-        Me.colFinancement.Name = "colFinancement"
-        Me.colFinancement.ReadOnly = True
-        '
-        'colCommentaire
-        '
-        Me.colCommentaire.DataPropertyName = "p_fidelite"
-        Me.colCommentaire.HeaderText = "Commentaire"
-        Me.colCommentaire.Name = "colCommentaire"
-        Me.colCommentaire.ReadOnly = True
-        '
         'PciviliteDataGridViewTextBoxColumn
         '
         Me.PciviliteDataGridViewTextBoxColumn.DataPropertyName = "p_civilite"
-        Me.PciviliteDataGridViewTextBoxColumn.HeaderText = "p_civilite"
+        Me.PciviliteDataGridViewTextBoxColumn.HeaderText = "Civilité"
         Me.PciviliteDataGridViewTextBoxColumn.Name = "PciviliteDataGridViewTextBoxColumn"
         Me.PciviliteDataGridViewTextBoxColumn.ReadOnly = True
         '
         'PnomDataGridViewTextBoxColumn
         '
         Me.PnomDataGridViewTextBoxColumn.DataPropertyName = "p_nom"
-        Me.PnomDataGridViewTextBoxColumn.HeaderText = "p_nom"
+        Me.PnomDataGridViewTextBoxColumn.HeaderText = "Nom"
         Me.PnomDataGridViewTextBoxColumn.Name = "PnomDataGridViewTextBoxColumn"
         Me.PnomDataGridViewTextBoxColumn.ReadOnly = True
         '
         'PprenomDataGridViewTextBoxColumn
         '
         Me.PprenomDataGridViewTextBoxColumn.DataPropertyName = "p_prenom"
-        Me.PprenomDataGridViewTextBoxColumn.HeaderText = "p_prenom"
+        Me.PprenomDataGridViewTextBoxColumn.HeaderText = "Prénom"
         Me.PprenomDataGridViewTextBoxColumn.Name = "PprenomDataGridViewTextBoxColumn"
         Me.PprenomDataGridViewTextBoxColumn.ReadOnly = True
         '
         'PdateNaissanceDataGridViewTextBoxColumn
         '
         Me.PdateNaissanceDataGridViewTextBoxColumn.DataPropertyName = "p_dateNaissance"
-        Me.PdateNaissanceDataGridViewTextBoxColumn.HeaderText = "p_dateNaissance"
+        Me.PdateNaissanceDataGridViewTextBoxColumn.HeaderText = "Date de naissance"
         Me.PdateNaissanceDataGridViewTextBoxColumn.Name = "PdateNaissanceDataGridViewTextBoxColumn"
         Me.PdateNaissanceDataGridViewTextBoxColumn.ReadOnly = True
         '
         'PadresseDataGridViewTextBoxColumn
         '
         Me.PadresseDataGridViewTextBoxColumn.DataPropertyName = "p_adresse"
-        Me.PadresseDataGridViewTextBoxColumn.HeaderText = "p_adresse"
+        Me.PadresseDataGridViewTextBoxColumn.HeaderText = "Adresse"
         Me.PadresseDataGridViewTextBoxColumn.Name = "PadresseDataGridViewTextBoxColumn"
         Me.PadresseDataGridViewTextBoxColumn.ReadOnly = True
         '
         'PcomplementAdresseDataGridViewTextBoxColumn
         '
         Me.PcomplementAdresseDataGridViewTextBoxColumn.DataPropertyName = "p_complementAdresse"
-        Me.PcomplementAdresseDataGridViewTextBoxColumn.HeaderText = "p_complementAdresse"
+        Me.PcomplementAdresseDataGridViewTextBoxColumn.HeaderText = "Complément d'adresse"
         Me.PcomplementAdresseDataGridViewTextBoxColumn.Name = "PcomplementAdresseDataGridViewTextBoxColumn"
         Me.PcomplementAdresseDataGridViewTextBoxColumn.ReadOnly = True
         '
         'PcodePostalDataGridViewTextBoxColumn
         '
         Me.PcodePostalDataGridViewTextBoxColumn.DataPropertyName = "p_codePostal"
-        Me.PcodePostalDataGridViewTextBoxColumn.HeaderText = "p_codePostal"
+        Me.PcodePostalDataGridViewTextBoxColumn.HeaderText = "Code postal"
         Me.PcodePostalDataGridViewTextBoxColumn.Name = "PcodePostalDataGridViewTextBoxColumn"
         Me.PcodePostalDataGridViewTextBoxColumn.ReadOnly = True
         '
         'PvilleDataGridViewTextBoxColumn
         '
         Me.PvilleDataGridViewTextBoxColumn.DataPropertyName = "p_ville"
-        Me.PvilleDataGridViewTextBoxColumn.HeaderText = "p_ville"
+        Me.PvilleDataGridViewTextBoxColumn.HeaderText = "Ville"
         Me.PvilleDataGridViewTextBoxColumn.Name = "PvilleDataGridViewTextBoxColumn"
         Me.PvilleDataGridViewTextBoxColumn.ReadOnly = True
         '
         'PpaysDataGridViewTextBoxColumn
         '
         Me.PpaysDataGridViewTextBoxColumn.DataPropertyName = "p_pays"
-        Me.PpaysDataGridViewTextBoxColumn.HeaderText = "p_pays"
+        Me.PpaysDataGridViewTextBoxColumn.HeaderText = "Pays"
         Me.PpaysDataGridViewTextBoxColumn.Name = "PpaysDataGridViewTextBoxColumn"
         Me.PpaysDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'PStatutDataGridViewTextBoxColumn
-        '
-        Me.PStatutDataGridViewTextBoxColumn.DataPropertyName = "p_Statut"
-        Me.PStatutDataGridViewTextBoxColumn.HeaderText = "p_Statut"
-        Me.PStatutDataGridViewTextBoxColumn.Name = "PStatutDataGridViewTextBoxColumn"
-        Me.PStatutDataGridViewTextBoxColumn.ReadOnly = True
         '
         'PniveauEtudesDataGridViewTextBoxColumn
         '
         Me.PniveauEtudesDataGridViewTextBoxColumn.DataPropertyName = "p_niveauEtudes"
-        Me.PniveauEtudesDataGridViewTextBoxColumn.HeaderText = "p_niveauEtudes"
+        Me.PniveauEtudesDataGridViewTextBoxColumn.HeaderText = "Diplôme"
         Me.PniveauEtudesDataGridViewTextBoxColumn.Name = "PniveauEtudesDataGridViewTextBoxColumn"
         Me.PniveauEtudesDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'PautreDataGridViewTextBoxColumn
-        '
-        Me.PautreDataGridViewTextBoxColumn.DataPropertyName = "p_autre"
-        Me.PautreDataGridViewTextBoxColumn.HeaderText = "p_autre"
-        Me.PautreDataGridViewTextBoxColumn.Name = "PautreDataGridViewTextBoxColumn"
-        Me.PautreDataGridViewTextBoxColumn.ReadOnly = True
         '
         'PprofessionDataGridViewTextBoxColumn
         '
         Me.PprofessionDataGridViewTextBoxColumn.DataPropertyName = "p_profession"
-        Me.PprofessionDataGridViewTextBoxColumn.HeaderText = "p_profession"
+        Me.PprofessionDataGridViewTextBoxColumn.HeaderText = "Profession"
         Me.PprofessionDataGridViewTextBoxColumn.Name = "PprofessionDataGridViewTextBoxColumn"
         Me.PprofessionDataGridViewTextBoxColumn.ReadOnly = True
         '
         'PdomaineEmploiDataGridViewTextBoxColumn
         '
         Me.PdomaineEmploiDataGridViewTextBoxColumn.DataPropertyName = "p_domaineEmploi"
-        Me.PdomaineEmploiDataGridViewTextBoxColumn.HeaderText = "p_domaineEmploi"
+        Me.PdomaineEmploiDataGridViewTextBoxColumn.HeaderText = "Domaine d'emploi"
         Me.PdomaineEmploiDataGridViewTextBoxColumn.Name = "PdomaineEmploiDataGridViewTextBoxColumn"
         Me.PdomaineEmploiDataGridViewTextBoxColumn.ReadOnly = True
         '
         'PmailPersoDataGridViewTextBoxColumn
         '
         Me.PmailPersoDataGridViewTextBoxColumn.DataPropertyName = "p_mailPerso"
-        Me.PmailPersoDataGridViewTextBoxColumn.HeaderText = "p_mailPerso"
+        Me.PmailPersoDataGridViewTextBoxColumn.HeaderText = "Mail perso."
         Me.PmailPersoDataGridViewTextBoxColumn.Name = "PmailPersoDataGridViewTextBoxColumn"
         Me.PmailPersoDataGridViewTextBoxColumn.ReadOnly = True
         '
         'PmailProDataGridViewTextBoxColumn
         '
         Me.PmailProDataGridViewTextBoxColumn.DataPropertyName = "p_mailPro"
-        Me.PmailProDataGridViewTextBoxColumn.HeaderText = "p_mailPro"
+        Me.PmailProDataGridViewTextBoxColumn.HeaderText = "Mail pro."
         Me.PmailProDataGridViewTextBoxColumn.Name = "PmailProDataGridViewTextBoxColumn"
         Me.PmailProDataGridViewTextBoxColumn.ReadOnly = True
         '
         'PtelProDataGridViewTextBoxColumn
         '
         Me.PtelProDataGridViewTextBoxColumn.DataPropertyName = "p_telPro"
-        Me.PtelProDataGridViewTextBoxColumn.HeaderText = "p_telPro"
+        Me.PtelProDataGridViewTextBoxColumn.HeaderText = "Tél. pro."
         Me.PtelProDataGridViewTextBoxColumn.Name = "PtelProDataGridViewTextBoxColumn"
         Me.PtelProDataGridViewTextBoxColumn.ReadOnly = True
         '
         'PtelPersoDataGridViewTextBoxColumn
         '
         Me.PtelPersoDataGridViewTextBoxColumn.DataPropertyName = "p_telPerso"
-        Me.PtelPersoDataGridViewTextBoxColumn.HeaderText = "p_telPerso"
+        Me.PtelPersoDataGridViewTextBoxColumn.HeaderText = "Tél. perso."
         Me.PtelPersoDataGridViewTextBoxColumn.Name = "PtelPersoDataGridViewTextBoxColumn"
         Me.PtelPersoDataGridViewTextBoxColumn.ReadOnly = True
         '
         'PcvOuiNonDataGridViewCheckBoxColumn
         '
         Me.PcvOuiNonDataGridViewCheckBoxColumn.DataPropertyName = "p_cvOuiNon"
-        Me.PcvOuiNonDataGridViewCheckBoxColumn.HeaderText = "p_cvOuiNon"
+        Me.PcvOuiNonDataGridViewCheckBoxColumn.HeaderText = "CV"
         Me.PcvOuiNonDataGridViewCheckBoxColumn.Name = "PcvOuiNonDataGridViewCheckBoxColumn"
         Me.PcvOuiNonDataGridViewCheckBoxColumn.ReadOnly = True
         '
         'PlettreMotivationOuiNonDataGridViewCheckBoxColumn
         '
         Me.PlettreMotivationOuiNonDataGridViewCheckBoxColumn.DataPropertyName = "p_lettreMotivationOuiNon"
-        Me.PlettreMotivationOuiNonDataGridViewCheckBoxColumn.HeaderText = "p_lettreMotivationOuiNon"
+        Me.PlettreMotivationOuiNonDataGridViewCheckBoxColumn.HeaderText = "Lettre de motivation"
         Me.PlettreMotivationOuiNonDataGridViewCheckBoxColumn.Name = "PlettreMotivationOuiNonDataGridViewCheckBoxColumn"
         Me.PlettreMotivationOuiNonDataGridViewCheckBoxColumn.ReadOnly = True
         '
         'PdateDebutContratDataGridViewTextBoxColumn
         '
         Me.PdateDebutContratDataGridViewTextBoxColumn.DataPropertyName = "p_dateDebutContrat"
-        Me.PdateDebutContratDataGridViewTextBoxColumn.HeaderText = "p_dateDebutContrat"
+        Me.PdateDebutContratDataGridViewTextBoxColumn.HeaderText = "Début de contrat"
         Me.PdateDebutContratDataGridViewTextBoxColumn.Name = "PdateDebutContratDataGridViewTextBoxColumn"
         Me.PdateDebutContratDataGridViewTextBoxColumn.ReadOnly = True
         '
         'PdateFinContratDataGridViewTextBoxColumn
         '
         Me.PdateFinContratDataGridViewTextBoxColumn.DataPropertyName = "p_dateFinContrat"
-        Me.PdateFinContratDataGridViewTextBoxColumn.HeaderText = "p_dateFinContrat"
+        Me.PdateFinContratDataGridViewTextBoxColumn.HeaderText = "Fin de contrat"
         Me.PdateFinContratDataGridViewTextBoxColumn.Name = "PdateFinContratDataGridViewTextBoxColumn"
         Me.PdateFinContratDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'PaccompteOuiNonDataGridViewCheckBoxColumn
+        'PacompteOuiNonDataGridViewCheckBoxColumn
         '
-        Me.PaccompteOuiNonDataGridViewCheckBoxColumn.DataPropertyName = "p_accompteOuiNon"
-        Me.PaccompteOuiNonDataGridViewCheckBoxColumn.HeaderText = "p_accompteOuiNon"
-        Me.PaccompteOuiNonDataGridViewCheckBoxColumn.Name = "PaccompteOuiNonDataGridViewCheckBoxColumn"
-        Me.PaccompteOuiNonDataGridViewCheckBoxColumn.ReadOnly = True
+        Me.PacompteOuiNonDataGridViewCheckBoxColumn.DataPropertyName = "p_acompteOuiNon"
+        Me.PacompteOuiNonDataGridViewCheckBoxColumn.HeaderText = "Acompte"
+        Me.PacompteOuiNonDataGridViewCheckBoxColumn.Name = "PacompteOuiNonDataGridViewCheckBoxColumn"
+        Me.PacompteOuiNonDataGridViewCheckBoxColumn.ReadOnly = True
         '
         'PnumeroChequeDataGridViewTextBoxColumn
         '
         Me.PnumeroChequeDataGridViewTextBoxColumn.DataPropertyName = "p_numeroCheque"
-        Me.PnumeroChequeDataGridViewTextBoxColumn.HeaderText = "p_numeroCheque"
+        Me.PnumeroChequeDataGridViewTextBoxColumn.HeaderText = "Numéro de chèque"
         Me.PnumeroChequeDataGridViewTextBoxColumn.Name = "PnumeroChequeDataGridViewTextBoxColumn"
         Me.PnumeroChequeDataGridViewTextBoxColumn.ReadOnly = True
         '
         'PfinancementDataGridViewTextBoxColumn
         '
         Me.PfinancementDataGridViewTextBoxColumn.DataPropertyName = "p_financement"
-        Me.PfinancementDataGridViewTextBoxColumn.HeaderText = "p_financement"
+        Me.PfinancementDataGridViewTextBoxColumn.HeaderText = "Financement"
         Me.PfinancementDataGridViewTextBoxColumn.Name = "PfinancementDataGridViewTextBoxColumn"
         Me.PfinancementDataGridViewTextBoxColumn.ReadOnly = True
         '
         'PfideliteDataGridViewTextBoxColumn
         '
         Me.PfideliteDataGridViewTextBoxColumn.DataPropertyName = "p_fidelite"
-        Me.PfideliteDataGridViewTextBoxColumn.HeaderText = "p_fidelite"
+        Me.PfideliteDataGridViewTextBoxColumn.HeaderText = "Commentaire"
         Me.PfideliteDataGridViewTextBoxColumn.Name = "PfideliteDataGridViewTextBoxColumn"
         Me.PfideliteDataGridViewTextBoxColumn.ReadOnly = True
         '
@@ -587,31 +372,8 @@ Partial Class Consultation
     Friend WithEvents txtRechercher As TextBox
     Friend WithEvents labTrier As Label
     Friend WithEvents DossierBindingSource As BindingSource
-    Friend WithEvents colCivilite As DataGridViewTextBoxColumn
-    Friend WithEvents colNom As DataGridViewTextBoxColumn
-    Friend WithEvents colPrenom As DataGridViewTextBoxColumn
-    Friend WithEvents colNaissance As DataGridViewTextBoxColumn
-    Friend WithEvents colAdresse As DataGridViewTextBoxColumn
-    Friend WithEvents colComplement As DataGridViewTextBoxColumn
-    Friend WithEvents colCP As DataGridViewTextBoxColumn
-    Friend WithEvents colVille As DataGridViewTextBoxColumn
-    Friend WithEvents colPays As DataGridViewTextBoxColumn
-    Friend WithEvents colStatut As DataGridViewTextBoxColumn
-    Friend WithEvents colDiplome As DataGridViewTextBoxColumn
-    Friend WithEvents colProfession As DataGridViewTextBoxColumn
-    Friend WithEvents colDomaine As DataGridViewTextBoxColumn
-    Friend WithEvents colMailPerso As DataGridViewTextBoxColumn
-    Friend WithEvents colMailPro As DataGridViewTextBoxColumn
-    Friend WithEvents colTelPro As DataGridViewTextBoxColumn
-    Friend WithEvents colTelPerso As DataGridViewTextBoxColumn
-    Friend WithEvents colCV As DataGridViewCheckBoxColumn
-    Friend WithEvents colMotiv As DataGridViewCheckBoxColumn
-    Friend WithEvents colDebutContrat As DataGridViewTextBoxColumn
-    Friend WithEvents colFinContrat As DataGridViewTextBoxColumn
-    Friend WithEvents colAcompte As DataGridViewCheckBoxColumn
-    Friend WithEvents colCheque As DataGridViewTextBoxColumn
-    Friend WithEvents colFinancement As DataGridViewTextBoxColumn
-    Friend WithEvents colCommentaire As DataGridViewTextBoxColumn
+    Friend WithEvents PStatutDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PaccompteOuiNonDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
     Friend WithEvents PciviliteDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PnomDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PprenomDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -621,9 +383,7 @@ Partial Class Consultation
     Friend WithEvents PcodePostalDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PvilleDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PpaysDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents PStatutDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PniveauEtudesDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents PautreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PprofessionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PdomaineEmploiDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PmailPersoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -634,7 +394,7 @@ Partial Class Consultation
     Friend WithEvents PlettreMotivationOuiNonDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
     Friend WithEvents PdateDebutContratDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PdateFinContratDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents PaccompteOuiNonDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents PacompteOuiNonDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
     Friend WithEvents PnumeroChequeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PfinancementDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PfideliteDataGridViewTextBoxColumn As DataGridViewTextBoxColumn

@@ -70,6 +70,7 @@ Partial Class Inscription
         Me.labProMail = New System.Windows.Forms.Label()
         Me.labPerso = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.labErreurDatesContrat = New System.Windows.Forms.Label()
         Me.panRenseign = New System.Windows.Forms.Panel()
         Me.cbFidelite = New System.Windows.Forms.ComboBox()
         Me.cbFinancement = New System.Windows.Forms.ComboBox()
@@ -96,7 +97,6 @@ Partial Class Inscription
         Me.labAcompte = New System.Windows.Forms.Label()
         Me.btnSauvegarder = New System.Windows.Forms.Button()
         Me.btnRetour = New System.Windows.Forms.Button()
-        Me.labErreurDatesContrat = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.panParcours.SuspendLayout()
         Me.panCoordonnees.SuspendLayout()
@@ -430,7 +430,7 @@ Partial Class Inscription
         '
         Me.dtNaissance.Font = New System.Drawing.Font("Verdana", 9.0!)
         Me.dtNaissance.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtNaissance.Location = New System.Drawing.Point(182, 112)
+        Me.dtNaissance.Location = New System.Drawing.Point(219, 110)
         Me.dtNaissance.Margin = New System.Windows.Forms.Padding(4)
         Me.dtNaissance.MaxDate = New Date(2019, 3, 24, 0, 0, 0, 0)
         Me.dtNaissance.MinDate = New Date(1990, 1, 1, 0, 0, 0, 0)
@@ -445,7 +445,7 @@ Partial Class Inscription
         Me.cbCivilite.Font = New System.Drawing.Font("Verdana", 9.0!)
         Me.cbCivilite.FormattingEnabled = True
         Me.cbCivilite.Items.AddRange(New Object() {"Madame", "Monsieur"})
-        Me.cbCivilite.Location = New System.Drawing.Point(182, 9)
+        Me.cbCivilite.Location = New System.Drawing.Point(219, 9)
         Me.cbCivilite.Margin = New System.Windows.Forms.Padding(4)
         Me.cbCivilite.Name = "cbCivilite"
         Me.cbCivilite.Size = New System.Drawing.Size(112, 26)
@@ -454,7 +454,7 @@ Partial Class Inscription
         'txtNom
         '
         Me.txtNom.Font = New System.Drawing.Font("Verdana", 9.0!)
-        Me.txtNom.Location = New System.Drawing.Point(182, 43)
+        Me.txtNom.Location = New System.Drawing.Point(219, 42)
         Me.txtNom.Margin = New System.Windows.Forms.Padding(4)
         Me.txtNom.Name = "txtNom"
         Me.txtNom.Size = New System.Drawing.Size(163, 26)
@@ -463,7 +463,7 @@ Partial Class Inscription
         'txtPrenom
         '
         Me.txtPrenom.Font = New System.Drawing.Font("Verdana", 9.0!)
-        Me.txtPrenom.Location = New System.Drawing.Point(182, 78)
+        Me.txtPrenom.Location = New System.Drawing.Point(219, 76)
         Me.txtPrenom.Margin = New System.Windows.Forms.Padding(4)
         Me.txtPrenom.Name = "txtPrenom"
         Me.txtPrenom.Size = New System.Drawing.Size(163, 26)
@@ -675,6 +675,18 @@ Partial Class Inscription
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(527, 619)
         Me.Panel2.TabIndex = 1
+        '
+        'labErreurDatesContrat
+        '
+        Me.labErreurDatesContrat.AutoSize = True
+        Me.labErreurDatesContrat.Font = New System.Drawing.Font("Verdana", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labErreurDatesContrat.ForeColor = System.Drawing.Color.Red
+        Me.labErreurDatesContrat.Location = New System.Drawing.Point(0, 438)
+        Me.labErreurDatesContrat.Name = "labErreurDatesContrat"
+        Me.labErreurDatesContrat.Size = New System.Drawing.Size(530, 18)
+        Me.labErreurDatesContrat.TabIndex = 21
+        Me.labErreurDatesContrat.Text = "La date de fin de contrat doit être supérieure à la date de début"
+        Me.labErreurDatesContrat.Visible = False
         '
         'panRenseign
         '
@@ -911,6 +923,7 @@ Partial Class Inscription
         Me.dtFinContrat.Name = "dtFinContrat"
         Me.dtFinContrat.Size = New System.Drawing.Size(187, 26)
         Me.dtFinContrat.TabIndex = 22
+        Me.dtFinContrat.Value = New Date(2019, 3, 25, 0, 0, 0, 0)
         '
         'labFinContrat
         '
@@ -945,6 +958,7 @@ Partial Class Inscription
         Me.dtDebutContrat.Name = "dtDebutContrat"
         Me.dtDebutContrat.Size = New System.Drawing.Size(187, 26)
         Me.dtDebutContrat.TabIndex = 21
+        Me.dtDebutContrat.Value = New Date(2019, 3, 25, 0, 0, 0, 0)
         '
         'labCheque
         '
@@ -992,18 +1006,6 @@ Partial Class Inscription
         Me.btnRetour.TabIndex = 3
         Me.btnRetour.Text = "Retour"
         Me.btnRetour.UseVisualStyleBackColor = False
-        '
-        'labErreurDatesContrat
-        '
-        Me.labErreurDatesContrat.AutoSize = True
-        Me.labErreurDatesContrat.Font = New System.Drawing.Font("Verdana", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.labErreurDatesContrat.ForeColor = System.Drawing.Color.Red
-        Me.labErreurDatesContrat.Location = New System.Drawing.Point(0, 438)
-        Me.labErreurDatesContrat.Name = "labErreurDatesContrat"
-        Me.labErreurDatesContrat.Size = New System.Drawing.Size(530, 18)
-        Me.labErreurDatesContrat.TabIndex = 21
-        Me.labErreurDatesContrat.Text = "La date de fin de contrat doit être supérieure à la date de début"
-        Me.labErreurDatesContrat.Visible = False
         '
         'Inscription
         '

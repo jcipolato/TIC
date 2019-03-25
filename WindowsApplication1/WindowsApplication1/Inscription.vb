@@ -65,7 +65,7 @@ Public Class Inscription
     End Sub
 
     Private Sub cbEtudes_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbEtudes.SelectedIndexChanged
-        If cbEtudes.SelectedItem.ToString = "Autre" Then
+        If cbEtudes.SelectedItem = "Autre" Then
             labAutre.Visible = True
             txtAutre.Visible = True
         Else
@@ -86,8 +86,11 @@ Public Class Inscription
         dossier.p_ville = txtVille.Text
         dossier.p_pays = cbPays.Text
         dossier.p_statut = cbStatut.Text
-        dossier.p_niveauEtudes = cbEtudes.Text
-        dossier.p_autre = txtAutre.Text
+        If cbEtudes.SelectedItem = "Autre" Then
+            dossier.p_niveauEtudes = txtAutre.Text
+        Else
+            dossier.p_niveauEtudes = cbEtudes.Text
+        End If
         dossier.p_profession = txtProfession.Text
         dossier.p_domaineEmploi = cbEmploi.Text
         dossier.p_mailPerso = txtMailPerso.Text

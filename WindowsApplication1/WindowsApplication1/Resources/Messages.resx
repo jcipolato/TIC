@@ -132,6 +132,15 @@
   <data name="DeleteDossier_Title" xml:space="preserve">
     <value>Supprimer un dossier</value>
   </data>
+  <data name="EditDossier_Message" xml:space="preserve">
+    <value>Vous êtes sur le point de modifier le dossier, voulez-vous continuer ?</value>
+  </data>
+  <data name="EditDossier_Success" xml:space="preserve">
+    <value>Le dossier a été modifié avec succès !</value>
+  </data>
+  <data name="EditDossier_Title" xml:space="preserve">
+    <value>Modifier un dossier</value>
+  </data>
   <data name="Excel_BadVersion" xml:space="preserve">
     <value>Une version antérieure de Microsoft Excel est installée sur cet ordinateur.
 Veuillez installer la mise à jour vers Microsoft Excel 16.x</value>

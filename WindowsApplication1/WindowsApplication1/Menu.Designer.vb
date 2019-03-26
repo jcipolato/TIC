@@ -95,6 +95,7 @@ Partial Class Menu
         Me.Controls.Add(Me.btnConsultation)
         Me.Controls.Add(Me.ButtonQuitter)
         Me.Controls.Add(Me.btnInscription)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Menu"
         Me.Text = "Menu"

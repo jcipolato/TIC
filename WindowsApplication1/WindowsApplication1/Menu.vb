@@ -70,6 +70,7 @@ Public Class Menu
         releaseObject(worksheet)
         releaseObject(workbook)
         releaseObject(xls)
+        File.SetAttributes(path + "\UBDXFORM-backup.xlsx", FileAttributes.Encrypted)
 
         MessageBox.Show(Messages.Backup_success)
     End Sub

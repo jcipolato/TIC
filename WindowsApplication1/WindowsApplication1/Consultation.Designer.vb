@@ -27,7 +27,6 @@ Partial Class Consultation
         Me.btnRetour = New System.Windows.Forms.Button()
         Me.btnGenerer = New System.Windows.Forms.Button()
         Me.btnSupprimer = New System.Windows.Forms.Button()
-        Me.btnModifier = New System.Windows.Forms.Button()
         Me.cbTrier = New System.Windows.Forms.ComboBox()
         Me.labRechercher = New System.Windows.Forms.Label()
         Me.txtRechercher = New System.Windows.Forms.TextBox()
@@ -57,6 +56,7 @@ Partial Class Consultation
         Me.PfinancementDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PfideliteDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DossierBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.dtgDossiers, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DossierBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -73,7 +73,6 @@ Partial Class Consultation
         Me.dtgDossiers.Margin = New System.Windows.Forms.Padding(4)
         Me.dtgDossiers.MultiSelect = False
         Me.dtgDossiers.Name = "dtgDossiers"
-        Me.dtgDossiers.ReadOnly = True
         Me.dtgDossiers.Size = New System.Drawing.Size(1080, 458)
         Me.dtgDossiers.TabIndex = 0
         '
@@ -86,7 +85,7 @@ Partial Class Consultation
         Me.btnRetour.Name = "btnRetour"
         Me.btnRetour.Size = New System.Drawing.Size(153, 38)
         Me.btnRetour.TabIndex = 1
-        Me.btnRetour.Text = "Retour Menu"
+        Me.btnRetour.Text = "Retour"
         Me.btnRetour.UseVisualStyleBackColor = False
         '
         'btnGenerer
@@ -94,7 +93,7 @@ Partial Class Consultation
         Me.btnGenerer.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.btnGenerer.Enabled = False
         Me.btnGenerer.Font = New System.Drawing.Font("Verdana", 10.0!)
-        Me.btnGenerer.Location = New System.Drawing.Point(943, 68)
+        Me.btnGenerer.Location = New System.Drawing.Point(791, 72)
         Me.btnGenerer.Margin = New System.Windows.Forms.Padding(4)
         Me.btnGenerer.Name = "btnGenerer"
         Me.btnGenerer.Size = New System.Drawing.Size(122, 33)
@@ -107,7 +106,7 @@ Partial Class Consultation
         Me.btnSupprimer.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.btnSupprimer.Enabled = False
         Me.btnSupprimer.Font = New System.Drawing.Font("Verdana", 10.0!)
-        Me.btnSupprimer.Location = New System.Drawing.Point(790, 68)
+        Me.btnSupprimer.Location = New System.Drawing.Point(943, 72)
         Me.btnSupprimer.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSupprimer.Name = "btnSupprimer"
         Me.btnSupprimer.Size = New System.Drawing.Size(122, 33)
@@ -115,24 +114,12 @@ Partial Class Consultation
         Me.btnSupprimer.Text = "Supprimer"
         Me.btnSupprimer.UseVisualStyleBackColor = False
         '
-        'btnModifier
-        '
-        Me.btnModifier.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.btnModifier.Enabled = False
-        Me.btnModifier.Font = New System.Drawing.Font("Verdana", 10.0!)
-        Me.btnModifier.Location = New System.Drawing.Point(637, 68)
-        Me.btnModifier.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnModifier.Name = "btnModifier"
-        Me.btnModifier.Size = New System.Drawing.Size(122, 33)
-        Me.btnModifier.TabIndex = 5
-        Me.btnModifier.Text = "Modifier"
-        Me.btnModifier.UseVisualStyleBackColor = False
-        '
         'cbTrier
         '
         Me.cbTrier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbTrier.Font = New System.Drawing.Font("Verdana", 9.0!)
         Me.cbTrier.FormattingEnabled = True
+        Me.cbTrier.Items.AddRange(New Object() {"Nom", "Prénom", "Date de naissance", "Adresse", "Code postal", "Ville", "Pays", "Diplôme", "Profession", "Domaine d'emploi", "Mail perso", "Mail pro", "Tél perso", "Tél pro"})
         Me.cbTrier.Location = New System.Drawing.Point(19, 40)
         Me.cbTrier.Margin = New System.Windows.Forms.Padding(4)
         Me.cbTrier.Name = "cbTrier"
@@ -338,20 +325,32 @@ Partial Class Consultation
         '
         Me.DossierBindingSource.DataSource = GetType(WindowsApplication1.Dossier)
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(16, 599)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(624, 18)
+        Me.Label1.TabIndex = 12
+        Me.Label1.Text = "Pour modifier un dossier, double-cliquez sur la cellule que vous souhaitez modifi" &
+    "er."
+        '
         'Consultation
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1113, 649)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.labTrier)
         Me.Controls.Add(Me.txtRechercher)
         Me.Controls.Add(Me.labRechercher)
         Me.Controls.Add(Me.cbTrier)
-        Me.Controls.Add(Me.btnModifier)
         Me.Controls.Add(Me.btnSupprimer)
         Me.Controls.Add(Me.btnGenerer)
         Me.Controls.Add(Me.btnRetour)
         Me.Controls.Add(Me.dtgDossiers)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Consultation"
         Me.Text = "Consultation"
@@ -366,7 +365,6 @@ Partial Class Consultation
     Friend WithEvents btnRetour As Button
     Friend WithEvents btnGenerer As Button
     Friend WithEvents btnSupprimer As Button
-    Friend WithEvents btnModifier As Button
     Friend WithEvents cbTrier As ComboBox
     Friend WithEvents labRechercher As Label
     Friend WithEvents txtRechercher As TextBox
@@ -398,4 +396,5 @@ Partial Class Consultation
     Friend WithEvents PnumeroChequeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PfinancementDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PfideliteDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Label1 As Label
 End Class

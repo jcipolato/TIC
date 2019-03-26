@@ -1017,6 +1017,7 @@ Partial Class Inscription
         Me.Controls.Add(Me.btnSauvegarder)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Inscription"
         Me.Text = "Inscription"

@@ -110,6 +110,33 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Recherche une chaîne localisée semblable à Vous êtes sur le point de modifier le dossier, voulez-vous continuer ?.
+        '''</summary>
+        Friend Shared ReadOnly Property EditDossier_Message() As String
+            Get
+                Return ResourceManager.GetString("EditDossier_Message", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Le dossier a été modifié avec succès !.
+        '''</summary>
+        Friend Shared ReadOnly Property EditDossier_Success() As String
+            Get
+                Return ResourceManager.GetString("EditDossier_Success", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Recherche une chaîne localisée semblable à Modifier un dossier.
+        '''</summary>
+        Friend Shared ReadOnly Property EditDossier_Title() As String
+            Get
+                Return ResourceManager.GetString("EditDossier_Title", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Recherche une chaîne localisée semblable à Une version antérieure de Microsoft Excel est installée sur cet ordinateur.
         '''Veuillez installer la mise à jour vers Microsoft Excel 16.x.
         '''</summary>

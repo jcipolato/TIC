@@ -130,9 +130,11 @@ Public Class Consultation
     End Sub
 
     Private Sub dtgDossiers_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dtgDossiers.CellDoubleClick
-        dtgDossiers(e.ColumnIndex, e.RowIndex).ReadOnly = False
-        old_value = dtgDossiers(e.ColumnIndex, e.RowIndex).Value
-        dtgDossiers.BeginEdit(True)
+        If (e.RowIndex > -1) Then
+            dtgDossiers(e.ColumnIndex, e.RowIndex).ReadOnly = False
+            old_value = dtgDossiers(e.ColumnIndex, e.RowIndex).Value
+            dtgDossiers.BeginEdit(True)
+        End If
     End Sub
 
     Private Sub dtgDossiers_CellEndEdit(sender As Object, e As DataGridViewCellEventArgs) Handles dtgDossiers.CellEndEdit

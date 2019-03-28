@@ -232,10 +232,11 @@ Public Class Consultation
         Dim word As Word.Application = CreateObject("Word.Application")
         Try
             Dim path = "C:\Users\" + Environment.UserName + "\Downloads\Dossier-" + dossier.p_nom + "-" + dossier.p_prenom + ".docx"
-            If Not File.Exists(path) Then
-                My.Computer.FileSystem.CopyFile("C:\UBDXFORM\Dossier.docx", path)
-                File.SetAttributes(path, FileAttributes.Normal)
+            If File.Exists(path) Then
+                My.Computer.FileSystem.DeleteFile(path)
             End If
+            My.Computer.FileSystem.CopyFile("C:\UBDXFORM\Dossier.docx", path)
+            File.SetAttributes(path, FileAttributes.Normal)
 
             Dim doc As Word.Document = word.Documents.Open(path)
 

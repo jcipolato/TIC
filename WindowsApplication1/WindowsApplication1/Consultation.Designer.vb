@@ -24,6 +24,14 @@ Partial Class Consultation
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.dtgDossiers = New System.Windows.Forms.DataGridView()
+        Me.btnRetour = New System.Windows.Forms.Button()
+        Me.btnGenerer = New System.Windows.Forms.Button()
+        Me.btnSupprimer = New System.Windows.Forms.Button()
+        Me.cbTrier = New System.Windows.Forms.ComboBox()
+        Me.labRechercher = New System.Windows.Forms.Label()
+        Me.txtRechercher = New System.Windows.Forms.TextBox()
+        Me.labTrier = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.PciviliteDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PnomDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PprenomDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -49,14 +57,6 @@ Partial Class Consultation
         Me.PfinancementDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PfideliteDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DossierBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.btnRetour = New System.Windows.Forms.Button()
-        Me.btnGenerer = New System.Windows.Forms.Button()
-        Me.btnSupprimer = New System.Windows.Forms.Button()
-        Me.cbTrier = New System.Windows.Forms.ComboBox()
-        Me.labRechercher = New System.Windows.Forms.Label()
-        Me.txtRechercher = New System.Windows.Forms.TextBox()
-        Me.labTrier = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.dtgDossiers, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DossierBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -75,6 +75,94 @@ Partial Class Consultation
         Me.dtgDossiers.Name = "dtgDossiers"
         Me.dtgDossiers.Size = New System.Drawing.Size(1080, 458)
         Me.dtgDossiers.TabIndex = 0
+        '
+        'btnRetour
+        '
+        Me.btnRetour.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.btnRetour.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.btnRetour.Location = New System.Drawing.Point(943, 599)
+        Me.btnRetour.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnRetour.Name = "btnRetour"
+        Me.btnRetour.Size = New System.Drawing.Size(153, 38)
+        Me.btnRetour.TabIndex = 1
+        Me.btnRetour.Text = "Retour"
+        Me.btnRetour.UseVisualStyleBackColor = False
+        '
+        'btnGenerer
+        '
+        Me.btnGenerer.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.btnGenerer.Enabled = False
+        Me.btnGenerer.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.btnGenerer.Location = New System.Drawing.Point(791, 72)
+        Me.btnGenerer.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnGenerer.Name = "btnGenerer"
+        Me.btnGenerer.Size = New System.Drawing.Size(122, 33)
+        Me.btnGenerer.TabIndex = 2
+        Me.btnGenerer.Text = "Générer"
+        Me.btnGenerer.UseVisualStyleBackColor = False
+        '
+        'btnSupprimer
+        '
+        Me.btnSupprimer.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.btnSupprimer.Enabled = False
+        Me.btnSupprimer.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.btnSupprimer.Location = New System.Drawing.Point(943, 72)
+        Me.btnSupprimer.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnSupprimer.Name = "btnSupprimer"
+        Me.btnSupprimer.Size = New System.Drawing.Size(122, 33)
+        Me.btnSupprimer.TabIndex = 4
+        Me.btnSupprimer.Text = "Supprimer"
+        Me.btnSupprimer.UseVisualStyleBackColor = False
+        '
+        'cbTrier
+        '
+        Me.cbTrier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbTrier.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.cbTrier.FormattingEnabled = True
+        Me.cbTrier.Items.AddRange(New Object() {"Nom", "Prénom", "Date de naissance", "Adresse", "Code postal", "Ville", "Pays", "Diplôme", "Profession", "Domaine d'emploi", "Mail perso", "Mail pro", "Tél perso", "Tél pro"})
+        Me.cbTrier.Location = New System.Drawing.Point(19, 40)
+        Me.cbTrier.Margin = New System.Windows.Forms.Padding(4)
+        Me.cbTrier.Name = "cbTrier"
+        Me.cbTrier.Size = New System.Drawing.Size(201, 26)
+        Me.cbTrier.TabIndex = 8
+        '
+        'labRechercher
+        '
+        Me.labRechercher.AutoSize = True
+        Me.labRechercher.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.labRechercher.Location = New System.Drawing.Point(16, 83)
+        Me.labRechercher.Name = "labRechercher"
+        Me.labRechercher.Size = New System.Drawing.Size(103, 18)
+        Me.labRechercher.TabIndex = 9
+        Me.labRechercher.Text = "Rechercher :"
+        '
+        'txtRechercher
+        '
+        Me.txtRechercher.Location = New System.Drawing.Point(135, 83)
+        Me.txtRechercher.Name = "txtRechercher"
+        Me.txtRechercher.Size = New System.Drawing.Size(319, 22)
+        Me.txtRechercher.TabIndex = 10
+        '
+        'labTrier
+        '
+        Me.labTrier.AutoSize = True
+        Me.labTrier.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.labTrier.Location = New System.Drawing.Point(16, 11)
+        Me.labTrier.Name = "labTrier"
+        Me.labTrier.Size = New System.Drawing.Size(81, 18)
+        Me.labTrier.TabIndex = 11
+        Me.labTrier.Text = "Trier par :"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(16, 599)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(624, 18)
+        Me.Label1.TabIndex = 12
+        Me.Label1.Text = "Pour modifier un dossier, double-cliquez sur la cellule que vous souhaitez modifi" &
+    "er."
         '
         'PciviliteDataGridViewTextBoxColumn
         '
@@ -248,94 +336,6 @@ Partial Class Consultation
         '
         Me.DossierBindingSource.DataSource = GetType(WindowsApplication1.Dossier)
         '
-        'btnRetour
-        '
-        Me.btnRetour.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.btnRetour.Font = New System.Drawing.Font("Verdana", 10.0!)
-        Me.btnRetour.Location = New System.Drawing.Point(943, 599)
-        Me.btnRetour.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnRetour.Name = "btnRetour"
-        Me.btnRetour.Size = New System.Drawing.Size(153, 38)
-        Me.btnRetour.TabIndex = 1
-        Me.btnRetour.Text = "Retour"
-        Me.btnRetour.UseVisualStyleBackColor = False
-        '
-        'btnGenerer
-        '
-        Me.btnGenerer.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.btnGenerer.Enabled = False
-        Me.btnGenerer.Font = New System.Drawing.Font("Verdana", 10.0!)
-        Me.btnGenerer.Location = New System.Drawing.Point(791, 72)
-        Me.btnGenerer.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnGenerer.Name = "btnGenerer"
-        Me.btnGenerer.Size = New System.Drawing.Size(122, 33)
-        Me.btnGenerer.TabIndex = 2
-        Me.btnGenerer.Text = "Générer"
-        Me.btnGenerer.UseVisualStyleBackColor = False
-        '
-        'btnSupprimer
-        '
-        Me.btnSupprimer.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.btnSupprimer.Enabled = False
-        Me.btnSupprimer.Font = New System.Drawing.Font("Verdana", 10.0!)
-        Me.btnSupprimer.Location = New System.Drawing.Point(943, 72)
-        Me.btnSupprimer.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnSupprimer.Name = "btnSupprimer"
-        Me.btnSupprimer.Size = New System.Drawing.Size(122, 33)
-        Me.btnSupprimer.TabIndex = 4
-        Me.btnSupprimer.Text = "Supprimer"
-        Me.btnSupprimer.UseVisualStyleBackColor = False
-        '
-        'cbTrier
-        '
-        Me.cbTrier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbTrier.Font = New System.Drawing.Font("Verdana", 9.0!)
-        Me.cbTrier.FormattingEnabled = True
-        Me.cbTrier.Items.AddRange(New Object() {"Nom", "Prénom", "Date de naissance", "Adresse", "Code postal", "Ville", "Pays", "Diplôme", "Profession", "Domaine d'emploi", "Mail perso", "Mail pro", "Tél perso", "Tél pro"})
-        Me.cbTrier.Location = New System.Drawing.Point(19, 40)
-        Me.cbTrier.Margin = New System.Windows.Forms.Padding(4)
-        Me.cbTrier.Name = "cbTrier"
-        Me.cbTrier.Size = New System.Drawing.Size(201, 26)
-        Me.cbTrier.TabIndex = 8
-        '
-        'labRechercher
-        '
-        Me.labRechercher.AutoSize = True
-        Me.labRechercher.Font = New System.Drawing.Font("Verdana", 9.0!)
-        Me.labRechercher.Location = New System.Drawing.Point(16, 83)
-        Me.labRechercher.Name = "labRechercher"
-        Me.labRechercher.Size = New System.Drawing.Size(103, 18)
-        Me.labRechercher.TabIndex = 9
-        Me.labRechercher.Text = "Rechercher :"
-        '
-        'txtRechercher
-        '
-        Me.txtRechercher.Location = New System.Drawing.Point(135, 83)
-        Me.txtRechercher.Name = "txtRechercher"
-        Me.txtRechercher.Size = New System.Drawing.Size(319, 22)
-        Me.txtRechercher.TabIndex = 10
-        '
-        'labTrier
-        '
-        Me.labTrier.AutoSize = True
-        Me.labTrier.Font = New System.Drawing.Font("Verdana", 9.0!)
-        Me.labTrier.Location = New System.Drawing.Point(16, 11)
-        Me.labTrier.Name = "labTrier"
-        Me.labTrier.Size = New System.Drawing.Size(81, 18)
-        Me.labTrier.TabIndex = 11
-        Me.labTrier.Text = "Trier par :"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(16, 599)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(624, 18)
-        Me.Label1.TabIndex = 12
-        Me.Label1.Text = "Pour modifier un dossier, double-cliquez sur la cellule que vous souhaitez modifi" &
-    "er."
-        '
         'Consultation
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -352,6 +352,8 @@ Partial Class Consultation
         Me.Controls.Add(Me.dtgDossiers)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "Consultation"
         Me.Text = "Consultation"
         CType(Me.dtgDossiers, System.ComponentModel.ISupportInitialize).EndInit()

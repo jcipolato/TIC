@@ -217,7 +217,7 @@ Partial Class Inscription
         Me.cbEmploi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbEmploi.Font = New System.Drawing.Font("Verdana", 9.0!)
         Me.cbEmploi.FormattingEnabled = True
-        Me.cbEmploi.Items.AddRange(New Object() {"Art", "Autre", "Administration", "Biologie-Chimiste-Physique", "Commerce", "Droit", "Enseignement", "Environnement", "Hôtellerie-Restauration-Tourisme", "Informatique-Multimédia", "Médecine-Santé", "Social", "Sport", "Technique", "Transports"})
+        Me.cbEmploi.Items.AddRange(New Object() {"Art", "Autre", "Biologie-Chimie-Physique", "Commerce-Services", "Droit", "Enseignement", "Environnement", "Economie-Administrations", "Hôtellerie-Tourisme", "Informatique-Multimédia", "Média-Communication", "Médecine-Santé", "Social-Sciences Humaines", "Sport", "Technique", "Transports"})
         Me.cbEmploi.Location = New System.Drawing.Point(7, 153)
         Me.cbEmploi.Margin = New System.Windows.Forms.Padding(4)
         Me.cbEmploi.Name = "cbEmploi"
@@ -707,7 +707,7 @@ Partial Class Inscription
         Me.cbFidelite.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbFidelite.Font = New System.Drawing.Font("Verdana", 9.0!)
         Me.cbFidelite.FormattingEnabled = True
-        Me.cbFidelite.Items.AddRange(New Object() {"Relation professionnelle", "Presse audovisuelle", "Site école", "Réseaux sociaux", "Presse écrite", "Site institutionnel", "Réseaux sociaux institutionnel", "Autre"})
+        Me.cbFidelite.Items.AddRange(New Object() {"Relation professionnelle", "Presse audiovisuelle", "Site École", "Réseaux sociaux", "Presse écrite", "Site Institutionnel", "Réseaux sociaux Institutionnel", "Autre"})
         Me.cbFidelite.Location = New System.Drawing.Point(8, 81)
         Me.cbFidelite.Margin = New System.Windows.Forms.Padding(4)
         Me.cbFidelite.Name = "cbFidelite"
@@ -1019,6 +1019,8 @@ Partial Class Inscription
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "Inscription"
         Me.Text = "Inscription"
         Me.Panel1.ResumeLayout(False)

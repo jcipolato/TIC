@@ -97,6 +97,8 @@ Partial Class Menu
         Me.Controls.Add(Me.btnInscription)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "Menu"
         Me.Text = "Menu"
         CType(Me.ptUBDX, System.ComponentModel.ISupportInitialize).EndInit()

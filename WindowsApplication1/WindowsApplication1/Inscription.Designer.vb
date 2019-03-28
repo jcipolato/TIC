@@ -707,7 +707,7 @@ Partial Class Inscription
         Me.cbFidelite.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbFidelite.Font = New System.Drawing.Font("Verdana", 9.0!)
         Me.cbFidelite.FormattingEnabled = True
-        Me.cbFidelite.Items.AddRange(New Object() {"Relation professionnelle", "Presse audiovisuelle", "Site École", "Réseaux sociaux", "Presse écrite", "Site Institutionnel", "Réseaux sociaux Institutionnel", "Autre"})
+        Me.cbFidelite.Items.AddRange(New Object() {"Relation personnelle", "Presse audiovisuelle", "Site École", "Réseaux sociaux", "Presse écrite", "Site Institutionnel", "Réseaux sociaux Institutionnel", "Autre"})
         Me.cbFidelite.Location = New System.Drawing.Point(8, 81)
         Me.cbFidelite.Margin = New System.Windows.Forms.Padding(4)
         Me.cbFidelite.Name = "cbFidelite"
@@ -719,7 +719,7 @@ Partial Class Inscription
         Me.cbFinancement.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbFinancement.Font = New System.Drawing.Font("Verdana", 9.0!)
         Me.cbFinancement.FormattingEnabled = True
-        Me.cbFinancement.Items.AddRange(New Object() {"Financement propre ", "Entreprise", "OPCA"})
+        Me.cbFinancement.Items.AddRange(New Object() {"Financement propre", "Entreprise", "OPCA"})
         Me.cbFinancement.Location = New System.Drawing.Point(187, 18)
         Me.cbFinancement.Margin = New System.Windows.Forms.Padding(4)
         Me.cbFinancement.Name = "cbFinancement"

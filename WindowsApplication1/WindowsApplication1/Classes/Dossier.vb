@@ -1,4 +1,4 @@
-﻿Public Class Dossier 'tester chaque Property ?
+﻿Public Class Dossier
 
 
     Sub New()

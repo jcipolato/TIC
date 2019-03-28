@@ -1,4 +1,4 @@
-﻿Public Class Dossier
+﻿Public Class Dossier 'tester chaque Property ?
 
 
     Sub New()
@@ -36,11 +36,11 @@
     End Property
 
     Private dateNaissance As Date
-    Public Property p_dateNaissance() As String
+    Public Property p_dateNaissance() As Date
         Get
             Return dateNaissance
         End Get
-        Set(ByVal value As String)
+        Set(ByVal value As Date)
             dateNaissance = value
         End Set
     End Property

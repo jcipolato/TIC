@@ -32,57 +32,11 @@ Public Class Menu
             If FirstOpeningMessage = DialogResult.Cancel Then
                 Me.Close()
             ElseIf FirstOpeningMessage = DialogResult.OK Then
-                GenerateBackup()
+                Common.GenerateBackup("C:\UBDXFORM")
             End If
         Else
-            Dim foundFile As String = String.Empty
-            For Each currentFile As String In My.Computer.FileSystem.GetFiles("C:\UBDXFORM\", FileIO.SearchOption.SearchAllSubDirectories, "*.xlsx")
-                foundFile = currentFile
-            Next
-
-            If String.IsNullOrEmpty(foundFile) Then
-                Dim BackupNotFound As DialogResult = MessageBox.Show(Messages.Backup_errorMessage, Messages.Backup_errorTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
-
-                If BackupNotFound = DialogResult.OK Then
-                    GenerateBackup()
-                End If
-            End If
+            Common.CheckBackup()
         End If
     End Sub
 
-    Private Sub GenerateBackup()
-        Dim path As String = "C:\UBDXFORM"
-        Dim xls As Excel.Application = New Excel.Application()
-
-        If xls Is Nothing Then
-            MessageBox.Show(Messages.Excel_BadVersion)
-            Return
-        End If
-        Dim workbook As Excel.Workbook = xls.Workbooks.Add(Reflection.Missing.Value)
-        Dim worksheet As Excel.Worksheet = CType(workbook.Sheets(1), Excel.Worksheet)
-
-        If (Not Directory.Exists(path)) Then
-            Directory.CreateDirectory(path)
-        End If
-        workbook.SaveAs(path + "\UBDXFORM-backup.xlsx")
-        xls.Quit()
-
-        releaseObject(worksheet)
-        releaseObject(workbook)
-        releaseObject(xls)
-        File.SetAttributes(path + "\UBDXFORM-backup.xlsx", FileAttributes.Encrypted)
-
-        MessageBox.Show(Messages.Backup_success)
-    End Sub
-
-    Private Sub releaseObject(ByVal obj As Object)
-        Try
-            Runtime.InteropServices.Marshal.ReleaseComObject(obj)
-            obj = Nothing
-        Catch ex As Exception
-            obj = Nothing
-        Finally
-            GC.Collect()
-        End Try
-    End Sub
 End Class

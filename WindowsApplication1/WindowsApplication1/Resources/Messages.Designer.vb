@@ -166,6 +166,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Recherche une chaîne localisée semblable à Le dossier d&apos;inscription a été généré avec succès !.
+        '''</summary>
+        Friend Shared ReadOnly Property GenerateDossier_Success() As String
+            Get
+                Return ResourceManager.GetString("GenerateDossier_Success", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Recherche une chaîne localisée semblable à L&apos;inscription a été ajoutée avec succès !.
         '''</summary>
         Friend Shared ReadOnly Property Inscription_Success() As String

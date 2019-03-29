@@ -41,8 +41,8 @@ Public Class Inscription
     End Sub
 
     Private Sub SwitchButtonState()
-        Dim controls As Control() = {txtNom, txtPrenom, txtAdresse, txtCP, txtProfession,
-            txtCheque, cbCivilite, cbEmploi, cbEtudes, cbFidelite, cbFinancement, cbPays,
+        Dim controls As Control() = {txtNom, txtPrenom, txtAdresse, txtCP,
+            txtCheque, cbCivilite, cbEtudes, cbFidelite, cbFinancement, cbPays,
             cbStatut, rbOuiCV, rbNonCV, rbOuiMotiv, rbNonMotiv, rbNonAcompte, rbOuiAcompte}
         For Each item In controls
             AddHandler item.TextChanged, Sub(s, ee)
@@ -124,33 +124,30 @@ Public Class Inscription
     End Sub
 
     Private Sub addDossier(dossier As Dossier)
-        If FileNotFound("C:\UBDXFORM\") = True Then
-            MessageBox.Show(Messages.Backup_errorMessage, Messages.Backup_errorTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
-        Else
-            Dim xls As Excel.Application = New Excel.Application()
+        CheckBackup()
+        Dim xls As Excel.Application = New Excel.Application()
 
-            If xls Is Nothing Then
-                MessageBox.Show(Messages.Excel_BadVersion)
-                Return
-            End If
-            Dim workbook As Excel.Workbook = xls.Workbooks.Open("C:\UBDXFORM\UBDXFORM-backup.xlsx")
-            Dim worksheet As Excel.Worksheet = CType(workbook.Sheets(1), Excel.Worksheet)
-
-            If worksheet.Rows(1).Insert() Then
-                For Each prop In dossier.GetType().GetProperties()
-                    DirectCast(worksheet.Cells(1, Array.IndexOf(dossier.GetType().GetProperties(), prop) + 1), Excel.Range).Value = prop.GetValue(dossier)
-                Next
-                MessageBox.Show(Messages.Inscription_Success)
-            End If
-
-            workbook.Save()
-            workbook.Close()
-            xls.Quit()
-
-            releaseObject(worksheet)
-            releaseObject(workbook)
-            releaseObject(xls)
-            Me.Close()
+        If xls Is Nothing Then
+            MessageBox.Show(Messages.Excel_BadVersion)
+            Return
         End If
+        Dim workbook As Excel.Workbook = xls.Workbooks.Open("C:\UBDXFORM\UBDXFORM-backup.xlsx")
+        Dim worksheet As Excel.Worksheet = CType(workbook.Sheets(1), Excel.Worksheet)
+
+        If worksheet.Rows(1).Insert() Then
+            For Each prop In dossier.GetType().GetProperties()
+                DirectCast(worksheet.Cells(1, Array.IndexOf(dossier.GetType().GetProperties(), prop) + 1), Excel.Range).Value = prop.GetValue(dossier)
+            Next
+            MessageBox.Show(Messages.Inscription_Success)
+        End If
+
+        workbook.Save()
+        workbook.Close()
+        xls.Quit()
+
+        releaseObject(worksheet)
+        releaseObject(workbook)
+        releaseObject(xls)
+        Me.Close()
     End Sub
 End Class

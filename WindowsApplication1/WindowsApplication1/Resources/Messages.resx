@@ -152,6 +152,9 @@ Veuillez sélectionner l'emplacement de sauvegarde de l'application. Vous pourre
   <data name="FirstOpening_Title" xml:space="preserve">
     <value>Bienvenue sur UBDXFORM</value>
   </data>
+  <data name="GenerateDossier_Success" xml:space="preserve">
+    <value>Le dossier d'inscription a été généré avec succès !</value>
+  </data>
   <data name="Inscription_Success" xml:space="preserve">
     <value>L'inscription a été ajoutée avec succès !</value>
   </data>

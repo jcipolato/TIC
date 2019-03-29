@@ -41,8 +41,8 @@ Public Class Inscription
     End Sub
 
     Private Sub SwitchButtonState()
-        Dim controls As Control() = {txtNom, txtPrenom, txtAdresse, txtCP, txtProfession,
-            txtCheque, cbCivilite, cbEmploi, cbEtudes, cbFidelite, cbFinancement, cbPays,
+        Dim controls As Control() = {txtNom, txtPrenom, txtAdresse, txtCP,
+            txtCheque, cbCivilite, cbEtudes, cbFidelite, cbFinancement, cbPays,
             cbStatut, rbOuiCV, rbNonCV, rbOuiMotiv, rbNonMotiv, rbNonAcompte, rbOuiAcompte}
         For Each item In controls
             AddHandler item.TextChanged, Sub(s, ee)

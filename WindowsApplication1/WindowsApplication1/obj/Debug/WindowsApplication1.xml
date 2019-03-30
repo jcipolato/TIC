@@ -68,6 +68,21 @@ WindowsApplication1
   Recherche une chaîne localisée semblable à Supprimer un dossier.
 </summary>
 </member>
+<member name="P:WindowsApplication1.My.Resources.Messages.EditDossier_Message">
+<summary>
+  Recherche une chaîne localisée semblable à Vous êtes sur le point de modifier le dossier, voulez-vous continuer ?.
+</summary>
+</member>
+<member name="P:WindowsApplication1.My.Resources.Messages.EditDossier_Success">
+<summary>
+  Recherche une chaîne localisée semblable à Le dossier a été modifié avec succès !.
+</summary>
+</member>
+<member name="P:WindowsApplication1.My.Resources.Messages.EditDossier_Title">
+<summary>
+  Recherche une chaîne localisée semblable à Modifier un dossier.
+</summary>
+</member>
 <member name="P:WindowsApplication1.My.Resources.Messages.Excel_BadVersion">
 <summary>
   Recherche une chaîne localisée semblable à Une version antérieure de Microsoft Excel est installée sur cet ordinateur.
@@ -83,6 +98,11 @@ Veuillez sélectionner l&apos;emplacement de sauvegarde de l&apos;application. V
 <member name="P:WindowsApplication1.My.Resources.Messages.FirstOpening_Title">
 <summary>
   Recherche une chaîne localisée semblable à Bienvenue sur UBDXFORM.
+</summary>
+</member>
+<member name="P:WindowsApplication1.My.Resources.Messages.GenerateDossier_Success">
+<summary>
+  Recherche une chaîne localisée semblable à Le dossier d&apos;inscription a été généré avec succès !.
 </summary>
 </member>
 <member name="P:WindowsApplication1.My.Resources.Messages.Inscription_Success">

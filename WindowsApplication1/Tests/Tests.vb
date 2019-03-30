@@ -17,46 +17,80 @@ Imports WindowsApplication1
     <TestMethod()> Public Sub Dossier_Properties_Test()
         Dim dossierTest As New Dossier()
 
-        'Setters
         dossierTest.p_civilite = "Madame"
+        Assert.Equals(dossierTest.p_civilite, "Madame")
+
         dossierTest.p_nom = "Molia"
+        Assert.Equals(dossierTest.p_nom, "Molia")
+
         dossierTest.p_prenom = "Clara"
+        Assert.Equals(dossierTest.p_prenom, "Clara")
+
         dossierTest.p_dateNaissance = Date.FromOADate(21 / 7 / 1996)
+        Assert.Equals(dossierTest.p_dateNaissance, Date.FromOADate(21 / 7 / 1996))
+
         dossierTest.p_adresse = "9 rue Félix Leclerc"
+        Assert.Equals(dossierTest.p_adresse, "9 rue Félix Leclerc")
+
         dossierTest.p_complementAdresse = " "
+        Assert.Equals(dossierTest.p_complementAdresse, " ")
+
         dossierTest.p_codePostal = 40220
+        Assert.Equals(dossierTest.p_codePostal, 40220)
+
         dossierTest.p_ville = "Tarnos"
+        Assert.Equals(dossierTest.p_ville, "Tarnos")
+
         dossierTest.p_pays = "France"
+        Assert.Equals(dossierTest.p_pays, "France")
+
         dossierTest.p_statut = "Salarié"
+        Assert.Equals(dossierTest.p_statut, "Salarié")
+
         dossierTest.p_niveauEtudes = "Master"
+        Assert.Equals(dossierTest.p_niveauEtudes, "Master")
+
         dossierTest.p_profession = "OnVerra"
+        Assert.Equals(dossierTest.p_profession, "OnVerra")
+
         dossierTest.p_domaineEmploi = "Informatique-Multimédia"
+        Assert.Equals(dossierTest.p_domaineEmploi, "Informatique-Multimédia")
+
         dossierTest.p_mailPerso = "clara.molia@free.fr"
+        Assert.Equals(dossierTest.p_mailPerso, "clara.molia@free.fr")
+
         dossierTest.p_mailPro = ""
+        Assert.Equals(dossierTest.p_mailPro, "")
+
         dossierTest.p_telPerso = 619982620
+        Assert.Equals(dossierTest.p_telPerso, 619982620)
+
         dossierTest.p_telPro = 619982620
+        Assert.Equals(dossierTest.p_telPro, 619982620)
+
         dossierTest.p_cvOuiNon = False
+        Assert.Equals(dossierTest.p_cvOuiNon, False)
+
         dossierTest.p_lettreMotivationOuiNon = False
+        Assert.Equals(dossierTest.p_lettreMotivationOuiNon, False)
+
         dossierTest.p_dateDebutContrat = Date.FromOADate(1 / 10 / 2018)
+        Assert.Equals(dossierTest.p_dateDebutContrat, Date.FromOADate(1 / 10 / 2018))
+
         dossierTest.p_dateFinContrat = Date.FromOADate(1 / 9 / 2020)
+        Assert.Equals(dossierTest.p_dateFinContrat, Date.FromOADate(1 / 9 / 2020))
+
         dossierTest.p_acompteOuiNon = True
+        Assert.Equals(dossierTest.p_acompteOuiNon, True)
+
         dossierTest.p_numeroCheque = 12457845
+        Assert.Equals(dossierTest.p_numeroCheque, 12457845)
+
         dossierTest.p_financement = "Entreprise"
+        Assert.Equals(dossierTest.p_financement, "Entreprise")
+
         dossierTest.p_fidelite = "Autre"
-
-        'EN COURS
-
-        'Getters
-        MsgBox(dossierTest.p_civilite + dossierTest.p_nom + dossierTest.p_prenom + Format(dossierTest.p_dateNaissance, "dd/mm/yyyy") +
-               dossierTest.p_adresse + dossierTest.p_complementAdresse + CStr(dossierTest.p_codePostal) + dossierTest.p_ville +
-               dossierTest.p_pays + dossierTest.p_statut + dossierTest.p_niveauEtudes + dossierTest.p_profession +
-               dossierTest.p_domaineEmploi + dossierTest.p_mailPerso + dossierTest.p_mailPro)
-
-        ' + dossierTest.p_telPerso +
-        ' dossierTest.p_telPro + dossierTest.p_cvOuiNon + dossierTest.p_lettreMotivationOuiNon + dossierTest.p_dateDebutContrat +
-        'dossierTest.p_dateFinContrat + dossierTest.p_acompteOuiNon + dossierTest.p_numeroCheque + dossierTest.p_financement + dossierTest.p_fidelite)
-
-
+        Assert.Equals(dossierTest.p_fidelite, "Autre")
 
     End Sub
 

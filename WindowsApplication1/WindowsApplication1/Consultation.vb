@@ -217,10 +217,10 @@ Public Class Consultation
     End Sub
 
     Private Sub btnGenerer_Click(sender As Object, e As EventArgs) Handles btnGenerer.Click
-        RemplirWord(dtgDossiers.CurrentRow.DataBoundItem)
+        FillWord(dtgDossiers.CurrentRow.DataBoundItem)
     End Sub
 
-    Private Sub RemplirWord(dossier As Dossier)
+    Private Sub FillWord(dossier As Dossier)
         Dim word As Word.Application = CreateObject("Word.Application")
         Try
             Dim path = "C:\Users\" + Environment.UserName + "\Downloads\Dossier-" + dossier.p_nom + "-" + dossier.p_prenom + ".docx"

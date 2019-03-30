@@ -120,10 +120,10 @@ Public Class Inscription
         dossier.p_financement = cbFinancement.Text
         dossier.p_fidelite = cbFidelite.Text
 
-        addDossier(dossier)
+        AddDossier(dossier)
     End Sub
 
-    Private Sub addDossier(dossier As Dossier)
+    Private Sub AddDossier(dossier As Dossier)
         CheckBackup()
         Dim xls As Excel.Application = New Excel.Application()
 
@@ -150,4 +150,5 @@ Public Class Inscription
         releaseObject(xls)
         Me.Close()
     End Sub
+
 End Class

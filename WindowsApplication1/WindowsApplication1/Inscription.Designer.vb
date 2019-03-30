@@ -37,6 +37,8 @@ Partial Class Inscription
         Me.labStatut = New System.Windows.Forms.Label()
         Me.cbStatut = New System.Windows.Forms.ComboBox()
         Me.panCoordonnees = New System.Windows.Forms.Panel()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.txtComplement = New System.Windows.Forms.TextBox()
         Me.labComplement = New System.Windows.Forms.Label()
         Me.labVille = New System.Windows.Forms.Label()
@@ -48,6 +50,10 @@ Partial Class Inscription
         Me.labPays = New System.Windows.Forms.Label()
         Me.labAdresse = New System.Windows.Forms.Label()
         Me.panIdentite = New System.Windows.Forms.Panel()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.dtNaissance = New System.Windows.Forms.DateTimePicker()
         Me.cbCivilite = New System.Windows.Forms.ComboBox()
         Me.txtNom = New System.Windows.Forms.TextBox()
@@ -97,6 +103,18 @@ Partial Class Inscription
         Me.labAcompte = New System.Windows.Forms.Label()
         Me.btnSauvegarder = New System.Windows.Forms.Button()
         Me.btnRetour = New System.Windows.Forms.Button()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.panParcours.SuspendLayout()
         Me.panCoordonnees.SuspendLayout()
@@ -151,6 +169,8 @@ Partial Class Inscription
         'panParcours
         '
         Me.panParcours.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.panParcours.Controls.Add(Me.Label10)
+        Me.panParcours.Controls.Add(Me.Label9)
         Me.panParcours.Controls.Add(Me.txtAutre)
         Me.panParcours.Controls.Add(Me.labAutre)
         Me.panParcours.Controls.Add(Me.txtProfession)
@@ -285,6 +305,10 @@ Partial Class Inscription
         'panCoordonnees
         '
         Me.panCoordonnees.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.panCoordonnees.Controls.Add(Me.Label5)
+        Me.panCoordonnees.Controls.Add(Me.Label8)
+        Me.panCoordonnees.Controls.Add(Me.Label7)
+        Me.panCoordonnees.Controls.Add(Me.Label6)
         Me.panCoordonnees.Controls.Add(Me.txtComplement)
         Me.panCoordonnees.Controls.Add(Me.labComplement)
         Me.panCoordonnees.Controls.Add(Me.labVille)
@@ -301,13 +325,35 @@ Partial Class Inscription
         Me.panCoordonnees.Size = New System.Drawing.Size(483, 141)
         Me.panCoordonnees.TabIndex = 2
         '
+        'Label7
+        '
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Label7.ForeColor = System.Drawing.Color.Red
+        Me.Label7.Location = New System.Drawing.Point(43, 103)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(14, 14)
+        Me.Label7.TabIndex = 25
+        Me.Label7.Text = "*"
+        '
+        'Label6
+        '
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Label6.ForeColor = System.Drawing.Color.Red
+        Me.Label6.Location = New System.Drawing.Point(110, 72)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(14, 14)
+        Me.Label6.TabIndex = 24
+        Me.Label6.Text = "*"
+        '
         'txtComplement
         '
         Me.txtComplement.Font = New System.Drawing.Font("Verdana", 9.0!)
-        Me.txtComplement.Location = New System.Drawing.Point(128, 42)
+        Me.txtComplement.Location = New System.Drawing.Point(145, 42)
         Me.txtComplement.Margin = New System.Windows.Forms.Padding(4)
         Me.txtComplement.Name = "txtComplement"
-        Me.txtComplement.Size = New System.Drawing.Size(344, 26)
+        Me.txtComplement.Size = New System.Drawing.Size(327, 26)
         Me.txtComplement.TabIndex = 5
         '
         'labComplement
@@ -347,7 +393,7 @@ Partial Class Inscription
         'txtCP
         '
         Me.txtCP.Font = New System.Drawing.Font("Verdana", 9.0!)
-        Me.txtCP.Location = New System.Drawing.Point(128, 76)
+        Me.txtCP.Location = New System.Drawing.Point(145, 75)
         Me.txtCP.Margin = New System.Windows.Forms.Padding(4)
         Me.txtCP.MaxLength = 5
         Me.txtCP.Name = "txtCP"
@@ -369,10 +415,10 @@ Partial Class Inscription
         'txtAdresse
         '
         Me.txtAdresse.Font = New System.Drawing.Font("Verdana", 9.0!)
-        Me.txtAdresse.Location = New System.Drawing.Point(128, 11)
+        Me.txtAdresse.Location = New System.Drawing.Point(145, 11)
         Me.txtAdresse.Margin = New System.Windows.Forms.Padding(4)
         Me.txtAdresse.Name = "txtAdresse"
-        Me.txtAdresse.Size = New System.Drawing.Size(344, 26)
+        Me.txtAdresse.Size = New System.Drawing.Size(327, 26)
         Me.txtAdresse.TabIndex = 4
         '
         'labCP
@@ -412,6 +458,10 @@ Partial Class Inscription
         'panIdentite
         '
         Me.panIdentite.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.panIdentite.Controls.Add(Me.Label4)
+        Me.panIdentite.Controls.Add(Me.Label3)
+        Me.panIdentite.Controls.Add(Me.Label2)
+        Me.panIdentite.Controls.Add(Me.Label1)
         Me.panIdentite.Controls.Add(Me.dtNaissance)
         Me.panIdentite.Controls.Add(Me.cbCivilite)
         Me.panIdentite.Controls.Add(Me.txtNom)
@@ -425,6 +475,54 @@ Partial Class Inscription
         Me.panIdentite.Name = "panIdentite"
         Me.panIdentite.Size = New System.Drawing.Size(483, 150)
         Me.panIdentite.TabIndex = 0
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Label4.ForeColor = System.Drawing.Color.Red
+        Me.Label4.Location = New System.Drawing.Point(0, 111)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(20, 20)
+        Me.Label4.TabIndex = 24
+        Me.Label4.Text = "*"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Label3.ForeColor = System.Drawing.Color.Red
+        Me.Label3.Location = New System.Drawing.Point(0, 75)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(20, 20)
+        Me.Label3.TabIndex = 24
+        Me.Label3.Text = "*"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Label2.ForeColor = System.Drawing.Color.Red
+        Me.Label2.Location = New System.Drawing.Point(-1, 42)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(20, 20)
+        Me.Label2.TabIndex = 24
+        Me.Label2.Text = "*"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Label1.ForeColor = System.Drawing.Color.Red
+        Me.Label1.Location = New System.Drawing.Point(-1, 8)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(20, 20)
+        Me.Label1.TabIndex = 23
+        Me.Label1.Text = "*"
         '
         'dtNaissance
         '
@@ -486,7 +584,7 @@ Partial Class Inscription
         Me.labDateNaissance.Location = New System.Drawing.Point(18, 116)
         Me.labDateNaissance.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.labDateNaissance.Name = "labDateNaissance"
-        Me.labDateNaissance.Size = New System.Drawing.Size(156, 26)
+        Me.labDateNaissance.Size = New System.Drawing.Size(190, 20)
         Me.labDateNaissance.TabIndex = 2
         Me.labDateNaissance.Text = "Date de naissance :"
         '
@@ -691,6 +789,8 @@ Partial Class Inscription
         'panRenseign
         '
         Me.panRenseign.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.panRenseign.Controls.Add(Me.Label18)
+        Me.panRenseign.Controls.Add(Me.Label17)
         Me.panRenseign.Controls.Add(Me.cbFidelite)
         Me.panRenseign.Controls.Add(Me.cbFinancement)
         Me.panRenseign.Controls.Add(Me.labFidelite)
@@ -720,10 +820,10 @@ Partial Class Inscription
         Me.cbFinancement.Font = New System.Drawing.Font("Verdana", 9.0!)
         Me.cbFinancement.FormattingEnabled = True
         Me.cbFinancement.Items.AddRange(New Object() {"Financement propre", "Entreprise", "OPCA"})
-        Me.cbFinancement.Location = New System.Drawing.Point(187, 18)
+        Me.cbFinancement.Location = New System.Drawing.Point(225, 18)
         Me.cbFinancement.Margin = New System.Windows.Forms.Padding(4)
         Me.cbFinancement.Name = "cbFinancement"
-        Me.cbFinancement.Size = New System.Drawing.Size(290, 26)
+        Me.cbFinancement.Size = New System.Drawing.Size(252, 26)
         Me.cbFinancement.TabIndex = 26
         '
         'labFidelite
@@ -739,12 +839,11 @@ Partial Class Inscription
         '
         'labFinancement
         '
-        Me.labFinancement.AutoSize = True
         Me.labFinancement.Font = New System.Drawing.Font("Verdana", 9.0!)
         Me.labFinancement.Location = New System.Drawing.Point(4, 21)
         Me.labFinancement.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.labFinancement.Name = "labFinancement"
-        Me.labFinancement.Size = New System.Drawing.Size(174, 18)
+        Me.labFinancement.Size = New System.Drawing.Size(213, 18)
         Me.labFinancement.TabIndex = 4
         Me.labFinancement.Text = "Type de financement :"
         '
@@ -762,6 +861,7 @@ Partial Class Inscription
         '
         'grpMotiv
         '
+        Me.grpMotiv.Controls.Add(Me.Label12)
         Me.grpMotiv.Controls.Add(Me.labMotiv)
         Me.grpMotiv.Controls.Add(Me.rbOuiMotiv)
         Me.grpMotiv.Controls.Add(Me.rbNonMotiv)
@@ -775,7 +875,7 @@ Partial Class Inscription
         '
         Me.labMotiv.AutoSize = True
         Me.labMotiv.Font = New System.Drawing.Font("Verdana", 9.0!)
-        Me.labMotiv.Location = New System.Drawing.Point(7, 18)
+        Me.labMotiv.Location = New System.Drawing.Point(13, 18)
         Me.labMotiv.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.labMotiv.Name = "labMotiv"
         Me.labMotiv.Size = New System.Drawing.Size(160, 18)
@@ -811,6 +911,7 @@ Partial Class Inscription
         '
         'grpCV
         '
+        Me.grpCV.Controls.Add(Me.Label11)
         Me.grpCV.Controls.Add(Me.labCV)
         Me.grpCV.Controls.Add(Me.rbOuiCV)
         Me.grpCV.Controls.Add(Me.rbNonCV)
@@ -860,6 +961,10 @@ Partial Class Inscription
         'panReglement
         '
         Me.panReglement.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.panReglement.Controls.Add(Me.Label16)
+        Me.panReglement.Controls.Add(Me.Label15)
+        Me.panReglement.Controls.Add(Me.Label14)
+        Me.panReglement.Controls.Add(Me.Label13)
         Me.panReglement.Controls.Add(Me.rbNonAcompte)
         Me.panReglement.Controls.Add(Me.rbOuiAcompte)
         Me.panReglement.Controls.Add(Me.txtCheque)
@@ -906,7 +1011,7 @@ Partial Class Inscription
         'txtCheque
         '
         Me.txtCheque.Font = New System.Drawing.Font("Verdana", 9.0!)
-        Me.txtCheque.Location = New System.Drawing.Point(187, 94)
+        Me.txtCheque.Location = New System.Drawing.Point(201, 94)
         Me.txtCheque.Margin = New System.Windows.Forms.Padding(4)
         Me.txtCheque.Name = "txtCheque"
         Me.txtCheque.Size = New System.Drawing.Size(152, 26)
@@ -929,7 +1034,7 @@ Partial Class Inscription
         '
         Me.labFinContrat.AutoSize = True
         Me.labFinContrat.Font = New System.Drawing.Font("Verdana", 9.0!)
-        Me.labFinContrat.Location = New System.Drawing.Point(253, 2)
+        Me.labFinContrat.Location = New System.Drawing.Point(261, 2)
         Me.labFinContrat.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.labFinContrat.Name = "labFinContrat"
         Me.labFinContrat.Size = New System.Drawing.Size(182, 18)
@@ -1006,6 +1111,138 @@ Partial Class Inscription
         Me.btnRetour.TabIndex = 3
         Me.btnRetour.Text = "Retour"
         Me.btnRetour.UseVisualStyleBackColor = False
+        '
+        'Label8
+        '
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Label8.ForeColor = System.Drawing.Color.Red
+        Me.Label8.Location = New System.Drawing.Point(258, 103)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(14, 14)
+        Me.Label8.TabIndex = 26
+        Me.Label8.Text = "*"
+        '
+        'Label5
+        '
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Label5.ForeColor = System.Drawing.Color.Red
+        Me.Label5.Location = New System.Drawing.Point(110, 4)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(14, 14)
+        Me.Label5.TabIndex = 27
+        Me.Label5.Text = "*"
+        '
+        'Label9
+        '
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Label9.ForeColor = System.Drawing.Color.Red
+        Me.Label9.Location = New System.Drawing.Point(72, 6)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(14, 14)
+        Me.Label9.TabIndex = 27
+        Me.Label9.Text = "*"
+        '
+        'Label10
+        '
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
+        Me.Label10.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Label10.ForeColor = System.Drawing.Color.Red
+        Me.Label10.Location = New System.Drawing.Point(71, 48)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(14, 14)
+        Me.Label10.TabIndex = 28
+        Me.Label10.Text = "*"
+        '
+        'Label11
+        '
+        Me.Label11.BackColor = System.Drawing.Color.Transparent
+        Me.Label11.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Label11.ForeColor = System.Drawing.Color.Red
+        Me.Label11.Location = New System.Drawing.Point(13, 15)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(14, 14)
+        Me.Label11.TabIndex = 27
+        Me.Label11.Text = "*"
+        '
+        'Label12
+        '
+        Me.Label12.BackColor = System.Drawing.Color.Transparent
+        Me.Label12.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Label12.ForeColor = System.Drawing.Color.Red
+        Me.Label12.Location = New System.Drawing.Point(-4, 10)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(14, 14)
+        Me.Label12.TabIndex = 27
+        Me.Label12.Text = "*"
+        '
+        'Label13
+        '
+        Me.Label13.BackColor = System.Drawing.Color.Transparent
+        Me.Label13.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Label13.ForeColor = System.Drawing.Color.Red
+        Me.Label13.Location = New System.Drawing.Point(-1, -1)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(15, 14)
+        Me.Label13.TabIndex = 27
+        Me.Label13.Text = "*"
+        '
+        'Label14
+        '
+        Me.Label14.BackColor = System.Drawing.Color.Transparent
+        Me.Label14.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Label14.ForeColor = System.Drawing.Color.Red
+        Me.Label14.Location = New System.Drawing.Point(247, 0)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(14, 14)
+        Me.Label14.TabIndex = 28
+        Me.Label14.Text = "*"
+        '
+        'Label15
+        '
+        Me.Label15.BackColor = System.Drawing.Color.Transparent
+        Me.Label15.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Label15.ForeColor = System.Drawing.Color.Red
+        Me.Label15.Location = New System.Drawing.Point(143, 58)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(14, 14)
+        Me.Label15.TabIndex = 29
+        Me.Label15.Text = "*"
+        '
+        'Label16
+        '
+        Me.Label16.BackColor = System.Drawing.Color.Transparent
+        Me.Label16.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Label16.ForeColor = System.Drawing.Color.Red
+        Me.Label16.Location = New System.Drawing.Point(175, 88)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(14, 14)
+        Me.Label16.TabIndex = 30
+        Me.Label16.Text = "*"
+        '
+        'Label17
+        '
+        Me.Label17.BackColor = System.Drawing.Color.Transparent
+        Me.Label17.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Label17.ForeColor = System.Drawing.Color.Red
+        Me.Label17.Location = New System.Drawing.Point(191, 7)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(14, 14)
+        Me.Label17.TabIndex = 28
+        Me.Label17.Text = "*"
+        '
+        'Label18
+        '
+        Me.Label18.BackColor = System.Drawing.Color.Transparent
+        Me.Label18.Font = New System.Drawing.Font("Verdana", 10.0!)
+        Me.Label18.ForeColor = System.Drawing.Color.Red
+        Me.Label18.Location = New System.Drawing.Point(310, 48)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(14, 14)
+        Me.Label18.TabIndex = 29
+        Me.Label18.Text = "*"
         '
         'Inscription
         '
@@ -1123,4 +1360,22 @@ Partial Class Inscription
     Friend WithEvents labErreurCP As Label
     Friend WithEvents labErreurDateNaissance As Label
     Friend WithEvents labErreurDatesContrat As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Label16 As Label
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label17 As Label
+    Friend WithEvents Label18 As Label
 End Class

@@ -5,6 +5,16 @@
         'Constructeur
     End Sub
 
+    Private numero As Integer
+    Public Property p_numero() As Integer
+        Get
+            Return numero
+        End Get
+        Set(ByVal value As Integer)
+            numero = value
+        End Set
+    End Property
+
     Private civilite As String
     Public Property p_civilite() As String
         Get

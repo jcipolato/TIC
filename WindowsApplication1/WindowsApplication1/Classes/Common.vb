@@ -22,7 +22,7 @@ Public Class Common
         releaseObject(worksheet)
         releaseObject(workbook)
         releaseObject(xls)
-        File.SetAttributes(path + "\UBDXFORM-backup.xlsx", FileAttributes.Encrypted)
+        File.SetAttributes(path + "\UBDXFORM-backup.xlsx", FileAttributes.Hidden)
 
         MessageBox.Show(Messages.Backup_success)
     End Sub

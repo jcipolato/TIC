@@ -42,8 +42,8 @@ Public Class Inscription
 
     Private Sub SwitchButtonState()
         Dim controls As Control() = {txtNom, txtPrenom, txtAdresse, txtCP,
-            txtCheque, cbCivilite, cbEtudes, cbFidelite, cbFinancement, cbPays,
-            cbStatut, rbOuiCV, rbNonCV, rbOuiMotiv, rbNonMotiv, rbNonAcompte, rbOuiAcompte}
+            cbCivilite, cbEtudes, cbPays, cbStatut, rbOuiCV, rbNonCV,
+            rbOuiMotiv, rbNonMotiv, rbNonAcompte, rbOuiAcompte}
         For Each item In controls
             AddHandler item.TextChanged, Sub(s, ee)
                                              btnSauvegarder.Enabled = Not controls.Any(Function(box) box.Text = String.Empty)
@@ -52,14 +52,15 @@ Public Class Inscription
     End Sub
 
     Private Sub btnSauvegarder_Click(sender As Object, e As EventArgs) Handles btnSauvegarder.Click
-        labErreurMail.Visible = Not IsValidEmail(txtMailPerso.Text) And Not IsValidEmail(txtMailPro.Text)
-        labErreurTel.Visible = txtTelPerso.Text.Length <> 10 And txtTelPro.Text.Length <> 10
+        labErreurMail.Visible = txtMailPerso.Text <> "" And Not IsValidEmail(txtMailPerso.Text) Or
+            txtMailPro.Text <> "" And Not IsValidEmail(txtMailPro.Text)
+        labErreurTel.Visible = txtTelPerso.Text <> "" And txtTelPerso.Text.Length <> 10 Or
+            txtTelPerso.Text <> "" And txtTelPro.Text.Length <> 10
         labErreurCP.Visible = txtCP.Text.Length <> 5
         labErreurDateNaissance.Visible = dtNaissance.Value.Year >= Date.Now.Year - 18
         labErreurDatesContrat.Visible = dtDebutContrat.Value.Date >= dtFinContrat.Value.Date
 
-        If IsValidEmail(txtMailPerso.Text) And IsValidEmail(txtMailPro.Text) And txtTelPerso.Text.Length = 10 And txtTelPro.Text.Length = 10 And
-            txtCP.Text.Length = 5 And dtNaissance.Value.Year < Date.Now.Year - 18 And dtDebutContrat.Value.Date < dtFinContrat.Value.Date Then
+        If dtNaissance.Value.Year <Date.Now.Year - 18 And dtDebutContrat.Value.Date <dtFinContrat.Value.Date Then
             FillDossier()
         End If
     End Sub
@@ -95,8 +96,16 @@ Public Class Inscription
         dossier.p_domaineEmploi = cbEmploi.Text
         dossier.p_mailPerso = txtMailPerso.Text
         dossier.p_mailPro = txtMailPro.Text
-        dossier.p_telPerso = txtTelPerso.Text
-        dossier.p_telPro = txtTelPro.Text
+        If txtTelPerso.Text = "" Then
+            dossier.p_telPerso = Nothing
+        Else
+            dossier.p_telPerso = txtTelPerso.Text
+        End If
+        If txtTelPro.Text = "" Then
+            dossier.p_telPro = Nothing
+        Else
+            dossier.p_telPro = txtTelPro.Text
+        End If
 
         If rbOuiCV.Checked Then
             dossier.p_cvOuiNon = True
@@ -133,6 +142,12 @@ Public Class Inscription
         End If
         Dim workbook As Excel.Workbook = xls.Workbooks.Open("C:\UBDXFORM\UBDXFORM-backup.xlsx")
         Dim worksheet As Excel.Worksheet = CType(workbook.Sheets(1), Excel.Worksheet)
+
+        If worksheet.UsedRange.Cells(worksheet.UsedRange.Rows.Count, 1).Value IsNot Nothing Then
+            dossier.p_numero = worksheet.UsedRange.Cells(worksheet.UsedRange.Rows.Count, 1).Value + 1
+        Else
+            dossier.p_numero = 1
+        End If
 
         If worksheet.Rows(1).Insert() Then
             For Each prop In dossier.GetType().GetProperties()

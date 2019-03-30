@@ -32,6 +32,8 @@ Partial Class Consultation
         Me.txtRechercher = New System.Windows.Forms.TextBox()
         Me.labTrier = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.DossierBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PnumeroDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PciviliteDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PnomDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PprenomDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -56,7 +58,6 @@ Partial Class Consultation
         Me.PnumeroChequeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PfinancementDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PfideliteDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DossierBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.dtgDossiers, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DossierBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -67,7 +68,7 @@ Partial Class Consultation
         Me.dtgDossiers.AllowUserToDeleteRows = False
         Me.dtgDossiers.AutoGenerateColumns = False
         Me.dtgDossiers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dtgDossiers.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PciviliteDataGridViewTextBoxColumn, Me.PnomDataGridViewTextBoxColumn, Me.PprenomDataGridViewTextBoxColumn, Me.PdateNaissanceDataGridViewTextBoxColumn, Me.PadresseDataGridViewTextBoxColumn, Me.PcomplementAdresseDataGridViewTextBoxColumn, Me.PcodePostalDataGridViewTextBoxColumn, Me.PvilleDataGridViewTextBoxColumn, Me.PpaysDataGridViewTextBoxColumn, Me.PniveauEtudesDataGridViewTextBoxColumn, Me.PprofessionDataGridViewTextBoxColumn, Me.PdomaineEmploiDataGridViewTextBoxColumn, Me.PmailPersoDataGridViewTextBoxColumn, Me.PmailProDataGridViewTextBoxColumn, Me.PtelProDataGridViewTextBoxColumn, Me.PtelPersoDataGridViewTextBoxColumn, Me.PcvOuiNonDataGridViewCheckBoxColumn, Me.PlettreMotivationOuiNonDataGridViewCheckBoxColumn, Me.PdateDebutContratDataGridViewTextBoxColumn, Me.PdateFinContratDataGridViewTextBoxColumn, Me.PacompteOuiNonDataGridViewCheckBoxColumn, Me.PnumeroChequeDataGridViewTextBoxColumn, Me.PfinancementDataGridViewTextBoxColumn, Me.PfideliteDataGridViewTextBoxColumn})
+        Me.dtgDossiers.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PnumeroDataGridViewTextBoxColumn, Me.PciviliteDataGridViewTextBoxColumn, Me.PnomDataGridViewTextBoxColumn, Me.PprenomDataGridViewTextBoxColumn, Me.PdateNaissanceDataGridViewTextBoxColumn, Me.PadresseDataGridViewTextBoxColumn, Me.PcomplementAdresseDataGridViewTextBoxColumn, Me.PcodePostalDataGridViewTextBoxColumn, Me.PvilleDataGridViewTextBoxColumn, Me.PpaysDataGridViewTextBoxColumn, Me.PniveauEtudesDataGridViewTextBoxColumn, Me.PprofessionDataGridViewTextBoxColumn, Me.PdomaineEmploiDataGridViewTextBoxColumn, Me.PmailPersoDataGridViewTextBoxColumn, Me.PmailProDataGridViewTextBoxColumn, Me.PtelProDataGridViewTextBoxColumn, Me.PtelPersoDataGridViewTextBoxColumn, Me.PcvOuiNonDataGridViewCheckBoxColumn, Me.PlettreMotivationOuiNonDataGridViewCheckBoxColumn, Me.PdateDebutContratDataGridViewTextBoxColumn, Me.PdateFinContratDataGridViewTextBoxColumn, Me.PacompteOuiNonDataGridViewCheckBoxColumn, Me.PnumeroChequeDataGridViewTextBoxColumn, Me.PfinancementDataGridViewTextBoxColumn, Me.PfideliteDataGridViewTextBoxColumn})
         Me.dtgDossiers.DataSource = Me.DossierBindingSource
         Me.dtgDossiers.Location = New System.Drawing.Point(16, 124)
         Me.dtgDossiers.Margin = New System.Windows.Forms.Padding(4)
@@ -163,6 +164,16 @@ Partial Class Consultation
         Me.Label1.TabIndex = 12
         Me.Label1.Text = "Pour modifier un dossier, double-cliquez sur la cellule que vous souhaitez modifi" &
     "er."
+        '
+        'DossierBindingSource
+        '
+        Me.DossierBindingSource.DataSource = GetType(WindowsApplication1.Dossier)
+        '
+        'PnumeroDataGridViewTextBoxColumn
+        '
+        Me.PnumeroDataGridViewTextBoxColumn.DataPropertyName = "p_numero"
+        Me.PnumeroDataGridViewTextBoxColumn.HeaderText = "Numéro"
+        Me.PnumeroDataGridViewTextBoxColumn.Name = "PnumeroDataGridViewTextBoxColumn"
         '
         'PciviliteDataGridViewTextBoxColumn
         '
@@ -332,10 +343,6 @@ Partial Class Consultation
         Me.PfideliteDataGridViewTextBoxColumn.Name = "PfideliteDataGridViewTextBoxColumn"
         Me.PfideliteDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'DossierBindingSource
-        '
-        Me.DossierBindingSource.DataSource = GetType(WindowsApplication1.Dossier)
-        '
         'Consultation
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -374,6 +381,8 @@ Partial Class Consultation
     Friend WithEvents DossierBindingSource As BindingSource
     Friend WithEvents PStatutDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PaccompteOuiNonDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents Label1 As Label
+    Friend WithEvents PnumeroDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PciviliteDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PnomDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PprenomDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -398,5 +407,4 @@ Partial Class Consultation
     Friend WithEvents PnumeroChequeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PfinancementDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PfideliteDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents Label1 As Label
 End Class
